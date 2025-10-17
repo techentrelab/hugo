@@ -15,5 +15,19 @@
       <guid>http://localhost:1313/posts/my-first-post/</guid>
       <description></description>
     </item>
+    <item>
+      <title>test</title>
+      <link>http://localhost:1313/posts/2025-10-17-test/</link>
+      <pubDate>Fri, 17 Oct 2025 15:31:24 +0900</pubDate>
+      <guid>http://localhost:1313/posts/2025-10-17-test/</guid>
+      <description>&lt;p&gt;テスト&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/2025-10-17/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2025-10-17/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;あいうえお&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
