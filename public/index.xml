@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>私のHugoサイト</title>
+    <title>徒然のままに</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on 私のHugoサイト</description>
+    <description>Recent content on 徒然のままに</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
     <lastBuildDate>Fri, 17 Oct 2025 15:31:24 +0900</lastBuildDate>

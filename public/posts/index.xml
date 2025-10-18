@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 私のHugoサイト</title>
+    <title>Posts on 徒然のままに</title>
     <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on 私のHugoサイト</description>
+    <description>Recent content in Posts on 徒然のままに</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
     <lastBuildDate>Fri, 17 Oct 2025 15:31:24 +0900</lastBuildDate>
@@ -13,14 +13,7 @@
       <link>http://localhost:1313/posts/my-first-post/</link>
       <pubDate>Fri, 17 Oct 2025 15:31:24 +0900</pubDate>
       <guid>http://localhost:1313/posts/my-first-post/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>test</title>
-      <link>http://localhost:1313/posts/2025-10-17-test/</link>
-      <pubDate>Fri, 17 Oct 2025 15:31:24 +0900</pubDate>
-      <guid>http://localhost:1313/posts/2025-10-17-test/</guid>
-      <description>&lt;p&gt;テスト&lt;/p&gt;</description>
+      <description>&lt;p&gt;最初の投稿&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
@@ -28,13 +21,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/2025-10-12-%E3%81%98%E3%82%83%E3%81%8C%E3%81%84%E3%82%82/</guid>
       <description>&lt;p&gt;じゃがいもに含まれるカリウムの量は、&lt;strong&gt;可食部100gあたりで約410mg&lt;/strong&gt;とされています（生の場合）。&lt;/p&gt;&#xA;&lt;p&gt;調理法によっても変動し、例えば水にさらしたり茹でたりすることでカリウムは水に溶け出すため、量が減る傾向があります。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;生のじゃがいも（可食部100gあたり）：&lt;strong&gt;410mg&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;ゆでたじゃがいも（100gあたり）：&lt;strong&gt;330mg&lt;/strong&gt;（または340mg）&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;中くらいのじゃがいも1個（約150g）で換算すると、約630mg程度のカリウムが含まれているという情報もあります。&lt;/p&gt;&#xA;&lt;p&gt;じゃがいもは、炭水化物（でんぷん）が主成分ですが、ビタミンやミネラル、食物繊維も豊富に含む栄養価の高い野菜です。&lt;/p&gt;&#xA;&lt;p&gt;特に注目すべき主要な栄養素は以下の通りです。&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-炭水化物でんぷん&#34;&gt;1. 炭水化物（でんぷん）&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;じゃがいもの主成分であり、体のエネルギー源となります。&lt;/li&gt;&#xA;&lt;li&gt;主食として利用される国が多いのはこのためです。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-ビタミンc&#34;&gt;2. ビタミンC&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;みかんやレモンなどの果物・野菜に多いイメージがありますが、じゃがいもにも豊富に含まれています。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;熱に強い&lt;/strong&gt;：じゃがいもに含まれるビタミンCは、でんぷん質に包まれているため、加熱しても比較的壊れにくいという特徴があります。&lt;/li&gt;&#xA;&lt;li&gt;抗酸化作用や、コラーゲンの生成を助ける働きがあります。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;3-カリウム&#34;&gt;3. カリウム&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;ミネラルの一種で、じゃがいもに非常に多く含まれています（バナナとほぼ同程度の量）。&lt;/li&gt;&#xA;&lt;li&gt;体内の&lt;strong&gt;余分なナトリウム（塩分）の排出&lt;/strong&gt;を促す働きがあり、むくみの予防や血圧の安定に役立ちます。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;4-食物繊維&#34;&gt;4. 食物繊維&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;水溶性、不溶性の両方の食物繊維が含まれています。&lt;/li&gt;&#xA;&lt;li&gt;お腹の調子を整える働きや、血糖値の急激な上昇を抑える効果が期待できます。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;その他&#34;&gt;その他&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;ビタミンB群&lt;/strong&gt;（特にビタミンB6など）も含まれており、代謝を助けるなどの働きがあります。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;※栄養成分値は品種や調理法（生、茹で、蒸しなど）によって異なります。 （例：生のじゃがいも可食部100gあたりで、ビタミンCは約28mg、カリウムは約410mg程度です。）&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>あいうえお</title>
-      <link>http://localhost:1313/posts/2025-10-17-%E3%81%82%E3%81%84%E3%81%86%E3%81%88%E3%81%8A/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025-10-17-%E3%81%82%E3%81%84%E3%81%86%E3%81%88%E3%81%8A/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;あいうえお&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

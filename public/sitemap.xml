@@ -8,9 +8,6 @@
     <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-10-17T15:31:24+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2025-10-17-test/</loc>
-    <lastmod>2025-10-17T15:31:24+09:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2025-10-17T15:31:24+09:00</lastmod>
   </url><url>
@@ -19,7 +16,5 @@
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-  </url><url>
-    <loc>http://localhost:1313/posts/2025-10-17-%E3%81%82%E3%81%84%E3%81%86%E3%81%88%E3%81%8A/</loc>
   </url>
 </urlset>
