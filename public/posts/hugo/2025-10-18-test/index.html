@@ -3,7 +3,7 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Example article title - 徒然のままに</title>
+	<title>テスト - 徒然のままに</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="Example article description">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,10 +36,31 @@
 		<span class="menu__btn-title" tabindex="-1">Menu</span>
 	</button>
 	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/posts/hugo/2025-10-18-test4/">
+				
+				<span class="menu__text">これはテストです</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/posts/hugo/2025-10-18-%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB/">
+				
+				<span class="menu__text">タイトル</span>
+				
+			</a>
+		</li>
 		<li class="menu__item menu__item--active">
 			<a class="menu__link" href="/posts/hugo/2025-10-18-test/">
 				
-				<span class="menu__text">Example article title</span>
+				<span class="menu__text">テスト</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/posts/hugo/2025-10-18-test2/">
+				
+				<span class="menu__text">テスト２</span>
 				
 			</a>
 		</li>
@@ -54,16 +75,11 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Example article title</h1>
+			<h1 class="post__title">テスト</h1>
 			<p class="post__lead">Example lead - highlighted near the title</p>
 			
 		</header>
-		
-	<figure class="post__thumbnail thumbnail">
-		
-		<img class="thumbnail__image" src="/img/placeholder.png" alt="Example article title">
-		
-	</figure><div class="content post__content clearfix">
+		<div class="content post__content clearfix">
 			<p>test1</p>
 
 		</div>
@@ -73,10 +89,7 @@
 	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M4 0h8s2 0 4 2l15 15s2 2 0 4L21 31s-2 2-4 0L2 16s-2-2-2-4V3s0-3 4-3m3 10a3 3 0 0 0 0-6 3 3 0 0 0 0 6"/></svg>
 	<ul class="tags__list">
 		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/test/" rel="tag">Test</a>
-		</li>
-		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/another-test/" rel="tag">Another test</a>
+			<a class="tags__link btn" href="/tags/%E5%BE%92%E7%84%B6/" rel="tag">徒然</a>
 		</li>
 	</ul>
 </div>
@@ -84,17 +97,18 @@
 	</article>
 </main>
 
-<div class="authorbox clearfix">
-	<p class="authorbox__warning">
-		<strong>WARNING:</strong> Authorbox is activated, but [Author] parameters are not specified.
-	</p>
-</div>
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
 		<a class="pager__link" href="/posts/hugo/2025-10-18-test2/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">Example article title</p>
+			<p class="pager__title">テスト２</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/posts/hugo/2025-10-18-test4/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">これはテストです</p>
 		</a>
 	</div>
 </nav>
@@ -112,17 +126,17 @@
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/posts/hugo/2025-10-18-test/">Example article title</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/hugo/2025-10-18-test2/">Example article title</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/hugo/2025-10-18-test3/">Example article title</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/hugo/2025-10-18-%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB/">タイトル</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/hugo/2025-10-18-test4/">これはテストです</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/hugo/2025-10-18-test/">テスト</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/hugo/2025-10-18-test2/">テスト２</a></li>
 		</ul>
 	</div>
 </div>
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
-		<a class="widget-taglist__link widget__link btn" href="/tags/another-test/" title="Another Test">Another Test</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/test/" title="Test">Test</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%E5%BE%92%E7%84%B6/" title="徒然">徒然</a>
 	</div>
 </div>
 </aside>

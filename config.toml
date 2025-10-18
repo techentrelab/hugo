@@ -7,12 +7,14 @@ disqusShortname = "" # Enable comments by entering your Disqus shortname
 googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 
 [Author]
-  name = "John Doe"
-  bio = "John Doe's true identity is unknown. Maybe he is a successful blogger or writer. Nobody knows it."
+  name = "松田"
+  bio = "もしかしたら、成功したブロガーか作家なのかもしれない。"
   avatar = "img/avatar.png"
 
+
+
 [Params]
-  description = "John Doe's Personal blog about everything" # Description of your site
+  description = "徒然のままに" # Description of your site
   opengraph = true
   twitter_cards = false
   readmore = false # Show "Read more" button in list if true
@@ -20,7 +22,8 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   pager = true
   post_meta = ["date", "categories"] # Order of post meta information
   mainSections = ["post", "docs"]
-  
+
+ 
 
 [Params.logo]
   subtitle = "Just another site" # Logo subtitle
