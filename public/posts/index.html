@@ -72,274 +72,45 @@
 		
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		
+		<p>test1</p>
 	</div>
 </article><article class="list__item post">
 	
+	<figure class="list__thumbnail thumbnail">
+		<a class="thumbnail__link" href="/posts/hugo/2025-10-18-test2/">
+		<img class="thumbnail__image" src="/img/placeholder.png" alt="Example article title">
+		</a>
+	</figure>
 	<header class="list__header">
 		<h2 class="list__title post__title">
-			<a href="/posts/hugo/2025-10-18--hugo/" rel="bookmark">
-			
+			<a href="/posts/hugo/2025-10-18-test2/" rel="bookmark">
+			Example article title
 			</a>
 		</h2>
+		<p class="list__lead post__lead">Example lead - highlighted near the title</p>
 		
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		<p>Mainroad</p>
-<ul>
-<li><strong>特徴:</strong> 昔ながらのブログテーマといった雰囲気で、サイドバーがあり、記事一覧が充実しているのが特徴です。レトロなブログデザインが好きな方や、多くの情報を整理して表示したい場合に適しています。</li>
-<li><strong>用途:</strong> クラシックなブログ。</li>
-<li><strong>GitHub:</strong> <a href="https://github.com/Vimux/Mainroad">https://github.com/Vimux/Mainroad</a></li>
-</ul>
-<p>hugo new posts/my-first-post.md</p>
+		<p>test2</p>
 	</div>
 </article><article class="list__item post">
 	
+	<figure class="list__thumbnail thumbnail">
+		<a class="thumbnail__link" href="/posts/hugo/2025-10-18-test3/">
+		<img class="thumbnail__image" src="/img/placeholder3.png" alt="Example article title">
+		</a>
+	</figure>
 	<header class="list__header">
 		<h2 class="list__title post__title">
-			<a href="/posts/hugo/2025-10-18-mainroad%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" rel="bookmark">
-			
+			<a href="/posts/hugo/2025-10-18-test3/" rel="bookmark">
+			Example article title
 			</a>
 		</h2>
+		<p class="list__lead post__lead">Example lead - highlighted near the title</p>
 		
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		<p><a href="https://github.com/Vimux/Mainroad/tree/master">https://github.com/Vimux/Mainroad/tree/master</a></p>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/living/my-first-post/" rel="bookmark">
-			My First Post
-			</a>
-		</h2>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/living/2025-10-18-%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA/" rel="bookmark">
-			カテゴリ
-			</a>
-		</h2>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>Hugoで投稿をカテゴリに分けるには、主に**タクソノミー（Taxonomies）**という機能を使います。デフォルトで<code>categories</code>と<code>tags</code>という2つのタクソノミーが用意されています。</p>
-<p>具体的な手順は以下の通りです。</p>
-<ol>
-<li>
-<p><strong>コンテンツのフロントマターにカテゴリを指定する</strong> 投稿のMarkdownファイル（例: <code>content/post/my-post.md</code>）の先頭にある<strong>フロントマター</strong>（<code>---</code>で囲まれた部分）に、<code>categories</code>という項目でカテゴリ名を指定します。</p>
-<ul>
-<li><code>categories</code>に指定した文字列がカテゴリ名（ターム）になります。</li>
-<li>複数のカテゴリを指定する場合は、配列形式（例のように<code>[]</code>で囲んでカンマ区切り）で記述します。</li>
-</ul>
-</li>
-<li>
-<p><strong>（必要に応じて）<code>config.toml</code>または<code>config.yaml</code>で設定を確認・調整する</strong> Hugoはデフォルトで<code>categories</code>と<code>tags</code>のタクソノミーを作成しますが、もし設定ファイル（例: <code>config.toml</code>）に以下の記述がない場合は追加することで明示的に定義できます。</p>
-<ul>
-<li>
-<p><strong>TOML形式の場合:</strong></p>
-<p>[taxonomies]
-category = &ldquo;categories&rdquo;
-tag = &ldquo;tags&rdquo;</p>
-</li>
-<li>
-<p><strong>YAML形式の場合:</strong></p>
-<p>taxonomies:
-category: categories
-tag: tags</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>テンプレートを用意する</strong> カテゴリ一覧ページや特定のカテゴリに属する記事一覧ページを表示するために、テーマのレイアウトファイル（例: <code>layouts/_default/taxonomy.html</code>や<code>layouts/_default/list.html</code>、<code>layouts/_default/terms.html</code>など）が適切に設定されている必要があります。</p>
-<ul>
-<li>通常、テーマを使用している場合は既に対応していることが多いです。</li>
-<li>カテゴリの一覧ページは、通常 <code>/categories/</code> のURLでアクセスできるようになります。</li>
-<li>特定のカテゴリ（例: &ldquo;カテゴリ1&rdquo;）に属する記事の一覧ページは、通常 <code>/categories/カテゴリ1/</code> のURLで自動生成されます。</li>
-</ul>
-</li>
-</ol>
-<p>この手順で、投稿が指定したカテゴリに分類され、Hugoによってカテゴリごとの一覧ページなどが自動で生成されるようになります。</p>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/living/2025-10-12-%E3%81%98%E3%82%83%E3%81%8C%E3%81%84%E3%82%82/" rel="bookmark">
-			じゃがいも
-			</a>
-		</h2>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>じゃがいもに含まれるカリウムの量は、<strong>可食部100gあたりで約410mg</strong>とされています（生の場合）。</p>
-<p>調理法によっても変動し、例えば水にさらしたり茹でたりすることでカリウムは水に溶け出すため、量が減る傾向があります。</p>
-<ul>
-<li>生のじゃがいも（可食部100gあたり）：<strong>410mg</strong></li>
-<li>ゆでたじゃがいも（100gあたり）：<strong>330mg</strong>（または340mg）</li>
-</ul>
-<p>中くらいのじゃがいも1個（約150g）で換算すると、約630mg程度のカリウムが含まれているという情報もあります。</p>
-<p>じゃがいもは、炭水化物（でんぷん）が主成分ですが、ビタミンやミネラル、食物繊維も豊富に含む栄養価の高い野菜です。</p>
-<p>特に注目すべき主要な栄養素は以下の通りです。</p>
-<h3 id="1-炭水化物でんぷん">1. 炭水化物（でんぷん）</h3>
-<ul>
-<li>じゃがいもの主成分であり、体のエネルギー源となります。</li>
-<li>主食として利用される国が多いのはこのためです。</li>
-</ul>
-<h3 id="2-ビタミンc">2. ビタミンC</h3>
-<ul>
-<li>みかんやレモンなどの果物・野菜に多いイメージがありますが、じゃがいもにも豊富に含まれています。</li>
-<li><strong>熱に強い</strong>：じゃがいもに含まれるビタミンCは、でんぷん質に包まれているため、加熱しても比較的壊れにくいという特徴があります。</li>
-<li>抗酸化作用や、コラーゲンの生成を助ける働きがあります。</li>
-</ul>
-<h3 id="3-カリウム">3. カリウム</h3>
-<ul>
-<li>ミネラルの一種で、じゃがいもに非常に多く含まれています（バナナとほぼ同程度の量）。</li>
-<li>体内の<strong>余分なナトリウム（塩分）の排出</strong>を促す働きがあり、むくみの予防や血圧の安定に役立ちます。</li>
-</ul>
-<h3 id="4-食物繊維">4. 食物繊維</h3>
-<ul>
-<li>水溶性、不溶性の両方の食物繊維が含まれています。</li>
-<li>お腹の調子を整える働きや、血糖値の急激な上昇を抑える効果が期待できます。</li>
-</ul>
-<h3 id="その他">その他</h3>
-<ul>
-<li><strong>ビタミンB群</strong>（特にビタミンB6など）も含まれており、代謝を助けるなどの働きがあります。</li>
-</ul>
-<p>※栄養成分値は品種や調理法（生、茹で、蒸しなど）によって異なります。 （例：生のじゃがいも可食部100gあたりで、ビタミンCは約28mg、カリウムは約410mg程度です。）</p>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/2025-10-18-%E5%BE%92%E7%84%B6%E8%8D%89/" rel="bookmark">
-			徒然草
-			</a>
-		</h2>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>「<strong>徒然なる</strong>」という言葉で始まる作品として有名なのは、吉田兼好（よしだ けんこう）による古典随筆**『徒然草（つれづれぐさ）』**です。</p>
-<p>これは「つれづれなるままに、日暮らし硯（すずり）に向かいて、心にうつりゆくよしなしごとを、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。」という有名な序段で始まります。</p>
-<p>『徒然草』は、清少納言の『枕草子』、鴨長明の『方丈記』と並び、<strong>日本三大随筆</strong>の一つに数えられる作品で、現代語訳や解説付きのものなど、様々な形で本が出版されていますよ。</p>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/2025-10-18-%E6%9C%88%E3%81%AE%E6%BA%80%E3%81%A1%E6%AC%A0%E3%81%91/" rel="bookmark">
-			月の満ち欠け
-			</a>
-		</h2>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>月が<strong>三日月</strong>になったり<strong>満月</strong>になったりする現象は、「<strong>月の満ち欠け</strong>（げつの・みちかけ）」と呼ばれ、<strong>月・地球・太陽</strong>の<strong>位置関係が変化</strong>することによって起こります。</p>
-<p>月は太陽のように自ら光る天体ではなく、<strong>太陽の光を反射</strong>して輝いています。地球の周りを公転する月は、太陽からの光が当たる部分と当たらない部分（夜の部分）に分かれていますが、地球から見てその<strong>光っている部分がどのくらい見えるか</strong>が変わることで、月の形が変化しているように見えるのです。</p>
-<h2 id="-月の満ち欠けのしくみ"><img src="https://fonts.gstatic.com/s/e/notoemoji/16.0/1f313/72.png" alt="🌓"> 月の満ち欠けのしくみ</h2>
-<p>月は約<strong>29.5日</strong>かけて地球の周りを一周（公転）しています。この公転によって、地球・月・太陽の位置関係が常に変化し、月の見え方が変わります。</p>
-<table>
-  <thead>
-      <tr>
-          <th>月の形</th>
-          <th>位置関係</th>
-          <th>地球からの見え方</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>新月</strong></td>
-          <td>月が地球と太陽の間にあるとき</td>
-          <td>太陽に照らされた月の裏側が地球を向くため、地球からは<strong>ほとんど見えません</strong>。</td>
-      </tr>
-      <tr>
-          <td><strong>三日月</strong></td>
-          <td>新月の後、月が少し公転したとき</td>
-          <td>太陽光が当たる部分がわずかに見え、細い弓形に見えます。</td>
-      </tr>
-      <tr>
-          <td><strong>上弦の月</strong></td>
-          <td>月が地球から見て太陽に対して90度の位置に来たとき</td>
-          <td>太陽に照らされた部分の<strong>半分</strong>が見えます（半月）。</td>
-      </tr>
-      <tr>
-          <td><strong>満月</strong></td>
-          <td>地球が月と太陽の間にあるとき</td>
-          <td>太陽に照らされた面全体が地球を向くため、<strong>まん丸</strong>に見えます。</td>
-      </tr>
-      <tr>
-          <td><strong>下弦の月</strong></td>
-          <td>満月の後、月がさらに公転し、再び90度の位置に来たとき</td>
-          <td>太陽に照らされた部分の<strong>半分</strong>が見えます（半月）。</td>
-      </tr>
-      <tr>
-          <td>（再び三日月を経て新月へ戻ります）</td>
-          <td></td>
-          <td></td>
-      </tr>
-  </tbody>
-</table>
-<p>月の形が実際に変わっているわけではなく、<strong>球体である月</strong>の<strong>太陽に照らされた部分</strong>を、<strong>地球上から見る角度が変わる</strong>ために、満ちたり欠けたりしているように見える、というわけです。</p>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/2025-10-18-%E9%9A%8F%E7%AD%86%E3%81%A8%E3%81%AF/" rel="bookmark">
-			随筆とは
-			</a>
-		</h2>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>**随筆（ずいひつ）**とは、文学における一形式で、<strong>筆者が自身の体験や見聞、読書などから得た知識、それに対する感想や思索を、特定の形式にとらわれず、筆のおもむくままに自由に書き記した散文</strong>のことです。</p>
-<p>「随筆」は、英語の「<strong>エッセイ（Essay）</strong>」とほぼ同義で用いられますが、日本では古くからある文学ジャンルとして確立しています。</p>
-<h2 id="随筆の主な特徴">随筆の主な特徴</h2>
-<ul>
-<li><strong>自由な形式</strong>：起承転結などの厳密な構成や、特定の論理展開に縛られません。</li>
-<li><strong>主観的</strong>：筆者の個人的な感想、意見、思想が中心となります。</li>
-<li><strong>断片的</strong>：短い文章や、思いつくままのトピックが寄せ集められていることが多いです。</li>
-<li><strong>テーマの多様性</strong>：日常の些細な出来事から、人生観、社会批評、自然への感動まで、幅広いテーマが扱われます。</li>
-</ul>
-<h2 id="日本三大随筆">日本三大随筆</h2>
-<p>日本の古典文学において、特に傑作とされ、後世に大きな影響を与えた以下の3作品が<strong>日本三大随筆</strong>と呼ばれています。</p>
-<table>
-  <thead>
-      <tr>
-          <th>作品名</th>
-          <th>成立時代</th>
-          <th>作者</th>
-          <th>主な特徴</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>枕草子</strong></td>
-          <td>平安時代中期</td>
-          <td>清少納言</td>
-          <td>宮廷生活の様子や自然への鋭い観察、分類的な表現（例：「うつくしきもの」）が特徴。</td>
-      </tr>
-      <tr>
-          <td><strong>方丈記</strong></td>
-          <td>鎌倉時代初期</td>
-          <td>鴨長明</td>
-          <td>災害や世の無常を主題に、隠者としての人生を簡潔な文体でつづったもの。</td>
-      </tr>
-      <tr>
-          <td><strong>徒然草</strong></td>
-          <td>鎌倉時代末期</td>
-          <td>吉田兼好</td>
-          <td>人生観、世相への批評、教訓、滑稽な逸話などが混然一体となった随筆集。</td>
-      </tr>
-  </tbody>
-</table>
+		<p>test2</p>
 	</div>
 </article>
 </main>
