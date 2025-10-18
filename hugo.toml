@@ -1,4 +1,4 @@
 baseURL = "http://example.org/" 
 languageCode = "ja-jp" 
-title = "私のHugoサイト" 
+title = "徒然のままに" 
 theme = "Mainroad"
