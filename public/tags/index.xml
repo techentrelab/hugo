@@ -15,5 +15,12 @@
       <guid>http://localhost:1313/tags/%E5%BE%92%E7%84%B6/</guid>
       <description></description>
     </item>
+    <item>
+      <title>時間管理</title>
+      <link>http://localhost:1313/tags/%E6%99%82%E9%96%93%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E6%99%82%E9%96%93%E7%AE%A1%E7%90%86/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
