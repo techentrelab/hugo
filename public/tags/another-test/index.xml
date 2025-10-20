@@ -10,24 +10,10 @@
     <atom:link href="http://localhost:1313/tags/another-test/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Example article title</title>
-      <link>http://localhost:1313/posts/hugo/2025-10-18-test/</link>
+      <link>http://localhost:1313/posts/example-article-title/</link>
       <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hugo/2025-10-18-test/</guid>
-      <description>&lt;p&gt;test1&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Example article title</title>
-      <link>http://localhost:1313/posts/hugo/2025-10-18-test2/</link>
-      <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hugo/2025-10-18-test2/</guid>
-      <description>&lt;p&gt;test2&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Example article title</title>
-      <link>http://localhost:1313/posts/hugo/2025-10-18-test3/</link>
-      <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hugo/2025-10-18-test3/</guid>
-      <description>&lt;p&gt;test3&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/example-article-title/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>

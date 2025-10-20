@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CSS on 徒然のままに</title>
+    <link>http://localhost:1313/tags/css/</link>
+    <description>Recent content in CSS on 徒然のままに</description>
+    <generator>Hugo</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Mon, 16 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ポモドーロタイマー2</title>
+      <link>http://localhost:1313/posts/%E3%83%9D%E3%83%A2%E3%83%89%E3%83%BC%E3%83%AD%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC2/</link>
+      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/%E3%83%9D%E3%83%A2%E3%83%89%E3%83%BC%E3%83%AD%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC2/</guid>
+      <description>&lt;p&gt;前の回答でご紹介したポモドーロタイマーの多くは、&lt;strong&gt;無料で使い始めることができます&lt;/strong&gt;。&lt;/p&gt;&#xA;&lt;p&gt;特に無料で基本的なポモドーロテクニックを実践できるのは以下のツールです。&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-webアプリ-インストール不要&#34;&gt;1. Webアプリ (インストール不要)&lt;/h3&gt;&#xA;&lt;p&gt;これらのWebアプリは、ブラウザさえあれば無料でフル機能にアクセスできることがほとんどです。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Pomofocus:&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;無料で利用できるシンプルなWebアプリです。&lt;/li&gt;&#xA;&lt;li&gt;基本的なポモドーロタイマー機能（時間設定、休憩時間の設定など）とタスクリスト機能が使えます。&lt;/li&gt;&#xA;&lt;li&gt;より高度な機能や特定の統計レポートなどが有料プランになる場合がありますが、タイマーとして使う分には無料版で十分です。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Marinara Timer:&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;これも無料で使えるWebベースのタイマーです。&lt;/li&gt;&#xA;&lt;li&gt;標準のポモドーロモードに加え、カスタム設定も無料で利用可能です。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Pomodoro Tracker (Webサイト):&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;シンプルなインターフェースのWeb版タイマーで、無償で必要最低限の機能を使えます。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-デスクトップアプリマルチプラットフォームアプリ&#34;&gt;2. デスクトップアプリ/マルチプラットフォームアプリ&lt;/h3&gt;&#xA;&lt;p&gt;これらのアプリは、無料でダウンロードして基本的な機能を利用できますが、一部の高度な機能（プロジェクト数の制限解除、詳細なレポート、デバイス間の同期など）が有料になる場合があります。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Focus To-Do:&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;無料版&lt;/strong&gt;でもポモドーロタイマーとタスク管理の基本的な機能は使えます。&lt;/li&gt;&#xA;&lt;li&gt;ただし、無料版では作成できる&lt;strong&gt;プロジェクト数に制限がある&lt;/strong&gt;（例：最大5つまで）などの制限が設けられていることがあります。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Pomatez:&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Windows、Mac、Linux対応のデスクトップアプリで、基本的に無料で利用できます。カスタマイズも可能です。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tomighty:&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Windows、Macなどで使えるシンプルなデスクトップタイマーで、無料で提供されています。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;【結論】&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;まずは**「Pomofocus」&lt;strong&gt;や&lt;/strong&gt;「Marinara Timer」&lt;strong&gt;といった&lt;/strong&gt;Webアプリ**を試すのが、&lt;strong&gt;最も手軽で無料で基本的な機能が使える&lt;/strong&gt;のでおすすめです。&lt;/p&gt;&#xA;&lt;p&gt;もしタスク管理と連携させたい場合は、&lt;strong&gt;「Focus To-Do」の無料版&lt;/strong&gt;を試してみて、機能が足りなくなったら有料版を検討すると良いでしょう。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

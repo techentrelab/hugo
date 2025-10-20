@@ -6,35 +6,28 @@
     <description>Recent content in Posts on 徒然のままに</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 21 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Example article title</title>
-      <link>http://localhost:1313/posts/hugo/2025-10-18-test/</link>
-      <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hugo/2025-10-18-test/</guid>
-      <description>&lt;p&gt;test1&lt;/p&gt;</description>
+      <title>ポモドーロタイマー</title>
+      <link>http://localhost:1313/posts/%E3%83%9D%E3%83%A2%E3%83%89%E3%83%BC%E3%83%AD%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC/</link>
+      <pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/%E3%83%9D%E3%83%A2%E3%83%89%E3%83%BC%E3%83%AD%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC/</guid>
+      <description>&lt;p&gt;パソコンで使えるポモドーロタイマーをお探しですね。様々な種類がありますが、特におすすめなのは以下の3つのタイプです。&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-タスク管理機能と連携したい方におすすめ&#34;&gt;1. タスク管理機能と連携したい方におすすめ&lt;/h3&gt;&#xA;&lt;h4 id=&#34;focus-to-do&#34;&gt;&lt;strong&gt;Focus To-Do&lt;/strong&gt;&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;特徴:&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;ポモドーロタイマーとTo Doリスト（タスク管理）が統合されています。&lt;/li&gt;&#xA;&lt;li&gt;作業時間の記録やレポート機能も充実しており、どのタスクにどれだけ集中したかを視覚的に把握できます。&lt;/li&gt;&#xA;&lt;li&gt;Windows、Macのデスクトップアプリのほか、Web版、スマホアプリもあり、データが同期できるため、場所を選ばず使えます。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;プラットフォーム:&lt;/strong&gt; Windows、Mac、Web、Chrome拡張機能、iOS、Android&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-シンプルで手軽に始めたい方におすすめ&#34;&gt;2. シンプルで手軽に始めたい方におすすめ&lt;/h3&gt;&#xA;&lt;h4 id=&#34;pomofocus&#34;&gt;&lt;strong&gt;Pomofocus&lt;/strong&gt;&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;特徴:&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;非常にシンプルで直感的なデザインのWebアプリです。&lt;/li&gt;&#xA;&lt;li&gt;インストール不要でブラウザからすぐに使え、タスクをリストに追加してタイマーを回すだけという手軽さが魅力です。&lt;/li&gt;&#xA;&lt;li&gt;タイマーの時間やセット数などのカスタマイズも可能です。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;プラットフォーム:&lt;/strong&gt; Web (ブラウザ)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;marinara-timer&#34;&gt;&lt;strong&gt;Marinara Timer&lt;/strong&gt;&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;特徴:&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;これもシンプルなWebベースのタイマーです。&lt;/li&gt;&#xA;&lt;li&gt;カスタマイズ性が高く、標準のポモドーロ以外にも「カスタムタイマー」を作成できます。&lt;/li&gt;&#xA;&lt;li&gt;アプリの導入が禁止されている会社のPCなどでも、ブラウザがあれば利用できることが多いです。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;プラットフォーム:&lt;/strong&gt; Web (ブラウザ)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;3-多機能なデスクトップアプリを探している方におすすめ&#34;&gt;3. 多機能なデスクトップアプリを探している方におすすめ&lt;/h3&gt;&#xA;&lt;h4 id=&#34;pomatez-windowsmaclinux&#34;&gt;&lt;strong&gt;Pomatez (Windows/Mac/Linux)&lt;/strong&gt;&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;特徴:&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Windows、Mac、Linuxで使えるクロスプラットフォームのデスクトップアプリです。&lt;/li&gt;&#xA;&lt;li&gt;標準のポモドーロサイクルに加え、時間やセット数の詳細なカスタマイズが可能です。&lt;/li&gt;&#xA;&lt;li&gt;タスクリスト機能もあり、次にやるべきタスクを管理できます。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;プラットフォーム:&lt;/strong&gt; Windows、Mac、Linux&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;選び方のポイント&#34;&gt;【選び方のポイント】&lt;/h3&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;目的&lt;/th&gt;&#xA;          &lt;th&gt;おすすめのタイプ&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;タスク管理も一緒にしたい&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Focus To-Do&lt;/strong&gt; (タイマーとTo Doが一体化)&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;インストールせず手軽に開始したい&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Pomofocus&lt;/strong&gt; や &lt;strong&gt;Marinara Timer&lt;/strong&gt; (シンプルなWebアプリ)&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;PC上での集中に特化したい&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Pomatez&lt;/strong&gt; など (デスクトップアプリでカスタマイズ可能)&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;まずはWebアプリの「Pomofocus」などから試してみて、慣れてきたらタスク管理と連携できる「Focus To-Do」のような多機能なアプリを検討するのがおすすめです。&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Example article title</title>
-      <link>http://localhost:1313/posts/hugo/2025-10-18-test2/</link>
-      <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hugo/2025-10-18-test2/</guid>
-      <description>&lt;p&gt;test2&lt;/p&gt;</description>
+      <title>ポモドーロタイマー2</title>
+      <link>http://localhost:1313/posts/%E3%83%9D%E3%83%A2%E3%83%89%E3%83%BC%E3%83%AD%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC2/</link>
+      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/%E3%83%9D%E3%83%A2%E3%83%89%E3%83%BC%E3%83%AD%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC2/</guid>
+      <description>&lt;p&gt;前の回答でご紹介したポモドーロタイマーの多くは、&lt;strong&gt;無料で使い始めることができます&lt;/strong&gt;。&lt;/p&gt;&#xA;&lt;p&gt;特に無料で基本的なポモドーロテクニックを実践できるのは以下のツールです。&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-webアプリ-インストール不要&#34;&gt;1. Webアプリ (インストール不要)&lt;/h3&gt;&#xA;&lt;p&gt;これらのWebアプリは、ブラウザさえあれば無料でフル機能にアクセスできることがほとんどです。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Pomofocus:&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;無料で利用できるシンプルなWebアプリです。&lt;/li&gt;&#xA;&lt;li&gt;基本的なポモドーロタイマー機能（時間設定、休憩時間の設定など）とタスクリスト機能が使えます。&lt;/li&gt;&#xA;&lt;li&gt;より高度な機能や特定の統計レポートなどが有料プランになる場合がありますが、タイマーとして使う分には無料版で十分です。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Marinara Timer:&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;これも無料で使えるWebベースのタイマーです。&lt;/li&gt;&#xA;&lt;li&gt;標準のポモドーロモードに加え、カスタム設定も無料で利用可能です。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Pomodoro Tracker (Webサイト):&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;シンプルなインターフェースのWeb版タイマーで、無償で必要最低限の機能を使えます。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-デスクトップアプリマルチプラットフォームアプリ&#34;&gt;2. デスクトップアプリ/マルチプラットフォームアプリ&lt;/h3&gt;&#xA;&lt;p&gt;これらのアプリは、無料でダウンロードして基本的な機能を利用できますが、一部の高度な機能（プロジェクト数の制限解除、詳細なレポート、デバイス間の同期など）が有料になる場合があります。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Focus To-Do:&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;無料版&lt;/strong&gt;でもポモドーロタイマーとタスク管理の基本的な機能は使えます。&lt;/li&gt;&#xA;&lt;li&gt;ただし、無料版では作成できる&lt;strong&gt;プロジェクト数に制限がある&lt;/strong&gt;（例：最大5つまで）などの制限が設けられていることがあります。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Pomatez:&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Windows、Mac、Linux対応のデスクトップアプリで、基本的に無料で利用できます。カスタマイズも可能です。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tomighty:&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Windows、Macなどで使えるシンプルなデスクトップタイマーで、無料で提供されています。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;【結論】&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;まずは**「Pomofocus」&lt;strong&gt;や&lt;/strong&gt;「Marinara Timer」&lt;strong&gt;といった&lt;/strong&gt;Webアプリ**を試すのが、&lt;strong&gt;最も手軽で無料で基本的な機能が使える&lt;/strong&gt;のでおすすめです。&lt;/p&gt;&#xA;&lt;p&gt;もしタスク管理と連携させたい場合は、&lt;strong&gt;「Focus To-Do」の無料版&lt;/strong&gt;を試してみて、機能が足りなくなったら有料版を検討すると良いでしょう。&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Example article title</title>
-      <link>http://localhost:1313/posts/hugo/2025-10-18-test3/</link>
+      <title>   </title>
+      <link>http://localhost:1313/posts/hugo/templates/template1/</link>
       <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hugo/2025-10-18-test3/</guid>
-      <description>&lt;p&gt;test3&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>これはテストです</title>
-      <link>http://localhost:1313/posts/hugo/2025-10-18-test4/</link>
-      <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hugo/2025-10-18-test4/</guid>
-      <description>&lt;p&gt;テストの文章です&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/hugo/templates/template1/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>

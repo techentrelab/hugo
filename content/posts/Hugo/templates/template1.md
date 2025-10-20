@@ -1,13 +1,13 @@
 ---
-title: タイトル2
-date: 2025-10-18
+title: "   "
+date: 2017-08-21
+lead: " "
 description: Example article description
 categories:
   - 随筆
 tags:
   - 徒然
 menu: main
-lead: リードの文
 comments: false
 authorbox: false
 pager: true
@@ -20,4 +20,4 @@ widgets:
   - taglist
 ---
 
-投稿の文章
+
