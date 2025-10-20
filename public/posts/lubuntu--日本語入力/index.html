@@ -3,7 +3,7 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title> - 徒然のままに</title>
+	<title>Lubuntu  日本語入力 - 徒然のままに</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="Example article description">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,7 +50,7 @@
 				
 			</a>
 		</li>
-		<li class="menu__item">
+		<li class="menu__item menu__item--active">
 			<a class="menu__link" href="/posts/lubuntu--%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%85%A5%E5%8A%9B/">
 				
 				<span class="menu__text">Lubuntu  日本語入力</span>
@@ -110,11 +110,46 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title"></h1>
+			<h1 class="post__title">Lubuntu  日本語入力</h1>
 			
 		</header>
-		<div class="content post__content clearfix">
-			
+		
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#lubuntu--日本語入力のセットアップガイド">Lubuntu  日本語入力のセットアップガイド</a>
+      <ul>
+        <li><a href="#日本語入力エンジンmozcの導入">日本語入力エンジン「Mozc」の導入</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<hr>
+<h2 id="lubuntu--日本語入力のセットアップガイド">Lubuntu  日本語入力のセットアップガイド</h2>
+<p>Lubuntu 19.04をインストールした直後、日本語表示は可能ですが、日本語入力はできません。これは、日本語変換エンジン「Mozc」が不足しているためです。また、中国・韓国語向けの不要なツールが日本語入力の邪魔をすることがあります。</p>
+<h3 id="日本語入力エンジンmozcの導入">日本語入力エンジン「Mozc」の導入</h3>
+<p>まず、日本語入力に必要な「fcitx-mozc」をインストールします。</p>
+<ol>
+<li>
+<p><strong>システムを更新し、<code>fcitx-mozc</code>をインストールします。</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
+</span></span><span style="display:flex;"><span>sudo apt install fcitx-mozc
+</span></span></code></pre></div></li>
+<li>
+<p><strong>再ログイン後、設定を確認します。</strong>
+ログアウトして再度ログインし、「入力メソッドの設定」を開いてください。以下の項目が表示されていれば、インストールは成功です。</p>
+<ul>
+<li>キーボード - 日本語</li>
+<li>Mozc</li>
+</ul>
+<p>これで日本語入力自体は可能になりますが、トレイアイコンが「歯車」マークになり、少し分かりにくいかもしれません。</p>
+</li>
+</ol>
+
 		</div>
 		<footer class="post__footer">
 			
@@ -123,6 +158,9 @@
 	<ul class="tags__list">
 		<li class="tags__item">
 			<a class="tags__link btn" href="/tags/%E5%BE%92%E7%84%B6/" rel="tag">徒然</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/linux/" rel="tag">linux</a>
 		</li>
 	</ul>
 </div>
@@ -133,15 +171,15 @@
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/posts/example-article-title/" rel="prev">
+		<a class="pager__link" href="/posts/obsidian%E3%81%A7%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%85%A5%E5%8A%9B/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">Example article title</p>
+			<p class="pager__title">Obsidianで日本語入力</p>
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/posts/%E3%83%9D%E3%83%A2%E3%83%89%E3%83%BC%E3%83%AD%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC2/" rel="next">
+		<a class="pager__link" href="/posts/1%E6%97%A5%E3%81%AE%E6%99%82%E9%96%93%E3%82%92%E6%9C%89%E5%8A%B9%E3%81%AB%E4%BD%BF%E3%81%86/" rel="next">
 			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">ポモドーロタイマー2</p>
+			<p class="pager__title">1日の時間を有効に使う</p>
 		</a>
 	</div>
 </nav>
@@ -175,6 +213,7 @@
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/linux/" title="Linux">Linux</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/money/" title="Money">Money</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/time/" title="Time">Time</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/work/" title="Work">Work</a>
