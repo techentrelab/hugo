@@ -14,6 +14,9 @@
     <loc>http://localhost:1313/posts/%E3%83%9D%E3%83%A2%E3%83%89%E3%83%BC%E3%83%AD%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC/</loc>
     <lastmod>2025-10-20T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/posts/%E5%B9%B4%E9%87%91%E5%8F%97%E7%B5%A6%E6%A8%A9%E8%80%85-%E5%8F%97%E5%8F%96%E6%A9%9F%E9%96%A2%E5%A4%89%E6%9B%B4%E5%B1%8A/</loc>
+    <lastmod>2025-10-20T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/%E5%BE%92%E7%84%B6/</loc>
     <lastmod>2025-10-20T00:00:00+00:00</lastmod>
   </url><url>
@@ -30,6 +33,15 @@
     <lastmod>2018-04-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/hugo/templates/template1/</loc>
+    <lastmod>2017-08-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/category-1/</loc>
+    <lastmod>2017-08-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/category-2/</loc>
+    <lastmod>2017-08-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/example-article-title/</loc>
     <lastmod>2017-08-21T00:00:00+00:00</lastmod>
   </url>
 </urlset>

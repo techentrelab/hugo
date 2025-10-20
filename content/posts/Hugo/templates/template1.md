@@ -1,7 +1,7 @@
 ---
-title: "   "
+title: ""
 date: 2017-08-21
-lead: " "
+lead: ""
 description: Example article description
 categories:
   - 随筆
