@@ -22,5 +22,12 @@
       <guid>http://localhost:1313/posts/lubuntu--%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%85%A5%E5%8A%9B/</guid>
       <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;lubuntu--日本語入力のセットアップガイド&#34;&gt;Lubuntu  日本語入力のセットアップガイド&lt;/h2&gt;&#xA;&lt;h3 id=&#34;日本語入力エンジンmozcの導入&#34;&gt;日本語入力エンジン「Mozc」の導入&lt;/h3&gt;&#xA;&lt;p&gt;まず、日本語入力に必要な「fcitx-mozc」をインストールします。&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;システムを更新し、&lt;code&gt;fcitx-mozc&lt;/code&gt;をインストールします。&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt update&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt install fcitx-mozc&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;再ログイン後、設定を確認します。&lt;/strong&gt;&#xA;ログアウトして再度ログインし、「入力メソッドの設定」を開いてください。以下の項目が表示されていれば、インストールは成功です。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;キーボード - 日本語&lt;/li&gt;&#xA;&lt;li&gt;Mozc&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
     </item>
+    <item>
+      <title>~/.profileと ~/.xprofile</title>
+      <link>http://localhost:1313/posts/profile%E3%81%A8xprofile/</link>
+      <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/profile%E3%81%A8xprofile/</guid>
+      <description>&lt;p&gt;&lt;code&gt;~/.profile&lt;/code&gt; と &lt;code&gt;~/.xprofile&lt;/code&gt; は、ユーザーのホームディレクトリ内にあるファイルなので、絶対パスは以下のようになります。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;~/.profile&lt;/code&gt;: &lt;code&gt;/home/ユーザー名/.profile&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;~/.xprofile&lt;/code&gt;: &lt;code&gt;/home/ユーザー名/.xprofile&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;ここで、「ユーザー名」はあなたのユーザー名に置き換えてください。&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

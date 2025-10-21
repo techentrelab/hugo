@@ -8,7 +8,13 @@
     <loc>http://localhost:1313/posts/fcitx%E3%81%AE%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3/</loc>
     <lastmod>2025-10-21T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/posts/fcitx%E3%81%AE%E8%87%AA%E5%8B%95%E8%B5%B7%E5%8B%95/</loc>
+    <lastmod>2025-10-21T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/learn/</loc>
+    <lastmod>2025-10-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/linux/</loc>
     <lastmod>2025-10-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/lubuntu%E3%81%A7fcitx5/</loc>
@@ -33,9 +39,6 @@
     <lastmod>2025-10-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/1%E6%97%A5%E3%81%AE%E6%99%82%E9%96%93%E3%82%92%E6%9C%89%E5%8A%B9%E3%81%AB%E4%BD%BF%E3%81%86/</loc>
-    <lastmod>2025-10-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/linux/</loc>
     <lastmod>2025-10-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/lubuntu--%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%85%A5%E5%8A%9B/</loc>
@@ -69,6 +72,9 @@
     <lastmod>2018-04-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/hugo/templates/template1/</loc>
+    <lastmod>2017-08-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/profile%E3%81%A8xprofile/</loc>
     <lastmod>2017-08-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/category-1/</loc>

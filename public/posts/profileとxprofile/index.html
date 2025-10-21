@@ -3,7 +3,7 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title> - 徒然のままに</title>
+	<title>~/.profileと ~/.xprofile - 徒然のままに</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="Example article description">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -85,10 +85,10 @@
 				
 			</a>
 		</li>
-		<li class="menu__item">
+		<li class="menu__item menu__item--active">
 			<a class="menu__link" href="/posts/profile%E3%81%A8xprofile/">
 				
-				<span class="menu__text">~/.profile` と ~/.xprofile</span>
+				<span class="menu__text">~/.profileと ~/.xprofile</span>
 				
 			</a>
 		</li>
@@ -145,11 +145,17 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title"></h1>
+			<h1 class="post__title">~/.profileと ~/.xprofile</h1>
 			
 		</header>
 		<div class="content post__content clearfix">
-			
+			<p><code>~/.profile</code> と <code>~/.xprofile</code> は、ユーザーのホームディレクトリ内にあるファイルなので、絶対パスは以下のようになります。</p>
+<ul>
+<li><code>~/.profile</code>: <code>/home/ユーザー名/.profile</code></li>
+<li><code>~/.xprofile</code>: <code>/home/ユーザー名/.xprofile</code></li>
+</ul>
+<p>ここで、「ユーザー名」はあなたのユーザー名に置き換えてください。</p>
+
 		</div>
 		<footer class="post__footer">
 			
@@ -158,6 +164,9 @@
 	<ul class="tags__list">
 		<li class="tags__item">
 			<a class="tags__link btn" href="/tags/%E5%BE%92%E7%84%B6/" rel="tag">徒然</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/linux/" rel="tag">linux</a>
 		</li>
 	</ul>
 </div>
@@ -168,15 +177,15 @@
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/posts/profile%E3%81%A8xprofile/" rel="prev">
+		<a class="pager__link" href="/posts/example-article-title/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">~/.profile` と ~/.xprofile</p>
+			<p class="pager__title">Example article title</p>
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/posts/%E3%83%9D%E3%83%A2%E3%83%89%E3%83%BC%E3%83%AD%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC2/" rel="next">
+		<a class="pager__link" href="/posts/hugo/templates/template1/" rel="next">
 			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">ポモドーロタイマー2</p>
+			<p class="pager__title"></p>
 		</a>
 	</div>
 </nav>

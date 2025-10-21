@@ -100,6 +100,13 @@
       <description></description>
     </item>
     <item>
+      <title>~/.profileと ~/.xprofile</title>
+      <link>http://localhost:1313/posts/profile%E3%81%A8xprofile/</link>
+      <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/profile%E3%81%A8xprofile/</guid>
+      <description>&lt;p&gt;&lt;code&gt;~/.profile&lt;/code&gt; と &lt;code&gt;~/.xprofile&lt;/code&gt; は、ユーザーのホームディレクトリ内にあるファイルなので、絶対パスは以下のようになります。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;~/.profile&lt;/code&gt;: &lt;code&gt;/home/ユーザー名/.profile&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;~/.xprofile&lt;/code&gt;: &lt;code&gt;/home/ユーザー名/.xprofile&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;ここで、「ユーザー名」はあなたのユーザー名に置き換えてください。&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Example article title</title>
       <link>http://localhost:1313/posts/example-article-title/</link>
       <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
