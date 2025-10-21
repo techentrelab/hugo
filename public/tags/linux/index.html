@@ -59,6 +59,13 @@
 			</a>
 		</li>
 		<li class="menu__item">
+			<a class="menu__link" href="/posts/fcitx%E3%81%AE%E8%87%AA%E5%8B%95%E8%B5%B7%E5%8B%95/">
+				
+				<span class="menu__text">Fcitxの自動起動</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
 			<a class="menu__link" href="/posts/lubuntu--%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%85%A5%E5%8A%9B/">
 				
 				<span class="menu__text">Lubuntu  日本語入力</span>
@@ -133,6 +140,68 @@
 	<header class="main__header">
 		<h1 class="main__title">Linux</h1>
 	</header><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/fcitx%E3%81%AE%E8%87%AA%E5%8B%95%E8%B5%B7%E5%8B%95/" rel="bookmark">
+			Fcitxの自動起動
+			</a>
+		</h2>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>Lubuntuのデスクトップ環境（LXQt）でFcitxの自動起動を設定する方法はいくつかあります。最も確実で推奨される方法をいくつかご紹介します。</p>
+<h3 id="1-lxqtの自動起動設定推奨">1. LXQtの自動起動設定（推奨）</h3>
+<p>LubuntuのLXQt環境には、アプリケーションの自動起動を管理するためのGUIツールがあります。</p>
+<ol>
+<li><strong>スタートメニューを開く:</strong> 画面左下のメニューアイコンをクリックします。</li>
+<li><strong>設定を開く:</strong> 「設定」または「Preferences」を選択します。</li>
+<li><strong>LXQt設定センターを開く:</strong> 「LXQt 設定センター」または「LXQt Settings Center」を選択します。</li>
+<li><strong>自動起動を選択:</strong> 左側のリストから「自動起動」または「Autostart」を選択します。</li>
+<li><strong>「追加」をクリック:</strong> 右上の「追加」ボタンをクリックします。</li>
+<li><strong>Fcitxのコマンドを入力:</strong>
+<ul>
+<li><strong>名前 (Name):</strong> <code>Fcitx</code> （わかりやすい名前）</li>
+<li><strong>コマンド (Command):</strong> <code>fcitx -d</code> （または <code>fcitx</code> のみでも動作することが多いですが、<code>-d</code> はデーモンとして起動するオプションです。）</li>
+<li><strong>説明 (Description):</strong> <code>Fcitx Input Method</code> （オプション）</li>
+</ul>
+</li>
+<li><strong>「OK」をクリック</strong>して追加し、設定センターを閉じます。</li>
+</ol>
+<p>これで次回ログイン時にFcitxが自動的に起動するはずです。</p>
+<h3 id="2-desktopファイルを直接配置する">2. .desktopファイルを直接配置する</h3>
+<p>もしGUIツールが見つからない、または使いたくない場合は、手動で <code>.desktop</code> ファイルを作成して配置することもできます。</p>
+<ol>
+<li>
+<p><strong>ファイルマネージャーを開く:</strong> 「PCManFM-Qt」などのファイルマネージャーを開きます。</p>
+</li>
+<li>
+<p><strong>ホームディレクトリに移動:</strong> 自分のホームディレクトリ (<code>/home/your_username/</code>) に移動します。</p>
+</li>
+<li>
+<p><strong>隠しファイルを表示:</strong> <code>Ctrl + H</code> を押すか、メニューから「表示」→「隠しファイルを表示」を選択して、隠しファイルを表示させます。</p>
+</li>
+<li>
+<p><strong><code>~/.config/autostart/</code> ディレクトリに移動:</strong>
+このディレクトリがなければ作成してください。
+<code>mkdir -p ~/.config/autostart/</code></p>
+</li>
+<li>
+<p><strong>新しいファイルを作成:</strong> <code>fcitx.desktop</code> という名前の新しいファイルを作成し、以下の内容を貼り付けます。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#66d9ef">[Desktop Entry]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Type</span><span style="color:#f92672">=</span><span style="color:#e6db74">Application</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Name</span><span style="color:#f92672">=</span><span style="color:#e6db74">Fcitx</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Comment</span><span style="color:#f92672">=</span><span style="color:#e6db74">Fcitx Input Method</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Exec</span><span style="color:#f92672">=</span><span style="color:#e6db74">fcitx -d</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Icon</span><span style="color:#f92672">=</span><span style="color:#e6db74">fcitx</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Terminal</span><span style="color:#f92672">=</span><span style="color:#e6db74">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Categories</span><span style="color:#f92672">=</span><span style="color:#e6db74">System;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">StartupNotify</span><span style="color:#f92672">=</span><span style="color:#e6db74">false</span>
+</span></span></code></pre></div></li>
+<li>
+<p>ファイルを保存します。</p>
+	</div>
+</article><article class="list__item post">
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
