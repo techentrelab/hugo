@@ -66,6 +66,13 @@
 			</a>
 		</li>
 		<li class="menu__item">
+			<a class="menu__link" href="/posts/lubuntu%E3%81%A7fcitx5/">
+				
+				<span class="menu__text">LubuntuでFcitx5</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
 			<a class="menu__link" href="/posts/obsidian%E3%81%A7%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%85%A5%E5%8A%9B/">
 				
 				<span class="menu__text">Obsidianで日本語入力</span>
@@ -205,6 +212,80 @@ export XMODIFIERS=@im=fcitx
 </ul>
 <h3 id="5-fcitxとデスクトップ環境の競合まれ">5. Fcitxとデスクトップ環境の競合（まれ）</h3>
 <p>まれに、FcitxとLubuntuの特定のバージョン（LXQtまたはLXDE）の間で、システムトレイの描画に関する競合が発生することがあります。</p>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/lubuntu%E3%81%A7fcitx5/" rel="bookmark">
+			LubuntuでFcitx5
+			</a>
+		</h2>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<h3 id="lubuntuでfcitx5を導入する手順">LubuntuでFcitx5を導入する手順</h3>
+<p>以下に、LubuntuにFcitx5を導入する一般的な手順を示します。</p>
+<ol>
+<li>
+<p><strong>システムを更新する:</strong>
+まず、パッケージリストを更新し、システムを最新の状態に保ちます。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
+</span></span><span style="display:flex;"><span>sudo apt upgrade
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Fcitx5と必要な入力メソッドをインストールする:</strong>
+Fcitx5本体と、日本語入力に必要なエンジン（例: Mozc）をインストールします。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install fcitx5 fcitx5-mozc fcitx5-frontend-qt5 fcitx5-frontend-gtk3 fcitx5-frontend-gtk4
+</span></span></code></pre></div><ul>
+<li><code>fcitx5</code>: Fcitx5本体</li>
+<li><code>fcitx5-mozc</code>: 日本語入力エンジン（Google 日本語入力のオープンソース版）</li>
+<li><code>fcitx5-frontend-qt5</code>, <code>fcitx5-frontend-gtk3</code>, <code>fcitx5-frontend-gtk4</code>: それぞれQt5、GTK3、GTK4アプリケーションでFcitx5が機能するためのモジュール。Lubuntu（LXQt）はQtベースですが、GTKアプリケーションも利用するため、これらもインストールしておくと良いでしょう。</li>
+</ul>
+<p><strong>他の入力メソッドが必要な場合:</strong></p>
+<ul>
+<li>Anthy: <code>fcitx5-anthy</code></li>
+<li>rime: <code>fcitx5-xkb-extras-rime</code> など</li>
+</ul>
+</li>
+<li>
+<p><strong>環境変数を設定する:</strong>
+Fcitx5をシステム全体の入力メソッドとして認識させるために、以下の環境変数を設定する必要があります。これは、ユーザーのホームディレクトリにある<code>.xprofile</code>ファイルに記述するのが一般的です。</p>
+<p><code>.xprofile</code>ファイルを作成または編集します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nano ~/.xprofile
+</span></span></code></pre></div><p>以下の行を追加します（もし既存の設定があれば、それに合わせて調整してください）。</p>
+<pre tabindex="0"><code>export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+export INPUT_METHOD=fcitx
+export SDL_IM_MODULE=fcitx
+</code></pre><p>ファイルを保存して閉じます（Ctrl+O, Enter, Ctrl+X）。</p>
+</li>
+<li>
+<p><strong>Fcitx5を自動起動に設定する:</strong>
+Fcitx5がLubuntuの起動時に自動的に開始されるように設定します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nano ~/.config/lxsession/Lubuntu/autostart
+</span></span></code></pre></div><p>以下の行を追加します（もし既存の設定でFcitx4などが起動している場合は、その行を削除またはコメントアウトしてから追加してください）。</p>
+<pre tabindex="0"><code>@fcitx5 -d
+</code></pre><p><code>-d</code> はデーモンとして起動するオプションです。</p>
+</li>
+<li>
+<p><strong>設定を反映させるために再起動する:</strong>
+上記の設定変更を適用するには、一度ログアウトして再度ログインするか、システムを再起動する必要があります。</p>
+</li>
+<li>
+<p><strong>Fcitx5を設定する:</strong>
+システムが起動したら、Fcitx5の設定ツールを開いて、入力メソッド（Mozcなど）を追加します。</p>
+<ul>
+<li>アプリケーションメニューから「Fcitx5設定」のような項目を探して起動するか、ターミナルで <code>fcitx5-configtool</code> と入力して起動します。</li>
+<li>「入力メソッド」タブに移動し、左下の「+」ボタンをクリックします。</li>
+<li>「現在の入力メソッドのみ表示」のチェックを外し、「Mozc」を検索して選択し、「OK」をクリックして追加します。</li>
+<li>必要に応じて、キーボードレイアウト（例: 日本語キーボード）も追加します。</li>
+</ul>
+</li>
+<li>
+<p><strong>動作確認:</strong>
+テキストエディタやウェブブラウザなどを開き、キーボードで日本語入力ができるか（通常は <code>半角/全角</code> キーで切り替え）確認します。Fcitx5のアイコンがシステムトレイに表示されているはずです。</p>
 	</div>
 </article><article class="list__item post">
 	
@@ -692,66 +773,6 @@ Linuxでは、FcitxまたはIBusが主要なIMEフレームワークです。ど
   </tbody>
 </table>
 <p>目的は抽象的で構いませんが、目標をこのSMART基準で定めることで、「目的を達成するための行動」が具体的に見えてくるようになります。</p>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/%E3%83%9D%E3%83%A2%E3%83%89%E3%83%BC%E3%83%AD%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC2/" rel="bookmark">
-			ポモドーロタイマー2
-			</a>
-		</h2>
-		<p class="list__lead post__lead"> </p>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>前の回答でご紹介したポモドーロタイマーの多くは、<strong>無料で使い始めることができます</strong>。</p>
-<p>特に無料で基本的なポモドーロテクニックを実践できるのは以下のツールです。</p>
-<h3 id="1-webアプリ-インストール不要">1. Webアプリ (インストール不要)</h3>
-<p>これらのWebアプリは、ブラウザさえあれば無料でフル機能にアクセスできることがほとんどです。</p>
-<ul>
-<li><strong>Pomofocus:</strong>
-<ul>
-<li>無料で利用できるシンプルなWebアプリです。</li>
-<li>基本的なポモドーロタイマー機能（時間設定、休憩時間の設定など）とタスクリスト機能が使えます。</li>
-<li>より高度な機能や特定の統計レポートなどが有料プランになる場合がありますが、タイマーとして使う分には無料版で十分です。</li>
-</ul>
-</li>
-<li><strong>Marinara Timer:</strong>
-<ul>
-<li>これも無料で使えるWebベースのタイマーです。</li>
-<li>標準のポモドーロモードに加え、カスタム設定も無料で利用可能です。</li>
-</ul>
-</li>
-<li><strong>Pomodoro Tracker (Webサイト):</strong>
-<ul>
-<li>シンプルなインターフェースのWeb版タイマーで、無償で必要最低限の機能を使えます。</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-デスクトップアプリマルチプラットフォームアプリ">2. デスクトップアプリ/マルチプラットフォームアプリ</h3>
-<p>これらのアプリは、無料でダウンロードして基本的な機能を利用できますが、一部の高度な機能（プロジェクト数の制限解除、詳細なレポート、デバイス間の同期など）が有料になる場合があります。</p>
-<ul>
-<li><strong>Focus To-Do:</strong>
-<ul>
-<li><strong>無料版</strong>でもポモドーロタイマーとタスク管理の基本的な機能は使えます。</li>
-<li>ただし、無料版では作成できる<strong>プロジェクト数に制限がある</strong>（例：最大5つまで）などの制限が設けられていることがあります。</li>
-</ul>
-</li>
-<li><strong>Pomatez:</strong>
-<ul>
-<li>Windows、Mac、Linux対応のデスクトップアプリで、基本的に無料で利用できます。カスタマイズも可能です。</li>
-</ul>
-</li>
-<li><strong>Tomighty:</strong>
-<ul>
-<li>Windows、Macなどで使えるシンプルなデスクトップタイマーで、無料で提供されています。</li>
-</ul>
-</li>
-</ul>
-<p><strong>【結論】</strong></p>
-<p>まずは**「Pomofocus」<strong>や</strong>「Marinara Timer」<strong>といった</strong>Webアプリ**を試すのが、<strong>最も手軽で無料で基本的な機能が使える</strong>のでおすすめです。</p>
-<p>もしタスク管理と連携させたい場合は、<strong>「Focus To-Do」の無料版</strong>を試してみて、機能が足りなくなったら有料版を検討すると良いでしょう。</p>
 	</div>
 </article>
 </main>
