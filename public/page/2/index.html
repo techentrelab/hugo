@@ -88,6 +88,13 @@
 			</a>
 		</li>
 		<li class="menu__item">
+			<a class="menu__link" href="/posts/python-%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/">
+				
+				<span class="menu__text">Python プログラミング</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
 			<a class="menu__link" href="/posts/profile%E3%81%A8xprofile/">
 				
 				<span class="menu__text">~/.profileと ~/.xprofile</span>
@@ -150,6 +157,13 @@
 				
 			</a>
 		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/posts/%E8%AB%8B%E6%B1%82%E6%9B%B8%E3%81%AEpdf/">
+				
+				<span class="menu__text">請求書のPDF</span>
+				
+			</a>
+		</li>
 	</ul>
 </nav>
 
@@ -160,6 +174,140 @@
 			
 <main class="main list" role="main">
 	<article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/obsidian%E3%81%A7%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%85%A5%E5%8A%9B/" rel="bookmark">
+			Obsidianで日本語入力
+			</a>
+		</h2>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>Linux環境でObsidianでのみ日本語入力ができない場合、WindowsやmacOSとは異なるアプローチが必要になることがあります。Linuxではデスクトップ環境（GNOME, KDE, Xfceなど）や使用しているIMEフレームワーク（Fcitx, IBusなど）によって設定方法が異なるため、それらを考慮した対処法を見ていきましょう。</p>
+<h3 id="linuxに特化した対処法">Linuxに特化した対処法</h3>
+<p>基本的な対処法（Obsidianの再起動、コミュニティプラグインの無効化、テーマの変更、Obsidianの再インストール）はWindows/macOSと共通ですので、まずこれらをお試しください。</p>
+<p><strong>追加で確認すべき点（Linux固有）:</strong></p>
+<ol>
+<li>
+<p><strong>IMEフレームワークの確認と設定:</strong>
+Linuxでは、FcitxまたはIBusが主要なIMEフレームワークです。どちらを使っているか、そしてその設定が正しいかを確認することが重要です。</p>
+<ul>
+<li>
+<p><strong>Fcitx (例: Fcitx5 + Mozc)</strong></p>
+<ul>
+<li><strong>Fcitx5の状態確認:</strong> ターミナルで <code>fcitx5</code> と入力してEnterを押し、エラーが出ないか確認します。既に起動している場合は「<code>Fcitx is already running.</code>」のようなメッセージが出ます。</li>
+<li><strong>入力メソッドの確認:</strong> <code>fcitx5-configtool</code> (または <code>fcitx-configtool</code> if using Fcitx4) を実行し、使用したい日本語入力（例: Mozc, Anthy）が「入力メソッド」リストに追加され、有効になっているか確認します。</li>
+<li><strong>環境変数の設定:</strong> <code>$HOME/.profile</code> や <code>$HOME/.xprofile</code>、またはデスクトップ環境の自動起動スクリプトなどに、以下の環境変数が設定されているか確認します。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export GTK_IM_MODULE<span style="color:#f92672">=</span>fcitx
+</span></span><span style="display:flex;"><span>export QT_IM_MODULE<span style="color:#f92672">=</span>fcitx
+</span></span><span style="display:flex;"><span>export XMODIFIERS<span style="color:#f92672">=</span>@im<span style="color:#f92672">=</span>fcitx
+</span></span><span style="display:flex;"><span>export DefaultIMModule<span style="color:#f92672">=</span>fcitx
+</span></span></code></pre></div>変更した場合は、ログアウト・ログインが必要です。</li>
+</ul>
+</li>
+<li>
+<p><strong>IBus (例: IBus + Mozc)</strong></p>
+<ul>
+<li><strong>IBusの状態確認:</strong> ターミナルで <code>ibus-daemon -x -d</code> と入力してEnterを押し、エラーが出ないか確認します。</li>
+<li><strong>入力メソッドの確認:</strong> <code>ibus-setup</code> を実行し、使用したい日本語入力（例: Mozc, Anthy）が「入力メソッド」リストに追加され、有効になっているか確認します。</li>
+<li><strong>環境変数の設定:</strong> <code>$HOME/.profile</code> や <code>$HOME/.xprofile</code> などに、以下の環境変数が設定されているか確認します。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export GTK_IM_MODULE<span style="color:#f92672">=</span>ibus
+</span></span><span style="display:flex;"><span>export QT_IM_MODULE<span style="color:#f92672">=</span>ibus
+</span></span><span style="display:flex;"><span>export XMODIFIERS<span style="color:#f92672">=</span>@im<span style="color:#f92672">=</span>ibus
+</span></span><span style="display:flex;"><span>export DefaultIMModule<span style="color:#f92672">=</span>ibus
+</span></span></code></pre></div>変更した場合は、ログアウト・ログインが必要です。</li>
+</ul>
+</li>
+<li>
+<p><strong>重要:</strong> どちらかのフレームワークしか使わないように設定し、両方が競合しないようにしてください。</p>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/%E3%83%9D%E3%83%A2%E3%83%89%E3%83%BC%E3%83%AD%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC/" rel="bookmark">
+			ポモドーロタイマー
+			</a>
+		</h2>
+		<p class="list__lead post__lead"> </p>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>パソコンで使えるポモドーロタイマーをお探しですね。様々な種類がありますが、特におすすめなのは以下の3つのタイプです。</p>
+<h3 id="1-タスク管理機能と連携したい方におすすめ">1. タスク管理機能と連携したい方におすすめ</h3>
+<h4 id="focus-to-do"><strong>Focus To-Do</strong></h4>
+<ul>
+<li><strong>特徴:</strong>
+<ul>
+<li>ポモドーロタイマーとTo Doリスト（タスク管理）が統合されています。</li>
+<li>作業時間の記録やレポート機能も充実しており、どのタスクにどれだけ集中したかを視覚的に把握できます。</li>
+<li>Windows、Macのデスクトップアプリのほか、Web版、スマホアプリもあり、データが同期できるため、場所を選ばず使えます。</li>
+</ul>
+</li>
+<li><strong>プラットフォーム:</strong> Windows、Mac、Web、Chrome拡張機能、iOS、Android</li>
+</ul>
+<h3 id="2-シンプルで手軽に始めたい方におすすめ">2. シンプルで手軽に始めたい方におすすめ</h3>
+<h4 id="pomofocus"><strong>Pomofocus</strong></h4>
+<ul>
+<li><strong>特徴:</strong>
+<ul>
+<li>非常にシンプルで直感的なデザインのWebアプリです。</li>
+<li>インストール不要でブラウザからすぐに使え、タスクをリストに追加してタイマーを回すだけという手軽さが魅力です。</li>
+<li>タイマーの時間やセット数などのカスタマイズも可能です。</li>
+</ul>
+</li>
+<li><strong>プラットフォーム:</strong> Web (ブラウザ)</li>
+</ul>
+<h4 id="marinara-timer"><strong>Marinara Timer</strong></h4>
+<ul>
+<li><strong>特徴:</strong>
+<ul>
+<li>これもシンプルなWebベースのタイマーです。</li>
+<li>カスタマイズ性が高く、標準のポモドーロ以外にも「カスタムタイマー」を作成できます。</li>
+<li>アプリの導入が禁止されている会社のPCなどでも、ブラウザがあれば利用できることが多いです。</li>
+</ul>
+</li>
+<li><strong>プラットフォーム:</strong> Web (ブラウザ)</li>
+</ul>
+<h3 id="3-多機能なデスクトップアプリを探している方におすすめ">3. 多機能なデスクトップアプリを探している方におすすめ</h3>
+<h4 id="pomatez-windowsmaclinux"><strong>Pomatez (Windows/Mac/Linux)</strong></h4>
+<ul>
+<li><strong>特徴:</strong>
+<ul>
+<li>Windows、Mac、Linuxで使えるクロスプラットフォームのデスクトップアプリです。</li>
+<li>標準のポモドーロサイクルに加え、時間やセット数の詳細なカスタマイズが可能です。</li>
+<li>タスクリスト機能もあり、次にやるべきタスクを管理できます。</li>
+</ul>
+</li>
+<li><strong>プラットフォーム:</strong> Windows、Mac、Linux</li>
+</ul>
+<h3 id="選び方のポイント">【選び方のポイント】</h3>
+<table>
+  <thead>
+      <tr>
+          <th>目的</th>
+          <th>おすすめのタイプ</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>タスク管理も一緒にしたい</strong></td>
+          <td><strong>Focus To-Do</strong> (タイマーとTo Doが一体化)</td>
+      </tr>
+      <tr>
+          <td><strong>インストールせず手軽に開始したい</strong></td>
+          <td><strong>Pomofocus</strong> や <strong>Marinara Timer</strong> (シンプルなWebアプリ)</td>
+      </tr>
+      <tr>
+          <td><strong>PC上での集中に特化したい</strong></td>
+          <td><strong>Pomatez</strong> など (デスクトップアプリでカスタマイズ可能)</td>
+      </tr>
+  </tbody>
+</table>
+<p>まずはWebアプリの「Pomofocus」などから試してみて、慣れてきたらタスク管理と連携できる「Focus To-Do」のような多機能なアプリを検討するのがおすすめです。</p>
+	</div>
+</article><article class="list__item post">
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
