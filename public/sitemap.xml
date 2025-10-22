@@ -5,6 +5,9 @@
     <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-10-22T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/cook/</loc>
+    <lastmod>2025-10-22T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/health/</loc>
     <lastmod>2025-10-22T00:00:00+00:00</lastmod>
   </url><url>
@@ -12,6 +15,9 @@
     <lastmod>2025-10-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-10-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/%E3%81%B2%E3%81%98%E3%81%8D%E3%81%AE%E7%85%AE%E7%89%A9/</loc>
     <lastmod>2025-10-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E5%BE%92%E7%84%B6/</loc>
