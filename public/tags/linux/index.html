@@ -66,6 +66,13 @@
 			</a>
 		</li>
 		<li class="menu__item">
+			<a class="menu__link" href="/posts/git-clone/">
+				
+				<span class="menu__text">git clone</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
 			<a class="menu__link" href="/posts/lubuntu--%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%85%A5%E5%8A%9B/">
 				
 				<span class="menu__text">Lubuntu  日本語入力</span>
@@ -178,6 +185,37 @@
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
+			<a href="/posts/git-clone/" rel="bookmark">
+			git clone
+			</a>
+		</h2>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		GitHubでリポジトリのZIPファイルをPCにダウンロードした場合、それは単なるスナップショット（特定の時点のファイル群）であり、Gitの履歴情報やリモートとの連携情報が失われています。したがって、ダウンロードしたZIPファイルから直接Gitリポジトリとして連携させることはできません。
+この場合、「Gitリポジトリをダウンロード」ではなく、「Gitリポジトリをクローン」するというアプローチを取る必要があります。クローンすることで、Gitの全ての履歴とリモートへの参照が設定された状態でローカルにリポジトリが作成されます。
+しかし、もしどうしてもZIPファイルでダウンロードしたファイル群から作業を始めたいのであれば、以下の手順でリモートリポジトリと連携させることができます。
+シナリオ1: GitHubリポジトリをまだクローンしていない場合 (推奨アプローチ) これが最も推奨される方法です。ZIPファイルをダウンロードして作業するのではなく、最初からgit cloneを使用します。
+ZIPファイルを削除する（または別の場所に移動する）: ZIPファイルでダウンロードしたディレクトリは不要になります。
+GitHubリポジトリのURLを取得する: GitHubのリポジトリページに行き、「Code」ボタンをクリックして、HTTPSまたはSSHのURLをコピーします。
+HTTPS: https://github.com/your-username/your-repo.git SSH: git@github.com:your-username/your-repo.git (SSHキーを設定済みの場合) コマンドラインでリポジトリをクローンする: 作業したいディレクトリに移動し、以下のコマンドを実行します。
+git clone &lt;リポジトリのURL&gt; 例:
+git clone https://github.com/techentrelab/hugo.git これにより、hugo という名前のディレクトリが作成され、その中にリポジトリの全てのファイルとGitの履歴、そしてoriginという名前のリモート設定が自動的に行われます。
+作成されたディレクトリに移動して作業を開始する:
+cd hugo これで、ローカルリポジトリがリモートのGitHubリポジトリと完全に連携された状態になります。git pull や git push がすぐに利用可能です。
+シナリオ2: ZIPファイルでダウンロードしたファイル群から作業を始めたい場合 (非推奨だが、手順は以下) この方法は、Gitの履歴をすべて破棄し、新しいリポジトリとして「再出発」するような形になります。既存のリモートリポジトリにコミットをプッシュしたい場合は、さらに複雑な手順が必要になる場合があります。
+前提: ZIPファイルを展開したディレクトリ（例: hugo）があり、その中にリポジトリのファイル群が入っているとします。
+展開したディレクトリに移動する:
+cd /path/to/your/unzipped/hugo 新しいGitリポジトリを初期化する: これにより、現在のディレクトリが新しいGitリポジトリとして認識されます。
+git init 全てのファイルをステージングする: ダウンロードしたファイル群を、新しいリポジトリの最初のコミットとして準備します。
+git add . 最初のコミットを作成する:
+git commit -m &#34;Initial commit from downloaded zip&#34; GitHubリポジトリのURLを取得する: シナリオ1と同じように、GitHubのリポジトリページからURLをコピーします。
+リモートリポジトリを追加する: origin という名前でGitHubリポジトリのURLを追加します。
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
 			<a href="/posts/fcitx%E3%81%AE%E8%87%AA%E5%8B%95%E8%B5%B7%E5%8B%95/" rel="bookmark">
 			Fcitxの自動起動
 			</a>
@@ -185,56 +223,16 @@
 		
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		<p>Lubuntuのデスクトップ環境（LXQt）でFcitxの自動起動を設定する方法はいくつかあります。最も確実で推奨される方法をいくつかご紹介します。</p>
-<h3 id="1-lxqtの自動起動設定推奨">1. LXQtの自動起動設定（推奨）</h3>
-<p>LubuntuのLXQt環境には、アプリケーションの自動起動を管理するためのGUIツールがあります。</p>
-<ol>
-<li><strong>スタートメニューを開く:</strong> 画面左下のメニューアイコンをクリックします。</li>
-<li><strong>設定を開く:</strong> 「設定」または「Preferences」を選択します。</li>
-<li><strong>LXQt設定センターを開く:</strong> 「LXQt 設定センター」または「LXQt Settings Center」を選択します。</li>
-<li><strong>自動起動を選択:</strong> 左側のリストから「自動起動」または「Autostart」を選択します。</li>
-<li><strong>「追加」をクリック:</strong> 右上の「追加」ボタンをクリックします。</li>
-<li><strong>Fcitxのコマンドを入力:</strong>
-<ul>
-<li><strong>名前 (Name):</strong> <code>Fcitx</code> （わかりやすい名前）</li>
-<li><strong>コマンド (Command):</strong> <code>fcitx -d</code> （または <code>fcitx</code> のみでも動作することが多いですが、<code>-d</code> はデーモンとして起動するオプションです。）</li>
-<li><strong>説明 (Description):</strong> <code>Fcitx Input Method</code> （オプション）</li>
-</ul>
-</li>
-<li><strong>「OK」をクリック</strong>して追加し、設定センターを閉じます。</li>
-</ol>
-<p>これで次回ログイン時にFcitxが自動的に起動するはずです。</p>
-<h3 id="2-desktopファイルを直接配置する">2. .desktopファイルを直接配置する</h3>
-<p>もしGUIツールが見つからない、または使いたくない場合は、手動で <code>.desktop</code> ファイルを作成して配置することもできます。</p>
-<ol>
-<li>
-<p><strong>ファイルマネージャーを開く:</strong> 「PCManFM-Qt」などのファイルマネージャーを開きます。</p>
-</li>
-<li>
-<p><strong>ホームディレクトリに移動:</strong> 自分のホームディレクトリ (<code>/home/your_username/</code>) に移動します。</p>
-</li>
-<li>
-<p><strong>隠しファイルを表示:</strong> <code>Ctrl + H</code> を押すか、メニューから「表示」→「隠しファイルを表示」を選択して、隠しファイルを表示させます。</p>
-</li>
-<li>
-<p><strong><code>~/.config/autostart/</code> ディレクトリに移動:</strong>
-このディレクトリがなければ作成してください。
-<code>mkdir -p ~/.config/autostart/</code></p>
-</li>
-<li>
-<p><strong>新しいファイルを作成:</strong> <code>fcitx.desktop</code> という名前の新しいファイルを作成し、以下の内容を貼り付けます。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#66d9ef">[Desktop Entry]</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Type</span><span style="color:#f92672">=</span><span style="color:#e6db74">Application</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Name</span><span style="color:#f92672">=</span><span style="color:#e6db74">Fcitx</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Comment</span><span style="color:#f92672">=</span><span style="color:#e6db74">Fcitx Input Method</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Exec</span><span style="color:#f92672">=</span><span style="color:#e6db74">fcitx -d</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Icon</span><span style="color:#f92672">=</span><span style="color:#e6db74">fcitx</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Terminal</span><span style="color:#f92672">=</span><span style="color:#e6db74">false</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Categories</span><span style="color:#f92672">=</span><span style="color:#e6db74">System;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">StartupNotify</span><span style="color:#f92672">=</span><span style="color:#e6db74">false</span>
-</span></span></code></pre></div></li>
-<li>
-<p>ファイルを保存します。</p>
+		Lubuntuのデスクトップ環境（LXQt）でFcitxの自動起動を設定する方法はいくつかあります。最も確実で推奨される方法をいくつかご紹介します。
+1. LXQtの自動起動設定（推奨） LubuntuのLXQt環境には、アプリケーションの自動起動を管理するためのGUIツールがあります。
+スタートメニューを開く: 画面左下のメニューアイコンをクリックします。 設定を開く: 「設定」または「Preferences」を選択します。 LXQt設定センターを開く: 「LXQt 設定センター」または「LXQt Settings Center」を選択します。 自動起動を選択: 左側のリストから「自動起動」または「Autostart」を選択します。 「追加」をクリック: 右上の「追加」ボタンをクリックします。 Fcitxのコマンドを入力: 名前 (Name): Fcitx （わかりやすい名前） コマンド (Command): fcitx -d （または fcitx のみでも動作することが多いですが、-d はデーモンとして起動するオプションです。） 説明 (Description): Fcitx Input Method （オプション） 「OK」をクリックして追加し、設定センターを閉じます。 これで次回ログイン時にFcitxが自動的に起動するはずです。
+2. .desktopファイルを直接配置する もしGUIツールが見つからない、または使いたくない場合は、手動で .desktop ファイルを作成して配置することもできます。
+ファイルマネージャーを開く: 「PCManFM-Qt」などのファイルマネージャーを開きます。
+ホームディレクトリに移動: 自分のホームディレクトリ (/home/your_username/) に移動します。
+隠しファイルを表示: Ctrl + H を押すか、メニューから「表示」→「隠しファイルを表示」を選択して、隠しファイルを表示させます。
+~/.config/autostart/ ディレクトリに移動: このディレクトリがなければ作成してください。 mkdir -p ~/.config/autostart/
+新しいファイルを作成: fcitx.desktop という名前の新しいファイルを作成し、以下の内容を貼り付けます。
+[Desktop Entry] Type=Application Name=Fcitx Comment=Fcitx Input Method Exec=fcitx -d Icon=fcitx Terminal=false Categories=System; StartupNotify=false ファイルを保存します。
 	</div>
 </article><article class="list__item post">
 	
@@ -247,25 +245,10 @@
 		
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		<hr>
-<h2 id="lubuntu--日本語入力のセットアップガイド">Lubuntu  日本語入力のセットアップガイド</h2>
-<h3 id="日本語入力エンジンmozcの導入">日本語入力エンジン「Mozc」の導入</h3>
-<p>まず、日本語入力に必要な「fcitx-mozc」をインストールします。</p>
-<ol>
-<li>
-<p><strong>システムを更新し、<code>fcitx-mozc</code>をインストールします。</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
-</span></span><span style="display:flex;"><span>sudo apt install fcitx-mozc
-</span></span></code></pre></div></li>
-<li>
-<p><strong>再ログイン後、設定を確認します。</strong>
-ログアウトして再度ログインし、「入力メソッドの設定」を開いてください。以下の項目が表示されていれば、インストールは成功です。</p>
-<ul>
-<li>キーボード - 日本語</li>
-<li>Mozc</li>
-</ul>
-</li>
-</ol>
+		 Lubuntu 日本語入力のセットアップガイド 日本語入力エンジン「Mozc」の導入 まず、日本語入力に必要な「fcitx-mozc」をインストールします。
+システムを更新し、fcitx-mozcをインストールします。
+sudo apt update sudo apt install fcitx-mozc 再ログイン後、設定を確認します。 ログアウトして再度ログインし、「入力メソッドの設定」を開いてください。以下の項目が表示されていれば、インストールは成功です。
+キーボード - 日本語 Mozc 
 	</div>
 </article><article class="list__item post">
 	
@@ -278,12 +261,8 @@
 		
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		<p><code>~/.profile</code> と <code>~/.xprofile</code> は、ユーザーのホームディレクトリ内にあるファイルなので、絶対パスは以下のようになります。</p>
-<ul>
-<li><code>~/.profile</code>: <code>/home/ユーザー名/.profile</code></li>
-<li><code>~/.xprofile</code>: <code>/home/ユーザー名/.xprofile</code></li>
-</ul>
-<p>ここで、「ユーザー名」はあなたのユーザー名に置き換えてください。</p>
+		~/.profile と ~/.xprofile は、ユーザーのホームディレクトリ内にあるファイルなので、絶対パスは以下のようになります。
+~/.profile: /home/ユーザー名/.profile ~/.xprofile: /home/ユーザー名/.xprofile ここで、「ユーザー名」はあなたのユーザー名に置き換えてください。
 	</div>
 </article>
 </main>

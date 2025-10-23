@@ -1,4 +1,4 @@
 baseURL = "http://example.org/" 
-languageCode = "ja-jp" 
+languageCode = "ja" 
 title = "徒然のままに" 
-theme = "Mainroad"
+theme = "mainroad"
