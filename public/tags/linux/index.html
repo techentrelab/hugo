@@ -52,6 +52,27 @@
 			</a>
 		</li>
 		<li class="menu__item">
+			<a class="menu__link" href="/posts/fcitx%E3%81%AE%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3/">
+				
+				<span class="menu__text">Fcitxのキーボードアイコン</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/posts/fcitx%E3%81%AE%E8%87%AA%E5%8B%95%E8%B5%B7%E5%8B%95/">
+				
+				<span class="menu__text">Fcitxの自動起動</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/posts/git-clone/">
+				
+				<span class="menu__text">git clone</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
 			<a class="menu__link" href="/posts/lubuntu--%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%85%A5%E5%8A%9B/">
 				
 				<span class="menu__text">Lubuntu  日本語入力</span>
@@ -59,9 +80,37 @@
 			</a>
 		</li>
 		<li class="menu__item">
+			<a class="menu__link" href="/posts/lubuntu%E3%81%A7fcitx5/">
+				
+				<span class="menu__text">LubuntuでFcitx5</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
 			<a class="menu__link" href="/posts/obsidian%E3%81%A7%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%85%A5%E5%8A%9B/">
 				
 				<span class="menu__text">Obsidianで日本語入力</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/posts/python-%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/">
+				
+				<span class="menu__text">Python プログラミング</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/posts/profile%E3%81%A8xprofile/">
+				
+				<span class="menu__text">~/.profileと ~/.xprofile</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/posts/%E3%81%B2%E3%81%98%E3%81%8D%E3%81%AE%E7%85%AE%E7%89%A9/">
+				
+				<span class="menu__text">ひじきの煮物</span>
 				
 			</a>
 		</li>
@@ -87,6 +136,13 @@
 			</a>
 		</li>
 		<li class="menu__item">
+			<a class="menu__link" href="/posts/%E5%B0%BF%E5%A4%B1%E7%A6%81/">
+				
+				<span class="menu__text">尿失禁</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
 			<a class="menu__link" href="/posts/%E5%B9%B4%E9%87%91%E5%8F%97%E7%B5%A6%E6%A8%A9%E8%80%85-%E5%8F%97%E5%8F%96%E6%A9%9F%E9%96%A2%E5%A4%89%E6%9B%B4%E5%B1%8A/">
 				
 				<span class="menu__text">年金受給権者 受取機関変更届</span>
@@ -97,6 +153,20 @@
 			<a class="menu__link" href="/posts/%E7%9B%AE%E7%9A%84%E3%82%92%E6%98%8E%E7%A2%BA%E3%81%AB/">
 				
 				<span class="menu__text">目的を明確に</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/posts/%E8%A8%98%E6%86%B6%E3%81%AE%E5%AE%9A%E7%9D%80/">
+				
+				<span class="menu__text">記憶の定着</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/posts/%E8%AB%8B%E6%B1%82%E6%9B%B8%E3%81%AEpdf/">
+				
+				<span class="menu__text">請求書のPDF</span>
 				
 			</a>
 		</li>
@@ -112,6 +182,138 @@
 	<header class="main__header">
 		<h1 class="main__title">Linux</h1>
 	</header><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/git-clone/" rel="bookmark">
+			git clone
+			</a>
+		</h2>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>GitHubでリポジトリのZIPファイルをPCにダウンロードした場合、それは単なるスナップショット（特定の時点のファイル群）であり、Gitの履歴情報やリモートとの連携情報が失われています。したがって、ダウンロードしたZIPファイルから直接Gitリポジトリとして連携させることはできません。</p>
+<p>この場合、<strong>「Gitリポジトリをダウンロード」ではなく、「Gitリポジトリをクローン」する</strong>というアプローチを取る必要があります。クローンすることで、Gitの全ての履歴とリモートへの参照が設定された状態でローカルにリポジトリが作成されます。</p>
+<p>しかし、もし<strong>どうしてもZIPファイルでダウンロードしたファイル群から作業を始めたい</strong>のであれば、以下の手順でリモートリポジトリと連携させることができます。</p>
+<hr>
+<h3 id="シナリオ1-githubリポジトリをまだクローンしていない場合-推奨アプローチ">シナリオ1: GitHubリポジトリをまだクローンしていない場合 (推奨アプローチ)</h3>
+<p>これが最も推奨される方法です。ZIPファイルをダウンロードして作業するのではなく、最初から<code>git clone</code>を使用します。</p>
+<ol>
+<li>
+<p><strong>ZIPファイルを削除する（または別の場所に移動する）:</strong> ZIPファイルでダウンロードしたディレクトリは不要になります。</p>
+</li>
+<li>
+<p><strong>GitHubリポジトリのURLを取得する:</strong>
+GitHubのリポジトリページに行き、「Code」ボタンをクリックして、HTTPSまたはSSHのURLをコピーします。</p>
+<ul>
+<li><strong>HTTPS:</strong> <code>https://github.com/your-username/your-repo.git</code></li>
+<li><strong>SSH:</strong> <code>git@github.com:your-username/your-repo.git</code> (SSHキーを設定済みの場合)</li>
+</ul>
+</li>
+<li>
+<p><strong>コマンドラインでリポジトリをクローンする:</strong>
+作業したいディレクトリに移動し、以下のコマンドを実行します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone &lt;リポジトリのURL&gt;
+</span></span></code></pre></div><p><strong>例:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/techentrelab/hugo.git
+</span></span></code></pre></div><p>これにより、<code>hugo</code> という名前のディレクトリが作成され、その中にリポジトリの全てのファイルとGitの履歴、そして<code>origin</code>という名前のリモート設定が自動的に行われます。</p>
+</li>
+<li>
+<p><strong>作成されたディレクトリに移動して作業を開始する:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd hugo
+</span></span></code></pre></div></li>
+</ol>
+<p>これで、ローカルリポジトリがリモートのGitHubリポジトリと完全に連携された状態になります。<code>git pull</code> や <code>git push</code> がすぐに利用可能です。</p>
+<hr>
+<h3 id="シナリオ2-zipファイルでダウンロードしたファイル群から作業を始めたい場合-非推奨だが手順は以下">シナリオ2: ZIPファイルでダウンロードしたファイル群から作業を始めたい場合 (非推奨だが、手順は以下)</h3>
+<p>この方法は、Gitの履歴をすべて破棄し、新しいリポジトリとして「再出発」するような形になります。既存のリモートリポジトリにコミットをプッシュしたい場合は、さらに複雑な手順が必要になる場合があります。</p>
+<p><strong>前提:</strong> ZIPファイルを展開したディレクトリ（例: <code>hugo</code>）があり、その中にリポジトリのファイル群が入っているとします。</p>
+<ol>
+<li>
+<p><strong>展開したディレクトリに移動する:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /path/to/your/unzipped/hugo
+</span></span></code></pre></div></li>
+<li>
+<p><strong>新しいGitリポジトリを初期化する:</strong>
+これにより、現在のディレクトリが新しいGitリポジトリとして認識されます。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git init
+</span></span></code></pre></div></li>
+<li>
+<p><strong>全てのファイルをステージングする:</strong>
+ダウンロードしたファイル群を、新しいリポジトリの最初のコミットとして準備します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .
+</span></span></code></pre></div></li>
+<li>
+<p><strong>最初のコミットを作成する:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Initial commit from downloaded zip&#34;</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>GitHubリポジトリのURLを取得する:</strong>
+シナリオ1と同じように、GitHubのリポジトリページからURLをコピーします。</p>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/fcitx%E3%81%AE%E8%87%AA%E5%8B%95%E8%B5%B7%E5%8B%95/" rel="bookmark">
+			Fcitxの自動起動
+			</a>
+		</h2>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>Lubuntuのデスクトップ環境（LXQt）でFcitxの自動起動を設定する方法はいくつかあります。最も確実で推奨される方法をいくつかご紹介します。</p>
+<h3 id="1-lxqtの自動起動設定推奨">1. LXQtの自動起動設定（推奨）</h3>
+<p>LubuntuのLXQt環境には、アプリケーションの自動起動を管理するためのGUIツールがあります。</p>
+<ol>
+<li><strong>スタートメニューを開く:</strong> 画面左下のメニューアイコンをクリックします。</li>
+<li><strong>設定を開く:</strong> 「設定」または「Preferences」を選択します。</li>
+<li><strong>LXQt設定センターを開く:</strong> 「LXQt 設定センター」または「LXQt Settings Center」を選択します。</li>
+<li><strong>自動起動を選択:</strong> 左側のリストから「自動起動」または「Autostart」を選択します。</li>
+<li><strong>「追加」をクリック:</strong> 右上の「追加」ボタンをクリックします。</li>
+<li><strong>Fcitxのコマンドを入力:</strong>
+<ul>
+<li><strong>名前 (Name):</strong> <code>Fcitx</code> （わかりやすい名前）</li>
+<li><strong>コマンド (Command):</strong> <code>fcitx -d</code> （または <code>fcitx</code> のみでも動作することが多いですが、<code>-d</code> はデーモンとして起動するオプションです。）</li>
+<li><strong>説明 (Description):</strong> <code>Fcitx Input Method</code> （オプション）</li>
+</ul>
+</li>
+<li><strong>「OK」をクリック</strong>して追加し、設定センターを閉じます。</li>
+</ol>
+<p>これで次回ログイン時にFcitxが自動的に起動するはずです。</p>
+<h3 id="2-desktopファイルを直接配置する">2. .desktopファイルを直接配置する</h3>
+<p>もしGUIツールが見つからない、または使いたくない場合は、手動で <code>.desktop</code> ファイルを作成して配置することもできます。</p>
+<ol>
+<li>
+<p><strong>ファイルマネージャーを開く:</strong> 「PCManFM-Qt」などのファイルマネージャーを開きます。</p>
+</li>
+<li>
+<p><strong>ホームディレクトリに移動:</strong> 自分のホームディレクトリ (<code>/home/your_username/</code>) に移動します。</p>
+</li>
+<li>
+<p><strong>隠しファイルを表示:</strong> <code>Ctrl + H</code> を押すか、メニューから「表示」→「隠しファイルを表示」を選択して、隠しファイルを表示させます。</p>
+</li>
+<li>
+<p><strong><code>~/.config/autostart/</code> ディレクトリに移動:</strong>
+このディレクトリがなければ作成してください。
+<code>mkdir -p ~/.config/autostart/</code></p>
+</li>
+<li>
+<p><strong>新しいファイルを作成:</strong> <code>fcitx.desktop</code> という名前の新しいファイルを作成し、以下の内容を貼り付けます。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#66d9ef">[Desktop Entry]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Type</span><span style="color:#f92672">=</span><span style="color:#e6db74">Application</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Name</span><span style="color:#f92672">=</span><span style="color:#e6db74">Fcitx</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Comment</span><span style="color:#f92672">=</span><span style="color:#e6db74">Fcitx Input Method</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Exec</span><span style="color:#f92672">=</span><span style="color:#e6db74">fcitx -d</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Icon</span><span style="color:#f92672">=</span><span style="color:#e6db74">fcitx</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Terminal</span><span style="color:#f92672">=</span><span style="color:#e6db74">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Categories</span><span style="color:#f92672">=</span><span style="color:#e6db74">System;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">StartupNotify</span><span style="color:#f92672">=</span><span style="color:#e6db74">false</span>
+</span></span></code></pre></div></li>
+<li>
+<p>ファイルを保存します。</p>
+	</div>
+</article><article class="list__item post">
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
@@ -141,6 +343,24 @@
 </ul>
 </li>
 </ol>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/profile%E3%81%A8xprofile/" rel="bookmark">
+			~/.profileと ~/.xprofile
+			</a>
+		</h2>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p><code>~/.profile</code> と <code>~/.xprofile</code> は、ユーザーのホームディレクトリ内にあるファイルなので、絶対パスは以下のようになります。</p>
+<ul>
+<li><code>~/.profile</code>: <code>/home/ユーザー名/.profile</code></li>
+<li><code>~/.xprofile</code>: <code>/home/ユーザー名/.xprofile</code></li>
+</ul>
+<p>ここで、「ユーザー名」はあなたのユーザー名に置き換えてください。</p>
 	</div>
 </article>
 </main>
