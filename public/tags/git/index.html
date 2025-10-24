@@ -164,13 +164,6 @@
 			</a>
 		</li>
 		<li class="menu__item">
-			<a class="menu__link" href="/posts/%E8%85%8E%E8%87%93%E3%81%AE%E7%AE%A1%E7%90%86/">
-				
-				<span class="menu__text">腎臓の管理</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
 			<a class="menu__link" href="/posts/%E8%A8%98%E6%86%B6%E3%81%AE%E5%AE%9A%E7%9D%80/">
 				
 				<span class="menu__text">記憶の定着</span>
@@ -206,25 +199,64 @@
 		
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		GitHubでリポジトリのZIPファイルをPCにダウンロードした場合、それは単なるスナップショット（特定の時点のファイル群）であり、Gitの履歴情報やリモートとの連携情報が失われています。したがって、ダウンロードしたZIPファイルから直接Gitリポジトリとして連携させることはできません。
-この場合、「Gitリポジトリをダウンロード」ではなく、「Gitリポジトリをクローン」するというアプローチを取る必要があります。クローンすることで、Gitの全ての履歴とリモートへの参照が設定された状態でローカルにリポジトリが作成されます。
-しかし、もしどうしてもZIPファイルでダウンロードしたファイル群から作業を始めたいのであれば、以下の手順でリモートリポジトリと連携させることができます。
-シナリオ1: GitHubリポジトリをまだクローンしていない場合 (推奨アプローチ) これが最も推奨される方法です。ZIPファイルをダウンロードして作業するのではなく、最初からgit cloneを使用します。
-ZIPファイルを削除する（または別の場所に移動する）: ZIPファイルでダウンロードしたディレクトリは不要になります。
-GitHubリポジトリのURLを取得する: GitHubのリポジトリページに行き、「Code」ボタンをクリックして、HTTPSまたはSSHのURLをコピーします。
-HTTPS: https://github.com/your-username/your-repo.git SSH: git@github.com:your-username/your-repo.git (SSHキーを設定済みの場合) コマンドラインでリポジトリをクローンする: 作業したいディレクトリに移動し、以下のコマンドを実行します。
-git clone &lt;リポジトリのURL&gt; 例:
-git clone https://github.com/techentrelab/hugo.git これにより、hugo という名前のディレクトリが作成され、その中にリポジトリの全てのファイルとGitの履歴、そしてoriginという名前のリモート設定が自動的に行われます。
-作成されたディレクトリに移動して作業を開始する:
-cd hugo これで、ローカルリポジトリがリモートのGitHubリポジトリと完全に連携された状態になります。git pull や git push がすぐに利用可能です。
-シナリオ2: ZIPファイルでダウンロードしたファイル群から作業を始めたい場合 (非推奨だが、手順は以下) この方法は、Gitの履歴をすべて破棄し、新しいリポジトリとして「再出発」するような形になります。既存のリモートリポジトリにコミットをプッシュしたい場合は、さらに複雑な手順が必要になる場合があります。
-前提: ZIPファイルを展開したディレクトリ（例: hugo）があり、その中にリポジトリのファイル群が入っているとします。
-展開したディレクトリに移動する:
-cd /path/to/your/unzipped/hugo 新しいGitリポジトリを初期化する: これにより、現在のディレクトリが新しいGitリポジトリとして認識されます。
-git init 全てのファイルをステージングする: ダウンロードしたファイル群を、新しいリポジトリの最初のコミットとして準備します。
-git add . 最初のコミットを作成する:
-git commit -m &#34;Initial commit from downloaded zip&#34; GitHubリポジトリのURLを取得する: シナリオ1と同じように、GitHubのリポジトリページからURLをコピーします。
-リモートリポジトリを追加する: origin という名前でGitHubリポジトリのURLを追加します。
+		<p>GitHubでリポジトリのZIPファイルをPCにダウンロードした場合、それは単なるスナップショット（特定の時点のファイル群）であり、Gitの履歴情報やリモートとの連携情報が失われています。したがって、ダウンロードしたZIPファイルから直接Gitリポジトリとして連携させることはできません。</p>
+<p>この場合、<strong>「Gitリポジトリをダウンロード」ではなく、「Gitリポジトリをクローン」する</strong>というアプローチを取る必要があります。クローンすることで、Gitの全ての履歴とリモートへの参照が設定された状態でローカルにリポジトリが作成されます。</p>
+<p>しかし、もし<strong>どうしてもZIPファイルでダウンロードしたファイル群から作業を始めたい</strong>のであれば、以下の手順でリモートリポジトリと連携させることができます。</p>
+<hr>
+<h3 id="シナリオ1-githubリポジトリをまだクローンしていない場合-推奨アプローチ">シナリオ1: GitHubリポジトリをまだクローンしていない場合 (推奨アプローチ)</h3>
+<p>これが最も推奨される方法です。ZIPファイルをダウンロードして作業するのではなく、最初から<code>git clone</code>を使用します。</p>
+<ol>
+<li>
+<p><strong>ZIPファイルを削除する（または別の場所に移動する）:</strong> ZIPファイルでダウンロードしたディレクトリは不要になります。</p>
+</li>
+<li>
+<p><strong>GitHubリポジトリのURLを取得する:</strong>
+GitHubのリポジトリページに行き、「Code」ボタンをクリックして、HTTPSまたはSSHのURLをコピーします。</p>
+<ul>
+<li><strong>HTTPS:</strong> <code>https://github.com/your-username/your-repo.git</code></li>
+<li><strong>SSH:</strong> <code>git@github.com:your-username/your-repo.git</code> (SSHキーを設定済みの場合)</li>
+</ul>
+</li>
+<li>
+<p><strong>コマンドラインでリポジトリをクローンする:</strong>
+作業したいディレクトリに移動し、以下のコマンドを実行します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone &lt;リポジトリのURL&gt;
+</span></span></code></pre></div><p><strong>例:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/techentrelab/hugo.git
+</span></span></code></pre></div><p>これにより、<code>hugo</code> という名前のディレクトリが作成され、その中にリポジトリの全てのファイルとGitの履歴、そして<code>origin</code>という名前のリモート設定が自動的に行われます。</p>
+</li>
+<li>
+<p><strong>作成されたディレクトリに移動して作業を開始する:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd hugo
+</span></span></code></pre></div></li>
+</ol>
+<p>これで、ローカルリポジトリがリモートのGitHubリポジトリと完全に連携された状態になります。<code>git pull</code> や <code>git push</code> がすぐに利用可能です。</p>
+<hr>
+<h3 id="シナリオ2-zipファイルでダウンロードしたファイル群から作業を始めたい場合-非推奨だが手順は以下">シナリオ2: ZIPファイルでダウンロードしたファイル群から作業を始めたい場合 (非推奨だが、手順は以下)</h3>
+<p>この方法は、Gitの履歴をすべて破棄し、新しいリポジトリとして「再出発」するような形になります。既存のリモートリポジトリにコミットをプッシュしたい場合は、さらに複雑な手順が必要になる場合があります。</p>
+<p><strong>前提:</strong> ZIPファイルを展開したディレクトリ（例: <code>hugo</code>）があり、その中にリポジトリのファイル群が入っているとします。</p>
+<ol>
+<li>
+<p><strong>展開したディレクトリに移動する:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /path/to/your/unzipped/hugo
+</span></span></code></pre></div></li>
+<li>
+<p><strong>新しいGitリポジトリを初期化する:</strong>
+これにより、現在のディレクトリが新しいGitリポジトリとして認識されます。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git init
+</span></span></code></pre></div></li>
+<li>
+<p><strong>全てのファイルをステージングする:</strong>
+ダウンロードしたファイル群を、新しいリポジトリの最初のコミットとして準備します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .
+</span></span></code></pre></div></li>
+<li>
+<p><strong>最初のコミットを作成する:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Initial commit from downloaded zip&#34;</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>GitHubリポジトリのURLを取得する:</strong>
+シナリオ1と同じように、GitHubのリポジトリページからURLをコピーします。</p>
 	</div>
 </article>
 </main>

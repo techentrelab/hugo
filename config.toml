@@ -1,5 +1,5 @@
 baseurl = "/"
-title = "Mainroad"
+title = "mainroad"
 languageCode = "ja"
 paginate = "10" # Number of posts per page
 theme = "mainroad"
