@@ -3,7 +3,7 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Git - 徒然のままに</title>
+	<title>Living - 徒然のままに</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,7 @@
 
 	<link rel="stylesheet" href="/css/style.css">
 	
-	<link rel="alternate" type="application/rss+xml" href="/tags/git/index.xml" title="徒然のままに">
+	<link rel="alternate" type="application/rss+xml" href="/tags/living/index.xml" title="徒然のままに">
 
 	<link rel="shortcut icon" href="/favicon.ico">
 		
@@ -194,37 +194,31 @@
 			
 <main class="main list" role="main">
 	<header class="main__header">
-		<h1 class="main__title">Git</h1>
+		<h1 class="main__title">Living</h1>
 	</header><article class="list__item post">
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
-			<a href="/posts/git-clone/" rel="bookmark">
-			git clone
+			<a href="/posts/2d-vs-3d/" rel="bookmark">
+			クレジットカード認証：2D vs 3D
 			</a>
 		</h2>
 		
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		GitHubでリポジトリのZIPファイルをPCにダウンロードした場合、それは単なるスナップショット（特定の時点のファイル群）であり、Gitの履歴情報やリモートとの連携情報が失われています。したがって、ダウンロードしたZIPファイルから直接Gitリポジトリとして連携させることはできません。
-この場合、「Gitリポジトリをダウンロード」ではなく、「Gitリポジトリをクローン」するというアプローチを取る必要があります。クローンすることで、Gitの全ての履歴とリモートへの参照が設定された状態でローカルにリポジトリが作成されます。
-しかし、もしどうしてもZIPファイルでダウンロードしたファイル群から作業を始めたいのであれば、以下の手順でリモートリポジトリと連携させることができます。
-シナリオ1: GitHubリポジトリをまだクローンしていない場合 (推奨アプローチ) これが最も推奨される方法です。ZIPファイルをダウンロードして作業するのではなく、最初からgit cloneを使用します。
-ZIPファイルを削除する（または別の場所に移動する）: ZIPファイルでダウンロードしたディレクトリは不要になります。
-GitHubリポジトリのURLを取得する: GitHubのリポジトリページに行き、「Code」ボタンをクリックして、HTTPSまたはSSHのURLをコピーします。
-HTTPS: https://github.com/your-username/your-repo.git SSH: git@github.com:your-username/your-repo.git (SSHキーを設定済みの場合) コマンドラインでリポジトリをクローンする: 作業したいディレクトリに移動し、以下のコマンドを実行します。
-git clone &lt;リポジトリのURL&gt; 例:
-git clone https://github.com/techentrelab/hugo.git これにより、hugo という名前のディレクトリが作成され、その中にリポジトリの全てのファイルとGitの履歴、そしてoriginという名前のリモート設定が自動的に行われます。
-作成されたディレクトリに移動して作業を開始する:
-cd hugo これで、ローカルリポジトリがリモートのGitHubリポジトリと完全に連携された状態になります。git pull や git push がすぐに利用可能です。
-シナリオ2: ZIPファイルでダウンロードしたファイル群から作業を始めたい場合 (非推奨だが、手順は以下) この方法は、Gitの履歴をすべて破棄し、新しいリポジトリとして「再出発」するような形になります。既存のリモートリポジトリにコミットをプッシュしたい場合は、さらに複雑な手順が必要になる場合があります。
-前提: ZIPファイルを展開したディレクトリ（例: hugo）があり、その中にリポジトリのファイル群が入っているとします。
-展開したディレクトリに移動する:
-cd /path/to/your/unzipped/hugo 新しいGitリポジトリを初期化する: これにより、現在のディレクトリが新しいGitリポジトリとして認識されます。
-git init 全てのファイルをステージングする: ダウンロードしたファイル群を、新しいリポジトリの最初のコミットとして準備します。
-git add . 最初のコミットを作成する:
-git commit -m &#34;Initial commit from downloaded zip&#34; GitHubリポジトリのURLを取得する: シナリオ1と同じように、GitHubのリポジトリページからURLをコピーします。
-リモートリポジトリを追加する: origin という名前でGitHubリポジトリのURLを追加します。
+		クレジットカードの認証方法には、主に「2D認証」と「3Dセキュア（3D認証）」があります。
+2D認証（従来の認証方法） 2D認証は、最も基本的なクレジットカード決済の認証方法です。主に以下の情報を使用します。
+カード番号 有効期限 セキュリティコード（CVC/CVV）：カード裏面の署名欄にある3桁または4桁の数字。 これらの情報は、オンラインショッピングサイトなどで入力することで認証が行われます。
+メリット:
+入力項目が少なく、手軽に決済できる。 デメリット:
+カード情報が盗まれた場合、不正利用されるリスクがある。 なりすましに弱い。 3Dセキュア（3D認証） 3Dセキュアは、オンラインショッピングでのセキュリティを強化するための本人認証サービスです。Visaでは「Visa Secure（旧: Verified by Visa）」、Mastercardでは「Mastercard ID Check（旧: Mastercard SecureCode）」、JCBでは「J/Secure」、American Expressでは「SafeKey」などの名称で提供されています。
+2D認証の情報に加えて、カード会社に事前に登録したパスワードやワンタイムパスワードなどを入力することで、より厳格な本人確認を行います。
+3Dセキュアの主な認証方法:
+事前に設定したパスワード: カード会社が提供するWebサイトで、自分でパスワードを登録し、決済時にそのパスワードを入力する方法。 ワンタイムパスワード: 決済時に、登録済みの携帯電話やEメールアドレスにSMSやメールで送られてくる一度限り有効なパスワードを入力する方法。 生体認証: スマートフォンやPCの指紋認証や顔認証機能を利用して本人確認を行う方法。 リスクベース認証: ユーザーのデバイス情報、IPアドレス、購入履歴などから不正利用のリスクを判断し、リスクが低いと判断された場合は追加認証なしで決済が完了する場合もあります。 3Dセキュアの仕組みの例:
+オンラインショップでクレジットカード情報を入力し、決済ボタンを押します。 カード会社の認証画面に遷移します。 事前に設定したパスワードや、SMSで送られてきたワンタイムパスワードなどを入力します。 本人確認が成功すると、決済が完了します。 メリット:
+セキュリティが大幅に向上し、不正利用のリスクが低減する。 万が一カード情報が漏洩しても、パスワードがなければ不正利用されにくい。 不正利用された場合の補償対象となりやすい。 デメリット:
+追加のパスワード入力が必要になるため、決済に手間がかかることがある。 3Dセキュアに対応していないサイトでは利用できない。 まとめ 2D認証：カード情報のみで認証する、基本的な方法。 3Dセキュア：カード情報に加えて、パスワードなどで本人確認を行う、より安全な方法。 現在では、オンラインショッピングでのセキュリティ強化のため、3Dセキュアの利用が推奨されています。カード会社によっては、3Dセキュアの利用を必須としている場合もあります。
+もしよろしければ、これらの認証方法を図解したイラストを作成しましょうか？
 	</div>
 </article>
 </main>
