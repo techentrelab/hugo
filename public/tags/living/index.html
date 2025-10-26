@@ -213,41 +213,78 @@
 		
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		<hr>
-<p>CopyQは、コピー＆ペーストの履歴を管理し、生産性を向上させるための非常に便利なオープンソースのクリップボードマネージャーです。テキストだけでなく、画像なども記憶することができます。</p>
-<h3 id="1-インストールと起動">1. インストールと起動</h3>
-<p>CopyQはWindows、macOS、Linuxで利用可能です。
-公式サイトからダウンロードしてインストールするか、お使いのOSのパッケージマネージャー（例：Ubuntuなら<code>sudo apt install copyq</code>）を使ってインストールしてください。
-インストール後、アプリケーションを起動すると、通常はシステムトレイ（Windowsのタスクバー右端、macOSのメニューバー、Linuxのシステムトレイなど）にCopyQのアイコンが表示されます。</p>
-<h3 id="2-クリップボード履歴の自動記録">2. クリップボード履歴の自動記録</h3>
-<p>CopyQがバックグラウンドで実行されている間は、普段通りにテキストや画像をコピー（<code>Ctrl+C</code>または<code>Cmd+C</code>）するだけで、その内容が自動的にCopyQの履歴に保存されていきます。特別な操作は必要ありません。</p>
-<h3 id="3-クリップボード履歴の表示と選択">3. クリップボード履歴の表示と選択</h3>
-<p>保存された履歴を表示するには、以下のいずれかの操作を行います。</p>
+		<p>Espansoは、Mac、Windows、Linuxで利用できるオープンソースのテキスト拡張ツールです。頻繁に入力する単語、フレーズ、コードスニペットなどを短縮形に変換して入力の手間を省くことができます。</p>
+<h3 id="espansoの基本的な使い方">Espansoの基本的な使い方</h3>
+<ol>
+<li>
+<p><strong>インストール</strong>:
+まず、Espansoを公式サイトからダウンロードしてインストールします。各OSごとのインストール手順に従ってください。</p>
+</li>
+<li>
+<p><strong>設定ファイルの場所</strong>:
+Espansoの設定ファイルは通常以下の場所にあります。</p>
 <ul>
-<li><strong>システムトレイのアイコンをクリック</strong>: CopyQのアイコンを左クリックすると、履歴が表示されるメインウィンドウが開きます。</li>
-<li><strong>ショートカットキーを使用</strong>: デフォルトではWindowsで<code>Win + V</code>、macOSで<code>Cmd + Grave Accent (</code>)<code>、Linuxで</code>Ctrl + Alt + H`などのショートカットが設定されています（設定で変更可能）。</li>
+<li><strong>macOS</strong>: <code>~/Library/Application Support/espanso/match/</code></li>
+<li><strong>Windows</strong>: <code>%APPDATA%\espanso\match\</code></li>
+<li><strong>Linux</strong>: <code>~/.config/espanso/match/</code></li>
 </ul>
-<p>開いた履歴ウィンドウには、コピーした内容が新しいものから順に一覧表示されます。</p>
-<p>このウィンドウで、以下の操作が可能です。</p>
+<p>この<code>match</code>ディレクトリ内に、拡張ルールを定義するYAMLファイルを作成します。</p>
+</li>
+<li>
+<p><strong>基本的なルールの作成</strong>:
+<code>match</code>ディレクトリ内に<code>default.yml</code>（または任意の名前の<code>.yml</code>ファイル）を作成し、以下のように記述します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># default.yml</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">matches</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">trigger</span>: <span style="color:#e6db74">&#34;:date&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">replace</span>: <span style="color:#e6db74">&#34;{{DATE}}&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">trigger</span>: <span style="color:#e6db74">&#34;:greet&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">replace</span>: <span style="color:#e6db74">&#34;こんにちは！&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">trigger</span>: <span style="color:#e6db74">&#34;:email&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">replace</span>: <span style="color:#e6db74">&#34;your.email@example.com&#34;</span>
+</span></span></code></pre></div><ul>
+<li><code>trigger</code>: 短縮形（これを入力すると拡張されます）。通常はコロン <code>:</code> から始めるのが一般的です。</li>
+<li><code>replace</code>: <code>trigger</code>が入力されたときに置き換えられるテキストです。</li>
+<li><code>{{DATE}}</code>: Espansoが提供する組み込み変数で、現在の日付に自動的に置き換えられます。</li>
+</ul>
+</li>
+<li>
+<p><strong>Espansoの再起動または再読み込み</strong>:
+設定ファイルを変更したら、Espansoを再起動するか、トレイアイコンから「Reload Config」を選択して設定を再読み込みします。</p>
+</li>
+<li>
+<p><strong>使ってみる</strong>:
+テキストエディタやブラウザのテキストフィールドなどで、設定した<code>:date</code>や<code>:greet</code>と入力してみてください。自動的に定義したテキストに置き換わるはずです。</p>
+</li>
+</ol>
+<h3 id="より高度な使い方">より高度な使い方</h3>
 <ul>
-<li><strong>上下矢印キー</strong>: 目的の項目を選択します。</li>
-<li><strong>Enterキー</strong>: 選択した項目が現在のクリップボードにコピーされ、すぐにアプリケーションに貼り付け（<code>Ctrl+V</code>または<code>Cmd+V</code>）できるようになります。</li>
-<li><strong>数字キー (1, 2, 3&hellip;)</strong>: 一覧の上から順に1番目の項目、2番目の項目、&hellip;がクリップボードにコピーされます。</li>
-<li><strong>Spaceキー</strong>: 選択した項目の内容をプレビュー表示します（長いテキストや画像の場合に便利です）。</li>
-</ul>
-<h3 id="4-履歴の検索機能">4. 履歴の検索機能</h3>
-<p>履歴ウィンドウの下部には検索バーがあります。ここにキーワードを入力すると、保存されている履歴の中から、そのキーワードを含む項目だけを絞り込んで表示できます。これにより、大量の履歴の中から目的の項目を素早く見つけることができます。</p>
-<h3 id="5-アイテムの管理と編集">5. アイテムの管理と編集</h3>
-<p>履歴ウィンドウで任意の項目を右クリックすると、以下のようなオプションが表示されます。</p>
-<ul>
-<li><strong>Edit (編集)</strong>: 選択したテキストの内容を直接編集することができます。</li>
-<li><strong>Remove (削除)</strong>: 選択した項目を履歴から削除します。</li>
-<li><strong>Mark as Starred (お気に入りとしてマーク)</strong>: よく使う項目を「お気に入り」としてマークすることで、履歴の先頭に固定表示したり、特定のタブに保存したりできます。これにより、重要な項目を失わずに素早くアクセスできます。</li>
-<li><strong>Move to Tab (タブへ移動)</strong>: 複数のタブを作成している場合、項目を別のタブに移動して整理することができます。</li>
-</ul>
-<h3 id="6-設定の変更とカスタマイズ">6. 設定の変更とカスタマイズ</h3>
-<p>システムトレイのCopyQアイコンを右クリックし、「Show/Hide (表示/非表示)」または「Preferences (設定)」を選択すると、詳細な設定ダイアログが開きます。</p>
-<p>ここで、CopyQの様々な動作をカスタマイズできます。</p>
+<li>
+<p><strong>シェルコマンドの実行</strong>:
+Espansoは、シェルコマンドの出力を挿入することもできます。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">matches</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">trigger</span>: <span style="color:#e6db74">&#34;:ip&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">replace</span>: <span style="color:#e6db74">&#34;{{output}}&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">vars</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">output</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">type</span>: <span style="color:#ae81ff">shell</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">params</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">cmd</span>: <span style="color:#e6db74">&#34;curl ifconfig.me&#34;</span>
+</span></span></code></pre></div><p><code>:ip</code>と入力すると、外部IPアドレスが表示されます。</p>
+</li>
+<li>
+<p><strong>スクリプトの実行</strong>:
+Pythonなどのスクリプトを実行し、その出力を利用することも可能です。</p>
+</li>
+<li>
+<p><strong>フォームの作成</strong>:
+複数の入力が必要な場合、フォームを作成して対話的に入力を促すことができます。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">matches</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">trigger</span>: <span style="color:#e6db74">&#34;:todo&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">form</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      What needs to be done?
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      [[task]]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">replace</span>: <span style="color:#e6db74">&#34;- [ ] {{task}}&#34;</span>
+</span></span></code></pre></div><p><code>:todo</code>と入力すると、入力プロンプトが表示されます。</p>
 	</div>
 </article><article class="list__item post">
 	

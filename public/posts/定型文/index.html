@@ -212,6 +212,8 @@
   <ul>
     <li>
       <ul>
+        <li><a href="#espansoの基本的な使い方">Espansoの基本的な使い方</a></li>
+        <li><a href="#より高度な使い方">より高度な使い方</a></li>
         <li><a href="#1-インストールと起動">1. インストールと起動</a></li>
         <li><a href="#2-クリップボード履歴の自動記録">2. クリップボード履歴の自動記録</a></li>
         <li><a href="#3-クリップボード履歴の表示と選択">3. クリップボード履歴の表示と選択</a></li>
@@ -228,7 +230,92 @@
 </nav>
 	</div>
 </div><div class="content post__content clearfix">
-			<hr>
+			<p>Espansoは、Mac、Windows、Linuxで利用できるオープンソースのテキスト拡張ツールです。頻繁に入力する単語、フレーズ、コードスニペットなどを短縮形に変換して入力の手間を省くことができます。</p>
+<h3 id="espansoの基本的な使い方">Espansoの基本的な使い方</h3>
+<ol>
+<li>
+<p><strong>インストール</strong>:
+まず、Espansoを公式サイトからダウンロードしてインストールします。各OSごとのインストール手順に従ってください。</p>
+</li>
+<li>
+<p><strong>設定ファイルの場所</strong>:
+Espansoの設定ファイルは通常以下の場所にあります。</p>
+<ul>
+<li><strong>macOS</strong>: <code>~/Library/Application Support/espanso/match/</code></li>
+<li><strong>Windows</strong>: <code>%APPDATA%\espanso\match\</code></li>
+<li><strong>Linux</strong>: <code>~/.config/espanso/match/</code></li>
+</ul>
+<p>この<code>match</code>ディレクトリ内に、拡張ルールを定義するYAMLファイルを作成します。</p>
+</li>
+<li>
+<p><strong>基本的なルールの作成</strong>:
+<code>match</code>ディレクトリ内に<code>default.yml</code>（または任意の名前の<code>.yml</code>ファイル）を作成し、以下のように記述します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># default.yml</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">matches</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">trigger</span>: <span style="color:#e6db74">&#34;:date&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">replace</span>: <span style="color:#e6db74">&#34;{{DATE}}&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">trigger</span>: <span style="color:#e6db74">&#34;:greet&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">replace</span>: <span style="color:#e6db74">&#34;こんにちは！&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">trigger</span>: <span style="color:#e6db74">&#34;:email&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">replace</span>: <span style="color:#e6db74">&#34;your.email@example.com&#34;</span>
+</span></span></code></pre></div><ul>
+<li><code>trigger</code>: 短縮形（これを入力すると拡張されます）。通常はコロン <code>:</code> から始めるのが一般的です。</li>
+<li><code>replace</code>: <code>trigger</code>が入力されたときに置き換えられるテキストです。</li>
+<li><code>{{DATE}}</code>: Espansoが提供する組み込み変数で、現在の日付に自動的に置き換えられます。</li>
+</ul>
+</li>
+<li>
+<p><strong>Espansoの再起動または再読み込み</strong>:
+設定ファイルを変更したら、Espansoを再起動するか、トレイアイコンから「Reload Config」を選択して設定を再読み込みします。</p>
+</li>
+<li>
+<p><strong>使ってみる</strong>:
+テキストエディタやブラウザのテキストフィールドなどで、設定した<code>:date</code>や<code>:greet</code>と入力してみてください。自動的に定義したテキストに置き換わるはずです。</p>
+</li>
+</ol>
+<h3 id="より高度な使い方">より高度な使い方</h3>
+<ul>
+<li>
+<p><strong>シェルコマンドの実行</strong>:
+Espansoは、シェルコマンドの出力を挿入することもできます。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">matches</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">trigger</span>: <span style="color:#e6db74">&#34;:ip&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">replace</span>: <span style="color:#e6db74">&#34;{{output}}&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">vars</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">output</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">type</span>: <span style="color:#ae81ff">shell</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">params</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">cmd</span>: <span style="color:#e6db74">&#34;curl ifconfig.me&#34;</span>
+</span></span></code></pre></div><p><code>:ip</code>と入力すると、外部IPアドレスが表示されます。</p>
+</li>
+<li>
+<p><strong>スクリプトの実行</strong>:
+Pythonなどのスクリプトを実行し、その出力を利用することも可能です。</p>
+</li>
+<li>
+<p><strong>フォームの作成</strong>:
+複数の入力が必要な場合、フォームを作成して対話的に入力を促すことができます。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">matches</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">trigger</span>: <span style="color:#e6db74">&#34;:todo&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">form</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      What needs to be done?
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      [[task]]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">replace</span>: <span style="color:#e6db74">&#34;- [ ] {{task}}&#34;</span>
+</span></span></code></pre></div><p><code>:todo</code>と入力すると、入力プロンプトが表示されます。</p>
+</li>
+<li>
+<p><strong>画像挿入 (実験的機能)</strong>:
+Espansoは画像ファイルのパスを挿ートし、画像を貼り付けることもできます（アプリケーションによる）。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">matches</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">trigger</span>: <span style="color:#e6db74">&#34;:image&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">replace</span>: <span style="color:#e6db74">&#34;/path/to/your/image.png&#34;</span> <span style="color:#75715e"># 画像ファイルのパス</span>
+</span></span></code></pre></div><p>ただし、この機能はアプリケーションがクリップボード経由での画像貼り付けをサポートしている場合にのみ機能します。</p>
+</li>
+</ul>
+<p>Espansoのより詳細な機能や設定については、公式ドキュメントを参照することをお勧めします。
+<a href="https://espanso.org/">Espanso 公式サイト</a></p>
+<p>ご希望であれば、特定のシナリオでのEspansoの設定例を提示することもできます。例えば、「よく使うメールの定型文を登録したい」といった具体的な使い方があれば教えてください。</p>
+<hr>
 <p>CopyQは、コピー＆ペーストの履歴を管理し、生産性を向上させるための非常に便利なオープンソースのクリップボードマネージャーです。テキストだけでなく、画像なども記憶することができます。</p>
 <h3 id="1-インストールと起動">1. インストールと起動</h3>
 <p>CopyQはWindows、macOS、Linuxで利用可能です。
