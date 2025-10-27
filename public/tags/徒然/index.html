@@ -122,6 +122,13 @@
 			</a>
 		</li>
 		<li class="menu__item">
+			<a class="menu__link" href="/posts/%E3%82%B9%E3%83%9E%E3%83%95%E3%82%A9/">
+				
+				<span class="menu__text">スマフォ</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
 			<a class="menu__link" href="/posts/%E3%83%9D%E3%83%A2%E3%83%89%E3%83%BC%E3%83%AD%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC/">
 				
 				<span class="menu__text">ポモドーロタイマー</span>
@@ -203,6 +210,29 @@
 	<header class="main__header">
 		<h1 class="main__title">徒然</h1>
 	</header><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/%E3%82%B9%E3%83%9E%E3%83%95%E3%82%A9/" rel="bookmark">
+			スマフォ
+			</a>
+		</h2>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>moto gシリーズ:</p>
+<p>このシリーズは元々、コストパフォーマンスを重視したモデルが多く、他のシリーズと比較して全体的に価格が抑えられている傾向があります。</p>
+<p>例に挙げられている「moto g53j 5G」などは、発売時期やスペックから見て、比較的安価で手に入りやすいモデルの一つです。</p>
+<p>Xiaomi Redmiシリーズ（数字が若いモデル）:</p>
+<p>Redmiシリーズも価格帯が広いですが、型落ちのモデル（例: Redmi Note 10 Proなど、NFC搭載確認済みのもの）や、数字が若い（下位）モデルであれば、安価に見つかる可能性があります。</p>
+<p>Samsung Galaxy Aシリーズ（数字が若いモデル）:</p>
+<p>「Galaxy A23 5G」など、Aシリーズの中でも特に下位に位置するモデルは、比較的安価に設定されています。</p>
+<p>現状で一番安価なモデルを探す具体的な方法:</p>
+<p>各オンラインストアをチェック: Amazon、楽天市場、家電量販店のオンラインストア（ヨドバシカメラ、ビックカメラなど）で、「NFC対応 SIMフリー」などのキーワードで検索し、価格順に並べ替えてみる。</p>
+<p>格安SIM会社のキャンペーンを確認: 多くの格安SIM会社（IIJmio、OCN モバイル ONE、mineoなど）が、新規契約やMNP（乗り換え）と同時にスマートフォンを購入すると大幅な割引が適用されるキャンペーンを頻繁に実施しています。これが一番安く手に入れるチャンスが多いです。</p>
+<p>中古品も検討する: ゲオモバイル、イオシス、じゃんぱらなどの専門店では、状態の良い中古品が格安で販売されていることがあります。ただし、バッテリーの状態や保証期間には注意が必要です。</p>
+	</div>
+</article><article class="list__item post">
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
@@ -752,68 +782,6 @@ export XMODIFIERS=@im=fcitx
 </ul>
 <h3 id="5-fcitxとデスクトップ環境の競合まれ">5. Fcitxとデスクトップ環境の競合（まれ）</h3>
 <p>まれに、FcitxとLubuntuの特定のバージョン（LXQtまたはLXDE）の間で、システムトレイの描画に関する競合が発生することがあります。</p>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/fcitx%E3%81%AE%E8%87%AA%E5%8B%95%E8%B5%B7%E5%8B%95/" rel="bookmark">
-			Fcitxの自動起動
-			</a>
-		</h2>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>Lubuntuのデスクトップ環境（LXQt）でFcitxの自動起動を設定する方法はいくつかあります。最も確実で推奨される方法をいくつかご紹介します。</p>
-<h3 id="1-lxqtの自動起動設定推奨">1. LXQtの自動起動設定（推奨）</h3>
-<p>LubuntuのLXQt環境には、アプリケーションの自動起動を管理するためのGUIツールがあります。</p>
-<ol>
-<li><strong>スタートメニューを開く:</strong> 画面左下のメニューアイコンをクリックします。</li>
-<li><strong>設定を開く:</strong> 「設定」または「Preferences」を選択します。</li>
-<li><strong>LXQt設定センターを開く:</strong> 「LXQt 設定センター」または「LXQt Settings Center」を選択します。</li>
-<li><strong>自動起動を選択:</strong> 左側のリストから「自動起動」または「Autostart」を選択します。</li>
-<li><strong>「追加」をクリック:</strong> 右上の「追加」ボタンをクリックします。</li>
-<li><strong>Fcitxのコマンドを入力:</strong>
-<ul>
-<li><strong>名前 (Name):</strong> <code>Fcitx</code> （わかりやすい名前）</li>
-<li><strong>コマンド (Command):</strong> <code>fcitx -d</code> （または <code>fcitx</code> のみでも動作することが多いですが、<code>-d</code> はデーモンとして起動するオプションです。）</li>
-<li><strong>説明 (Description):</strong> <code>Fcitx Input Method</code> （オプション）</li>
-</ul>
-</li>
-<li><strong>「OK」をクリック</strong>して追加し、設定センターを閉じます。</li>
-</ol>
-<p>これで次回ログイン時にFcitxが自動的に起動するはずです。</p>
-<h3 id="2-desktopファイルを直接配置する">2. .desktopファイルを直接配置する</h3>
-<p>もしGUIツールが見つからない、または使いたくない場合は、手動で <code>.desktop</code> ファイルを作成して配置することもできます。</p>
-<ol>
-<li>
-<p><strong>ファイルマネージャーを開く:</strong> 「PCManFM-Qt」などのファイルマネージャーを開きます。</p>
-</li>
-<li>
-<p><strong>ホームディレクトリに移動:</strong> 自分のホームディレクトリ (<code>/home/your_username/</code>) に移動します。</p>
-</li>
-<li>
-<p><strong>隠しファイルを表示:</strong> <code>Ctrl + H</code> を押すか、メニューから「表示」→「隠しファイルを表示」を選択して、隠しファイルを表示させます。</p>
-</li>
-<li>
-<p><strong><code>~/.config/autostart/</code> ディレクトリに移動:</strong>
-このディレクトリがなければ作成してください。
-<code>mkdir -p ~/.config/autostart/</code></p>
-</li>
-<li>
-<p><strong>新しいファイルを作成:</strong> <code>fcitx.desktop</code> という名前の新しいファイルを作成し、以下の内容を貼り付けます。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#66d9ef">[Desktop Entry]</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Type</span><span style="color:#f92672">=</span><span style="color:#e6db74">Application</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Name</span><span style="color:#f92672">=</span><span style="color:#e6db74">Fcitx</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Comment</span><span style="color:#f92672">=</span><span style="color:#e6db74">Fcitx Input Method</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Exec</span><span style="color:#f92672">=</span><span style="color:#e6db74">fcitx -d</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Icon</span><span style="color:#f92672">=</span><span style="color:#e6db74">fcitx</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Terminal</span><span style="color:#f92672">=</span><span style="color:#e6db74">false</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Categories</span><span style="color:#f92672">=</span><span style="color:#e6db74">System;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">StartupNotify</span><span style="color:#f92672">=</span><span style="color:#e6db74">false</span>
-</span></span></code></pre></div></li>
-<li>
-<p>ファイルを保存します。</p>
 	</div>
 </article>
 </main>
