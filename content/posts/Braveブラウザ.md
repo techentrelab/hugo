@@ -7,6 +7,7 @@ categories:
   - 随筆
 tags:
   - 徒然
+  - linux
 menu: main
 comments: false
 authorbox: false
