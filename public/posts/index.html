@@ -52,6 +52,13 @@
 			</a>
 		</li>
 		<li class="menu__item">
+			<a class="menu__link" href="/posts/brave%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6/">
+				
+				<span class="menu__text">Braveブラウザ</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
 			<a class="menu__link" href="/posts/example-article-title/">
 				
 				<span class="menu__text">Example article title</span>
@@ -217,6 +224,46 @@
 	<header class="main__header">
 		<h1 class="main__title">Posts</h1>
 	</header><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/brave%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6/" rel="bookmark">
+			Braveブラウザ
+			</a>
+		</h2>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>UbuntuにBraveブラウザをインストールする方法はいくつかありますが、公式のリポジトリを追加してAPTパッケージマネージャーからインストールするのが最も推奨される方法です。これにより、今後も簡単にアップデートを受け取ることができます。</p>
+<p>以下の手順でインストールできます。</p>
+<p><strong>ステップ1: 必要なパッケージのインストール</strong>
+まず、Braveのリポジトリを追加するために必要な<code>curl</code>と<code>apt-transport-https</code>パッケージがシステムにインストールされていることを確認します。通常は既にインストールされていますが、念のため実行しておきましょう。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
+</span></span><span style="display:flex;"><span>sudo apt install curl apt-transport-https
+</span></span></code></pre></div><p><strong>ステップ2: BraveのGPGキーの追加</strong>
+Braveのリポジトリのパッケージが正規のものであることをシステムが確認できるように、GPGキーを追加します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+</span></span></code></pre></div><p><strong>ステップ3: Braveのリポジトリを追加</strong>
+次に、BraveブラウザのAPTリポジトリをシステムのソースリストに追加します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main&#34;</span> | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+</span></span></code></pre></div><p><strong>ステップ4: パッケージリストの更新</strong>
+新しいリポジトリが追加されたので、パッケージリストを更新します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
+</span></span></code></pre></div><p><strong>ステップ5: Braveブラウザのインストール</strong>
+最後に、Braveブラウザをインストールします。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install brave-browser
+</span></span></code></pre></div><p>これでBraveブラウザがインストールされました。</p>
+<p><strong>インストール後の起動方法:</strong>
+アプリケーションメニューから「Brave」または「Brave Browser」と検索して起動できます。
+ターミナルから起動する場合は、以下のコマンドを実行します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brave-browser
+</span></span></code></pre></div><p><strong>アンインストールしたい場合:</strong>
+もしBraveブラウザをアンインストールしたい場合は、以下のコマンドを実行します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt remove brave-browser
+</span></span><span style="display:flex;"><span>sudo apt autoremove
+</span></span></code></pre></div><p>この方法でインストールすれば、今後のシステムアップデートでBraveも自動的に最新の状態に保たれるので便利です。</p>
+	</div>
+</article><article class="list__item post">
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
@@ -738,44 +785,6 @@ GitHubのリポジトリページに行き、「Code」ボタンをクリック�
 </ul>
 <hr>
 <p>このレシピで、美味しいひじきの煮物を作ってみてくださいね！</p>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/%E8%AB%8B%E6%B1%82%E6%9B%B8%E3%81%AEpdf/" rel="bookmark">
-			請求書のPDF
-			</a>
-		</h2>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>AI を使って請求書の PDF を作成する方法は、大きく分けて以下の2つのアプローチがあります。</p>
-<ol>
-<li><strong>既存のデータから請求書を自動生成するアプローチ (最も一般的かつ実用的)</strong></li>
-<li><strong>自然言語指示から請求書の内容とデザインを生成するアプローチ (先進的・実験的)</strong></li>
-</ol>
-<p>それぞれの方法について詳しく説明します。</p>
-<hr>
-<h3 id="1-既存のデータから請求書を自動生成するアプローチ-最も一般的かつ実用的">1. 既存のデータから請求書を自動生成するアプローチ (最も一般的かつ実用的)</h3>
-<p>このアプローチでは、請求に必要なデータ（顧客情報、商品名、単価、数量、日付など）が既に存在し、AI はそのデータをテンプレートにはめ込み、PDF として出力する「自動化エンジン」として機能します。</p>
-<p><strong>AI の活用ポイント:</strong></p>
-<ul>
-<li><strong>データ抽出 (RPA/OCR と LLM の組み合わせ):</strong> 紙の請求書やスキャンされた請求書からデータを自動で読み取り、構造化されたデータに変換する際に AI-OCR や LLM が活用されます。</li>
-<li><strong>テンプレート選択・生成 (LLM の可能性):</strong> ユーザーの要望（例:「シンプルな請求書」「ロゴ入りのプロフェッショナルな請求書」）に応じて、適切な請求書テンプレートを選択または生成する。</li>
-<li><strong>ビジネスロジック適用 (従来のプログラミングとLLM):</strong> 消費税計算、合計金額の算出、割引適用、期日の自動計算など。これは従来のプログラミングで処理されますが、複雑なロジックをLLMに指示してコード生成させることも可能です。</li>
-<li><strong>最終的なPDF生成:</strong> 構造化されたデータをPDF形式で出力する。</li>
-</ul>
-<p><strong>具体的な実装方法 (Python を使用した例):</strong></p>
-<p>この場合、AI（GitHub Copilot や Gemini など）は、以下の作業を行うための Python コードの生成を支援する役割を果たします。</p>
-<p><strong>必要なライブラリ:</strong></p>
-<ul>
-<li><code>pandas</code>: 請求データを扱うため</li>
-<li><code>reportlab</code> または <code>fpdf2</code> または <code>Pillow</code> と <code>pyfpdf</code> など: Python で PDF を生成するため</li>
-<li><code>jinja2</code>: テンプレートエンジン (HTML テンプレートから PDF を生成する場合)</li>
-<li><code>weasyprint</code> または <code>wkhtmltopdf</code> (外部ツール): HTML/CSS から PDF を生成する場合</li>
-</ul>
-<p><strong>手順:</strong></p>
 	</div>
 </article>
 </main>
