@@ -3,7 +3,7 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>クレジットカード認証：2D vs 3D - 徒然のままに</title>
+	<title>Gitpod - 徒然のままに</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="Example article description">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -85,7 +85,7 @@
 				
 			</a>
 		</li>
-		<li class="menu__item">
+		<li class="menu__item menu__item--active">
 			<a class="menu__link" href="/posts/gitpod/">
 				
 				<span class="menu__text">Gitpod</span>
@@ -134,7 +134,7 @@
 				
 			</a>
 		</li>
-		<li class="menu__item menu__item--active">
+		<li class="menu__item">
 			<a class="menu__link" href="/posts/2d-vs-3d/">
 				
 				<span class="menu__text">クレジットカード認証：2D vs 3D</span>
@@ -229,78 +229,23 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">クレジットカード認証：2D vs 3D</h1>
+			<h1 class="post__title">Gitpod</h1>
 			
 		</header>
-		
-<div class="post__toc toc">
-	<div class="toc__title">Page content</div>
-	<div class="toc__menu">
-		<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#2d認証従来の認証方法">2D認証（従来の認証方法）</a></li>
-        <li><a href="#3dセキュア3d認証">3Dセキュア（3D認証）</a></li>
-        <li><a href="#まとめ">まとめ</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-	</div>
-</div><div class="content post__content clearfix">
-			<p>クレジットカードの認証方法には、主に「2D認証」と「3Dセキュア（3D認証）」があります。</p>
-<h3 id="2d認証従来の認証方法">2D認証（従来の認証方法）</h3>
-<p>2D認証は、最も基本的なクレジットカード決済の認証方法です。主に以下の情報を使用します。</p>
+		<div class="content post__content clearfix">
+			<p>Gitpodは、クラウドベースの統合開発環境（IDE）を提供するサービスです。コードを開発するために必要な環境を、ブラウザ上で瞬時に起動できます。</p>
+<p>主な特徴は以下の通りです。</p>
 <ul>
-<li><strong>カード番号</strong></li>
-<li><strong>有効期限</strong></li>
-<li><strong>セキュリティコード（CVC/CVV）</strong>：カード裏面の署名欄にある3桁または4桁の数字。</li>
+<li><strong>瞬時の開発環境起動:</strong> GitHub、GitLab、Bitbucketなどのリポジトリから、わずか数秒で完全に機能する開発環境を起動できます。</li>
+<li><strong>ブラウザベースのIDE:</strong> ローカルに何もインストールすることなく、ブラウザ上でVS CodeベースのIDEを利用できます。</li>
+<li><strong>Dockerfileによる環境定義:</strong> プロジェクトごとに必要なツールや依存関係をDockerfileで定義でき、開発環境の一貫性を保てます。</li>
+<li><strong>共同開発:</strong> 開発環境を簡単に共有し、チームメンバーと共同で作業できます。</li>
+<li><strong>自動化:</strong> 継続的インテグレーション/継続的デリバリー（CI/CD）パイプラインと統合し、開発ワークフローを自動化できます。</li>
+<li><strong>様々な言語とフレームワークのサポート:</strong> 多くのプログラミング言語やフレームワークに対応しています。</li>
 </ul>
-<p>これらの情報は、オンラインショッピングサイトなどで入力することで認証が行われます。</p>
-<p><strong>メリット:</strong></p>
-<ul>
-<li>入力項目が少なく、手軽に決済できる。</li>
-</ul>
-<p><strong>デメリット:</strong></p>
-<ul>
-<li>カード情報が盗まれた場合、不正利用されるリスクがある。</li>
-<li>なりすましに弱い。</li>
-</ul>
-<h3 id="3dセキュア3d認証">3Dセキュア（3D認証）</h3>
-<p>3Dセキュアは、オンラインショッピングでのセキュリティを強化するための本人認証サービスです。Visaでは「Visa Secure（旧: Verified by Visa）」、Mastercardでは「Mastercard ID Check（旧: Mastercard SecureCode）」、JCBでは「J/Secure」、American Expressでは「SafeKey」などの名称で提供されています。</p>
-<p>2D認証の情報に加えて、<strong>カード会社に事前に登録したパスワードやワンタイムパスワードなど</strong>を入力することで、より厳格な本人確認を行います。</p>
-<p><strong>3Dセキュアの主な認証方法:</strong></p>
-<ol>
-<li><strong>事前に設定したパスワード:</strong> カード会社が提供するWebサイトで、自分でパスワードを登録し、決済時にそのパスワードを入力する方法。</li>
-<li><strong>ワンタイムパスワード:</strong> 決済時に、登録済みの携帯電話やEメールアドレスにSMSやメールで送られてくる一度限り有効なパスワードを入力する方法。</li>
-<li><strong>生体認証:</strong> スマートフォンやPCの指紋認証や顔認証機能を利用して本人確認を行う方法。</li>
-<li><strong>リスクベース認証:</strong> ユーザーのデバイス情報、IPアドレス、購入履歴などから不正利用のリスクを判断し、リスクが低いと判断された場合は追加認証なしで決済が完了する場合もあります。</li>
-</ol>
-<p><strong>3Dセキュアの仕組みの例:</strong></p>
-<ol>
-<li>オンラインショップでクレジットカード情報を入力し、決済ボタンを押します。</li>
-<li>カード会社の認証画面に遷移します。</li>
-<li>事前に設定したパスワードや、SMSで送られてきたワンタイムパスワードなどを入力します。</li>
-<li>本人確認が成功すると、決済が完了します。</li>
-</ol>
-<p><strong>メリット:</strong></p>
-<ul>
-<li>セキュリティが大幅に向上し、不正利用のリスクが低減する。</li>
-<li>万が一カード情報が漏洩しても、パスワードがなければ不正利用されにくい。</li>
-<li>不正利用された場合の補償対象となりやすい。</li>
-</ul>
-<p><strong>デメリット:</strong></p>
-<ul>
-<li>追加のパスワード入力が必要になるため、決済に手間がかかることがある。</li>
-<li>3Dセキュアに対応していないサイトでは利用できない。</li>
-</ul>
-<h3 id="まとめ">まとめ</h3>
-<ul>
-<li><strong>2D認証</strong>：カード情報のみで認証する、基本的な方法。</li>
-<li><strong>3Dセキュア</strong>：カード情報に加えて、パスワードなどで本人確認を行う、より安全な方法。</li>
-</ul>
-<p>現在では、オンラインショッピングでのセキュリティ強化のため、3Dセキュアの利用が推奨されています。カード会社によっては、3Dセキュアの利用を必須としている場合もあります。</p>
+<p>Gitpodを利用することで、開発者は環境構築の手間から解放され、すぐにコードを書き始めることができます。特に、新しいプロジェクトに参加する際や、異なる環境で作業する必要がある場合に非常に便利です。</p>
+<p>例えば、GitHubのリポジトリのURLの前に<code>gitpod.io/#</code>を付けるだけで、そのリポジトリのGitpod環境を起動できます。</p>
+<p>Gitpodのロゴは以下のようなものです。</p>
 
 		</div>
 		<footer class="post__footer">
@@ -312,7 +257,7 @@
 			<a class="tags__link btn" href="/tags/%E5%BE%92%E7%84%B6/" rel="tag">徒然</a>
 		</li>
 		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/living/" rel="tag">living</a>
+			<a class="tags__link btn" href="/tags/git/" rel="tag">git</a>
 		</li>
 	</ul>
 </div>
@@ -322,16 +267,10 @@
 
 
 <nav class="pager flex">
-	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/posts/git-clone/" rel="prev">
-			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">git clone</p>
-		</a>
-	</div>
 	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/posts/%E9%95%B7%E6%99%82%E9%96%93%E5%BA%A7%E3%82%8A%E7%B6%9A%E3%81%91%E3%82%8B/" rel="next">
+		<a class="pager__link" href="/posts/example-article-title/" rel="next">
 			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">長時間座り続ける</p>
+			<p class="pager__title">Example article title</p>
 		</a>
 	</div>
 </nav>

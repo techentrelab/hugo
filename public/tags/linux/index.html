@@ -87,6 +87,13 @@
 			</a>
 		</li>
 		<li class="menu__item">
+			<a class="menu__link" href="/posts/gitpod/">
+				
+				<span class="menu__text">Gitpod</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
 			<a class="menu__link" href="/posts/lubuntu--%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%85%A5%E5%8A%9B/">
 				
 				<span class="menu__text">Lubuntu  日本語入力</span>
@@ -224,6 +231,46 @@
 	<header class="main__header">
 		<h1 class="main__title">Linux</h1>
 	</header><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/brave%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6/" rel="bookmark">
+			Braveブラウザ
+			</a>
+		</h2>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>UbuntuにBraveブラウザをインストールする方法はいくつかありますが、公式のリポジトリを追加してAPTパッケージマネージャーからインストールするのが最も推奨される方法です。これにより、今後も簡単にアップデートを受け取ることができます。</p>
+<p>以下の手順でインストールできます。</p>
+<p><strong>ステップ1: 必要なパッケージのインストール</strong>
+まず、Braveのリポジトリを追加するために必要な<code>curl</code>と<code>apt-transport-https</code>パッケージがシステムにインストールされていることを確認します。通常は既にインストールされていますが、念のため実行しておきましょう。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
+</span></span><span style="display:flex;"><span>sudo apt install curl apt-transport-https
+</span></span></code></pre></div><p><strong>ステップ2: BraveのGPGキーの追加</strong>
+Braveのリポジトリのパッケージが正規のものであることをシステムが確認できるように、GPGキーを追加します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+</span></span></code></pre></div><p><strong>ステップ3: Braveのリポジトリを追加</strong>
+次に、BraveブラウザのAPTリポジトリをシステムのソースリストに追加します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main&#34;</span> | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+</span></span></code></pre></div><p><strong>ステップ4: パッケージリストの更新</strong>
+新しいリポジトリが追加されたので、パッケージリストを更新します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
+</span></span></code></pre></div><p><strong>ステップ5: Braveブラウザのインストール</strong>
+最後に、Braveブラウザをインストールします。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install brave-browser
+</span></span></code></pre></div><p>これでBraveブラウザがインストールされました。</p>
+<p><strong>インストール後の起動方法:</strong>
+アプリケーションメニューから「Brave」または「Brave Browser」と検索して起動できます。
+ターミナルから起動する場合は、以下のコマンドを実行します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brave-browser
+</span></span></code></pre></div><p><strong>アンインストールしたい場合:</strong>
+もしBraveブラウザをアンインストールしたい場合は、以下のコマンドを実行します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt remove brave-browser
+</span></span><span style="display:flex;"><span>sudo apt autoremove
+</span></span></code></pre></div><p>この方法でインストールすれば、今後のシステムアップデートでBraveも自動的に最新の状態に保たれるので便利です。</p>
+	</div>
+</article><article class="list__item post">
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
