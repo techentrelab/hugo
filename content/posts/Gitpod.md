@@ -20,7 +20,7 @@ widgets:
   - recent
   - taglist
 ---
-[
+
 
 ### Ona (formerly Gitpod)
 https://ona.com/
