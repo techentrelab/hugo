@@ -3,7 +3,7 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Braveブラウザ - 徒然のままに</title>
+	<title>GitHub - 徒然のままに</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="Example article description">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,7 +50,7 @@
 				
 			</a>
 		</li>
-		<li class="menu__item menu__item--active">
+		<li class="menu__item">
 			<a class="menu__link" href="/posts/brave%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6/">
 				
 				<span class="menu__text">Braveブラウザ</span>
@@ -85,7 +85,7 @@
 				
 			</a>
 		</li>
-		<li class="menu__item">
+		<li class="menu__item menu__item--active">
 			<a class="menu__link" href="/posts/github/">
 				
 				<span class="menu__text">GitHub</span>
@@ -236,38 +236,95 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Braveブラウザ</h1>
+			<h1 class="post__title">GitHub</h1>
 			
 		</header>
-		<div class="content post__content clearfix">
-			<p>UbuntuにBraveブラウザをインストールする方法はいくつかありますが、公式のリポジトリを追加してAPTパッケージマネージャーからインストールするのが最も推奨される方法です。これにより、今後も簡単にアップデートを受け取ることができます。</p>
-<p>以下の手順でインストールできます。</p>
-<p><strong>ステップ1: 必要なパッケージのインストール</strong>
-まず、Braveのリポジトリを追加するために必要な<code>curl</code>と<code>apt-transport-https</code>パッケージがシステムにインストールされていることを確認します。通常は既にインストールされていますが、念のため実行しておきましょう。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
-</span></span><span style="display:flex;"><span>sudo apt install curl apt-transport-https
-</span></span></code></pre></div><p><strong>ステップ2: BraveのGPGキーの追加</strong>
-Braveのリポジトリのパッケージが正規のものであることをシステムが確認できるように、GPGキーを追加します。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-</span></span></code></pre></div><p><strong>ステップ3: Braveのリポジトリを追加</strong>
-次に、BraveブラウザのAPTリポジトリをシステムのソースリストに追加します。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main&#34;</span> | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-</span></span></code></pre></div><p><strong>ステップ4: パッケージリストの更新</strong>
-新しいリポジトリが追加されたので、パッケージリストを更新します。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
-</span></span></code></pre></div><p><strong>ステップ5: Braveブラウザのインストール</strong>
-最後に、Braveブラウザをインストールします。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install brave-browser
-</span></span></code></pre></div><p>これでBraveブラウザがインストールされました。</p>
-<p><strong>インストール後の起動方法:</strong>
-アプリケーションメニューから「Brave」または「Brave Browser」と検索して起動できます。
-ターミナルから起動する場合は、以下のコマンドを実行します。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brave-browser
-</span></span></code></pre></div><p><strong>アンインストールしたい場合:</strong>
-もしBraveブラウザをアンインストールしたい場合は、以下のコマンドを実行します。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt remove brave-browser
-</span></span><span style="display:flex;"><span>sudo apt autoremove
-</span></span></code></pre></div><p>この方法でインストールすれば、今後のシステムアップデートでBraveも自動的に最新の状態に保たれるので便利です。</p>
+		
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-組織または個人の設定ページへアクセスする">1. 組織または個人の設定ページへアクセスする</a></li>
+        <li><a href="#2-billing支払い設定へ移動する">2. Billing（支払い）設定へ移動する</a></li>
+        <li><a href="#3-プランを変更する">3. プランを変更する</a></li>
+        <li><a href="#注意点"><img src="https://fonts.gstatic.com/s/e/notoemoji/16.0/1f6a8/72.png"> 注意点</a></li>
+        <li><a href="#githubの主な有料プラン"><img src="https://fonts.gstatic.com/s/e/notoemoji/16.0/1f4b0/72.png"> GitHubの主な有料プラン</a></li>
+        <li><a href="#無料プラン-free-でできること"><img src="https://fonts.gstatic.com/s/e/notoemoji/16.0/2728/72.png"> 無料プラン (Free) でできること</a></li>
+        <li><a href="#その他の有料サービス"><img src="https://fonts.gstatic.com/s/e/notoemoji/16.0/1f4a1/72.png"> その他の有料サービス</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p>GitHubのプラン変更は、通常、GitHubのウェブサイト上から簡単に行うことができます。</p>
+<p>プランを変更する手順は、主に以下の通りです。</p>
+<h3 id="1-組織または個人の設定ページへアクセスする">1. 組織または個人の設定ページへアクセスする</h3>
+<ol>
+<li>GitHubにサインインします。</li>
+<li>画面右上のプロフィール写真をクリックします。</li>
+<li>プランを変更したいアカウントの種類に応じて、以下のいずれかを選択します。
+<ul>
+<li><strong>個人アカウントの場合:</strong> <strong>「Settings（設定）」</strong> を選択します。</li>
+<li><strong>組織アカウント（会社などのチームで利用している場合）の場合:</strong> <strong>「Your organizations（あなたの組織）」</strong> から該当の組織を選択し、<strong>「Settings（設定）」</strong> を選択します。</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-billing支払い設定へ移動する">2. Billing（支払い）設定へ移動する</h3>
+<ol>
+<li>設定画面のサイドバーで**「Billing and plans（請求とプラン）」** または <strong>「Billing &amp; plans」</strong> といった請求関連の項目を探し、クリックします。</li>
+</ol>
+<h3 id="3-プランを変更する">3. プランを変更する</h3>
+<ol>
+<li>現在のプランが表示されているセクションで、<strong>「Edit plan（プランの編集）」</strong> や <strong>「Upgrade（アップグレード）」</strong>、<strong>「Downgrade（ダウングレード）」</strong> といったボタンを探し、クリックします。</li>
+<li>希望するプラン（例：Free、Team、Enterprise）を選択し、画面の指示に従って変更を確定します。
+<ul>
+<li><strong>アップグレード（例：FreeからTeamへ）</strong> の場合は、チームのメンバー数や支払い情報を確認・入力します。</li>
+<li><strong>ダウングレード（例：TeamからFreeへ）</strong> の場合は、機能制限に関する警告が表示されることがありますので、内容を確認してから進めてください。</li>
+</ul>
+</li>
+</ol>
+<h3 id="注意点"><img src="https://fonts.gstatic.com/s/e/notoemoji/16.0/1f6a8/72.png" alt="🚨"> 注意点</h3>
+<ul>
+<li><strong>組織アカウントの場合:</strong> プラン変更ができるのは、通常、<strong>組織のオーナー（Owner）</strong> または <strong>管理者（Billing Manager）</strong> 権限を持つユーザーのみです。</li>
+<li><strong>ダウングレード:</strong> プランをダウングレードすると、それまで利用できていた高度な機能（必須レビュー、プライベートリポジトリの容量など）が利用できなくなる場合があります。変更前に、現在のプランで利用している機能が新しいプランでも提供されるか確認が必要です。</li>
+</ul>
+<p>具体的な操作はGitHubのインターフェースの更新によって変わる可能性があるため、迷われた際は<a href="https://docs.github.com/ja">GitHubの公式ドキュメント</a>を参照いただくのが確実です。</p>
+<p>お仕事でGitHub（ギットハブ）を利用される場合、<strong>有料プランを検討する必要がある</strong>ことが多いです。</p>
+<p>GitHubには<strong>無料プラン (Free)</strong> がありますが、チームでの開発をより円滑に進めるための高度な機能や、大規模な組織での利用に適した機能は<strong>有料プラン (TeamやEnterprise)</strong> で提供されています。</p>
+<p>主なプランとその特徴は以下の通りです:</p>
+<h3 id="githubの主な有料プラン"><img src="https://fonts.gstatic.com/s/e/notoemoji/16.0/1f4b0/72.png" alt="💰"> GitHubの主な有料プラン</h3>
+<ul>
+<li><strong>GitHub Teamプラン</strong>
+<ul>
+<li><strong>料金の目安:</strong> ユーザーあたり <strong>月額 $4</strong> 程度（年払い割引あり）</li>
+<li><strong>特徴:</strong> Freeプランの機能に加え、<strong>必須レビュー</strong>や<strong>コードオーナー</strong>といったチームでの<strong>高度な共同作業機能</strong>が追加されます。中小規模のチーム向けです。</li>
+</ul>
+</li>
+<li><strong>GitHub Enterpriseプラン</strong>
+<ul>
+<li><strong>料金の目安:</strong> ユーザーあたり <strong>月額 $21</strong> 程度（年間ライセンス契約）</li>
+<li><strong>特徴:</strong> Teamプランの機能に加え、<strong>大規模組織向け</strong>のセキュリティ、スケーラビリティ、<strong>一元的なID管理 (Enterprise Managed Users)</strong>、詳細な<strong>監査ログAPI</strong>などが強化されています。エンタープライズ級のサポートも利用可能です。</li>
+</ul>
+</li>
+</ul>
+<h3 id="無料プラン-free-でできること"><img src="https://fonts.gstatic.com/s/e/notoemoji/16.0/2728/72.png" alt="✨"> 無料プラン (Free) でできること</h3>
+<p>個人開発や小規模なプロジェクトであれば、無料プランでも以下の機能が利用できます。</p>
+<ul>
+<li><strong>無制限</strong>のパブリック/プライベートリポジトリ</li>
+<li>無制限のコラボレーター</li>
+<li>基本的な<strong>GitHub Actions</strong>の利用時間（月2,000分など）</li>
+<li><strong>GitHub Community Support</strong></li>
+</ul>
+<h3 id="その他の有料サービス"><img src="https://fonts.gstatic.com/s/e/notoemoji/16.0/1f4a1/72.png" alt="💡"> その他の有料サービス</h3>
+<ul>
+<li><strong>GitHub Copilot:</strong> AIペアプログラマー機能。個人向け (Pro) や法人向け (Business, Enterprise) の有料プランがあります。</li>
+<li><strong>GitHub Actions/Packages/Codespaces:</strong> 各プランで無料枠がありますが、それを超えて利用すると従量課金が発生します。</li>
+</ul>
+<p><strong>結論として、お仕事で「チームでの開発」や「より高いセキュリティ・管理機能」が必要な場合は、TeamやEnterpriseなどの有料プランをご利用いただくことになります。</strong></p>
 
 		</div>
 		<footer class="post__footer">
@@ -279,7 +336,7 @@ Braveのリポジトリのパッケージが正規のものであることをシ
 			<a class="tags__link btn" href="/tags/%E5%BE%92%E7%84%B6/" rel="tag">徒然</a>
 		</li>
 		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/linux/" rel="tag">linux</a>
+			<a class="tags__link btn" href="/tags/git/" rel="tag">git</a>
 		</li>
 	</ul>
 </div>
@@ -290,15 +347,9 @@ Braveのリポジトリのパッケージが正規のものであることをシ
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/posts/adhd/" rel="prev">
+		<a class="pager__link" href="/posts/brave%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">ADHD</p>
-		</a>
-	</div>
-	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/posts/github/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">GitHub</p>
+			<p class="pager__title">Braveブラウザ</p>
 		</a>
 	</div>
 </nav>
