@@ -2,28 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/ai/</loc>
+    <lastmod>2025-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/ai%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88/</loc>
+    <lastmod>2025-10-31T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-10-30T00:00:00+00:00</lastmod>
+    <lastmod>2025-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2025-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E5%BE%92%E7%84%B6/</loc>
+    <lastmod>2025-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/%E9%9A%8F%E7%AD%86/</loc>
+    <lastmod>2025-10-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/git/</loc>
     <lastmod>2025-10-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/github/</loc>
-    <lastmod>2025-10-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-10-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-10-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%E5%BE%92%E7%84%B6/</loc>
-    <lastmod>2025-10-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-10-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/%E9%9A%8F%E7%AD%86/</loc>
     <lastmod>2025-10-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/brave%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6/</loc>
@@ -58,9 +64,6 @@
   </url><url>
     <loc>http://localhost:1313/posts/%E5%B0%BF%E5%A4%B1%E7%A6%81/</loc>
     <lastmod>2025-10-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/ai/</loc>
-    <lastmod>2025-10-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/cook/</loc>
     <lastmod>2025-10-22T00:00:00+00:00</lastmod>
