@@ -3,7 +3,7 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>ポモドーロタイマー2 - 徒然のままに</title>
+	<title>Agent Development Kit - 徒然のままに</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="Example article description">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,7 +50,7 @@
 				
 			</a>
 		</li>
-		<li class="menu__item">
+		<li class="menu__item menu__item--active">
 			<a class="menu__link" href="/posts/agent-development-kit/">
 				
 				<span class="menu__text">Agent Development Kit</span>
@@ -176,7 +176,7 @@
 				
 			</a>
 		</li>
-		<li class="menu__item menu__item--active">
+		<li class="menu__item">
 			<a class="menu__link" href="/posts/%E3%83%9D%E3%83%A2%E3%83%89%E3%83%BC%E3%83%AD%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC2/">
 				
 				<span class="menu__text">ポモドーロタイマー2</span>
@@ -250,8 +250,7 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">ポモドーロタイマー2</h1>
-			<p class="post__lead"> </p>
+			<h1 class="post__title">Agent Development Kit</h1>
 			
 		</header>
 		
@@ -262,61 +261,55 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#1-webアプリ-インストール不要">1. Webアプリ (インストール不要)</a></li>
-        <li><a href="#2-デスクトップアプリマルチプラットフォームアプリ">2. デスクトップアプリ/マルチプラットフォームアプリ</a></li>
+        <li><a href="#agent-development-kit-adk-の主な特徴と提供された時代背景">Agent Development Kit (ADK) の主な特徴と提供された時代背景</a></li>
+        <li><a href="#現在の状況と進化">現在の状況と進化</a></li>
+        <li><a href="#まとめると">まとめると</a></li>
       </ul>
     </li>
   </ul>
 </nav>
 	</div>
 </div><div class="content post__content clearfix">
-			<p>前の回答でご紹介したポモドーロタイマーの多くは、<strong>無料で使い始めることができます</strong>。</p>
-<p>特に無料で基本的なポモドーロテクニックを実践できるのは以下のツールです。</p>
-<h3 id="1-webアプリ-インストール不要">1. Webアプリ (インストール不要)</h3>
-<p>これらのWebアプリは、ブラウザさえあれば無料でフル機能にアクセスできることがほとんどです。</p>
+			<p>Googleの <strong>Agent Development Kit (ADK)</strong> は、主に <strong>Googleアシスタント (Google Assistant)</strong> 上で動作するカスタムエージェント（またはアクション）を開発するためのSDK（ソフトウェア開発キット）を指します。</p>
+<p>これは、ユーザーが「OK Google」と話しかけることで操作できる、スマートスピーカー（Google Home/Nest）、スマートフォン、スマートディスプレイなどのデバイス上で動作する独自の機能やサービスを作成するためのツールセットです。</p>
+<h3 id="agent-development-kit-adk-の主な特徴と提供された時代背景">Agent Development Kit (ADK) の主な特徴と提供された時代背景</h3>
 <ul>
-<li><strong>Pomofocus:</strong>
+<li><strong>Googleアシスタントの登場初期:</strong> ADKという名称は、Googleアシスタントが普及し始めた初期の頃に、開発者がアシスタント向けのカスタム機能を開発する際に使われていました。当時は、主に「Actions on Google」というプラットフォーム上で、ユーザーと対話する「Agent (エージェント)」または「Action (アクション)」を構築するためのツールとして提供されていました。</li>
+<li><strong>Dialogflowとの連携:</strong> ADKの主要な部分は、Googleの自然言語理解（NLU）プラットフォームである <strong>Dialogflow</strong> と密接に連携していました。開発者はDialogflowを使って、ユーザーの発話意図（インテント）と情報の抽出（エンティティ）を定義し、エージェントの会話フローを設計しました。</li>
+<li><strong>SDK/ライブラリの提供:</strong> 特定のプログラミング言語（例えばNode.js用のクライアントライブラリなど）で、GoogleアシスタントAPIと連携するためのSDKやライブラリが提供され、開発者がエージェントのロジックを実装できるようになっていました。</li>
+</ul>
+<h3 id="現在の状況と進化">現在の状況と進化</h3>
+<p>「Agent Development Kit (ADK)」という厳密な名称は、現在では公式ドキュメントで以前ほど強調されて使われることは少なくなっています。しかし、その機能と目的は、現代のGoogleアシスタント開発エコシステムに引き継がれています。</p>
+<p>現在のGoogleアシスタント向け開発の主要なコンポーネントは以下の通りです。</p>
+<ol>
+<li>
+<p><strong>Actions on Google (Actions Console):</strong></p>
 <ul>
-<li>無料で利用できるシンプルなWebアプリです。</li>
-<li>基本的なポモドーロタイマー機能（時間設定、休憩時間の設定など）とタスクリスト機能が使えます。</li>
-<li>より高度な機能や特定の統計レポートなどが有料プランになる場合がありますが、タイマーとして使う分には無料版で十分です。</li>
+<li>Googleアシスタント向けのカスタム機能（アクション）を定義、設定、デプロイするためのプラットフォームです。このコンソールからDialogflowエージェントをアシスタントに接続したり、Webhookを設定してバックエンドロジックを実装したりします。これが、かつてのADKが対象としていた「エージェント開発」の中心的な場所です。</li>
 </ul>
 </li>
-<li><strong>Marinara Timer:</strong>
+<li>
+<p><strong>Dialogflow:</strong></p>
 <ul>
-<li>これも無料で使えるWebベースのタイマーです。</li>
-<li>標準のポモドーロモードに加え、カスタム設定も無料で利用可能です。</li>
+<li>引き続き、Googleアシスタントの会話型インターフェースの核となるNLUエンジンとして機能します。ユーザーの発話を理解し、エージェントの会話フローを管理します。</li>
 </ul>
 </li>
-<li><strong>Pomodoro Tracker (Webサイト):</strong>
+<li>
+<p><strong>Webhook (Cloud Functions, etc.):</strong></p>
 <ul>
-<li>シンプルなインターフェースのWeb版タイマーで、無償で必要最低限の機能を使えます。</li>
+<li>エージェントがユーザーの意図を理解した後、実際のビジネスロジック（データベースからの情報取得、外部APIの呼び出しなど）を実行するためのバックエンドコードは、Webhookとして提供されます。Google Cloud Functionsのようなサーバーレス機能がよく利用されます。</li>
 </ul>
 </li>
-</ul>
-<h3 id="2-デスクトップアプリマルチプラットフォームアプリ">2. デスクトップアプリ/マルチプラットフォームアプリ</h3>
-<p>これらのアプリは、無料でダウンロードして基本的な機能を利用できますが、一部の高度な機能（プロジェクト数の制限解除、詳細なレポート、デバイス間の同期など）が有料になる場合があります。</p>
+<li>
+<p><strong>Google Assistant SDK (for Devices):</strong></p>
 <ul>
-<li><strong>Focus To-Do:</strong>
-<ul>
-<li><strong>無料版</strong>でもポモドーロタイマーとタスク管理の基本的な機能は使えます。</li>
-<li>ただし、無料版では作成できる<strong>プロジェクト数に制限がある</strong>（例：最大5つまで）などの制限が設けられていることがあります。</li>
+<li>これは少し異なる文脈で使われますが、Googleアシスタントの機能をカスタムハードウェアデバイスに組み込むためのSDKも存在します。これは、スマートスピーカーのようなデバイスを自作したい開発者向けです。</li>
 </ul>
 </li>
-<li><strong>Pomatez:</strong>
-<ul>
-<li>Windows、Mac、Linux対応のデスクトップアプリで、基本的に無料で利用できます。カスタマイズも可能です。</li>
-</ul>
-</li>
-<li><strong>Tomighty:</strong>
-<ul>
-<li>Windows、Macなどで使えるシンプルなデスクトップタイマーで、無料で提供されています。</li>
-</ul>
-</li>
-</ul>
-<p><strong>【結論】</strong></p>
-<p>まずは**「Pomofocus」<strong>や</strong>「Marinara Timer」<strong>といった</strong>Webアプリ**を試すのが、<strong>最も手軽で無料で基本的な機能が使える</strong>のでおすすめです。</p>
-<p>もしタスク管理と連携させたい場合は、<strong>「Focus To-Do」の無料版</strong>を試してみて、機能が足りなくなったら有料版を検討すると良いでしょう。</p>
+</ol>
+<h3 id="まとめると">まとめると</h3>
+<p>Googleの <strong>Agent Development Kit (ADK)</strong> は、Googleアシスタント向けのカスタムエージェント（アクション）を開発するための、かつての包括的な呼び名でした。現在では、その機能は主に <strong>Actions on Google</strong> と <strong>Dialogflow</strong> を中心としたツールとプラットフォームに引き継がれ、さらにバックエンドのWebhook実装と組み合わせて開発が進められています。</p>
+<p>これは、AIエージェントの非常に具体的な一分野（Googleアシスタント上での会話型エージェント）に特化した開発キットだったと言えます。</p>
 
 		</div>
 		<footer class="post__footer">
@@ -328,7 +321,7 @@
 			<a class="tags__link btn" href="/tags/%E5%BE%92%E7%84%B6/" rel="tag">徒然</a>
 		</li>
 		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/time/" rel="tag">time</a>
+			<a class="tags__link btn" href="/tags/ai/" rel="tag">ai</a>
 		</li>
 	</ul>
 </div>
@@ -339,15 +332,9 @@
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/posts/hugo/templates/template1/" rel="prev">
+		<a class="pager__link" href="/posts/ai%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title"></p>
-		</a>
-	</div>
-	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/posts/%E7%9B%AE%E7%9A%84%E3%82%92%E6%98%8E%E7%A2%BA%E3%81%AB/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">目的を明確に</p>
+			<p class="pager__title">AIエージェント</p>
 		</a>
 	</div>
 </nav>

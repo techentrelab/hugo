@@ -52,6 +52,13 @@
 			</a>
 		</li>
 		<li class="menu__item">
+			<a class="menu__link" href="/posts/agent-development-kit/">
+				
+				<span class="menu__text">Agent Development Kit</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
 			<a class="menu__link" href="/posts/ai%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88/">
 				
 				<span class="menu__text">AIエージェント</span>
@@ -245,6 +252,57 @@
 	<header class="main__header">
 		<h1 class="main__title">Ai</h1>
 	</header><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/agent-development-kit/" rel="bookmark">
+			Agent Development Kit
+			</a>
+		</h2>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>Googleの <strong>Agent Development Kit (ADK)</strong> は、主に <strong>Googleアシスタント (Google Assistant)</strong> 上で動作するカスタムエージェント（またはアクション）を開発するためのSDK（ソフトウェア開発キット）を指します。</p>
+<p>これは、ユーザーが「OK Google」と話しかけることで操作できる、スマートスピーカー（Google Home/Nest）、スマートフォン、スマートディスプレイなどのデバイス上で動作する独自の機能やサービスを作成するためのツールセットです。</p>
+<h3 id="agent-development-kit-adk-の主な特徴と提供された時代背景">Agent Development Kit (ADK) の主な特徴と提供された時代背景</h3>
+<ul>
+<li><strong>Googleアシスタントの登場初期:</strong> ADKという名称は、Googleアシスタントが普及し始めた初期の頃に、開発者がアシスタント向けのカスタム機能を開発する際に使われていました。当時は、主に「Actions on Google」というプラットフォーム上で、ユーザーと対話する「Agent (エージェント)」または「Action (アクション)」を構築するためのツールとして提供されていました。</li>
+<li><strong>Dialogflowとの連携:</strong> ADKの主要な部分は、Googleの自然言語理解（NLU）プラットフォームである <strong>Dialogflow</strong> と密接に連携していました。開発者はDialogflowを使って、ユーザーの発話意図（インテント）と情報の抽出（エンティティ）を定義し、エージェントの会話フローを設計しました。</li>
+<li><strong>SDK/ライブラリの提供:</strong> 特定のプログラミング言語（例えばNode.js用のクライアントライブラリなど）で、GoogleアシスタントAPIと連携するためのSDKやライブラリが提供され、開発者がエージェントのロジックを実装できるようになっていました。</li>
+</ul>
+<h3 id="現在の状況と進化">現在の状況と進化</h3>
+<p>「Agent Development Kit (ADK)」という厳密な名称は、現在では公式ドキュメントで以前ほど強調されて使われることは少なくなっています。しかし、その機能と目的は、現代のGoogleアシスタント開発エコシステムに引き継がれています。</p>
+<p>現在のGoogleアシスタント向け開発の主要なコンポーネントは以下の通りです。</p>
+<ol>
+<li>
+<p><strong>Actions on Google (Actions Console):</strong></p>
+<ul>
+<li>Googleアシスタント向けのカスタム機能（アクション）を定義、設定、デプロイするためのプラットフォームです。このコンソールからDialogflowエージェントをアシスタントに接続したり、Webhookを設定してバックエンドロジックを実装したりします。これが、かつてのADKが対象としていた「エージェント開発」の中心的な場所です。</li>
+</ul>
+</li>
+<li>
+<p><strong>Dialogflow:</strong></p>
+<ul>
+<li>引き続き、Googleアシスタントの会話型インターフェースの核となるNLUエンジンとして機能します。ユーザーの発話を理解し、エージェントの会話フローを管理します。</li>
+</ul>
+</li>
+<li>
+<p><strong>Webhook (Cloud Functions, etc.):</strong></p>
+<ul>
+<li>エージェントがユーザーの意図を理解した後、実際のビジネスロジック（データベースからの情報取得、外部APIの呼び出しなど）を実行するためのバックエンドコードは、Webhookとして提供されます。Google Cloud Functionsのようなサーバーレス機能がよく利用されます。</li>
+</ul>
+</li>
+<li>
+<p><strong>Google Assistant SDK (for Devices):</strong></p>
+<ul>
+<li>これは少し異なる文脈で使われますが、Googleアシスタントの機能をカスタムハードウェアデバイスに組み込むためのSDKも存在します。これは、スマートスピーカーのようなデバイスを自作したい開発者向けです。</li>
+</ul>
+</li>
+</ol>
+<h3 id="まとめると">まとめると</h3>
+<p>Googleの <strong>Agent Development Kit (ADK)</strong> は、Googleアシスタント向けのカスタムエージェント（アクション）を開発するための、かつての包括的な呼び名でした。現在では、その機能は主に <strong>Actions on Google</strong> と <strong>Dialogflow</strong> を中心としたツールとプラットフォームに引き継がれ、さらにバックエンドのWebhook実装と組み合わせて開発が進められています。</p>
+	</div>
+</article><article class="list__item post">
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">

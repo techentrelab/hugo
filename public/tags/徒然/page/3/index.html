@@ -52,6 +52,13 @@
 			</a>
 		</li>
 		<li class="menu__item">
+			<a class="menu__link" href="/posts/agent-development-kit/">
+				
+				<span class="menu__text">Agent Development Kit</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
 			<a class="menu__link" href="/posts/ai%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88/">
 				
 				<span class="menu__text">AIエージェント</span>
@@ -245,6 +252,55 @@
 	<header class="main__header">
 		<h1 class="main__title">徒然</h1>
 	</header><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/obsidian%E3%81%A7%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%85%A5%E5%8A%9B/" rel="bookmark">
+			Obsidianで日本語入力
+			</a>
+		</h2>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>Linux環境でObsidianでのみ日本語入力ができない場合、WindowsやmacOSとは異なるアプローチが必要になることがあります。Linuxではデスクトップ環境（GNOME, KDE, Xfceなど）や使用しているIMEフレームワーク（Fcitx, IBusなど）によって設定方法が異なるため、それらを考慮した対処法を見ていきましょう。</p>
+<h3 id="linuxに特化した対処法">Linuxに特化した対処法</h3>
+<p>基本的な対処法（Obsidianの再起動、コミュニティプラグインの無効化、テーマの変更、Obsidianの再インストール）はWindows/macOSと共通ですので、まずこれらをお試しください。</p>
+<p><strong>追加で確認すべき点（Linux固有）:</strong></p>
+<ol>
+<li>
+<p><strong>IMEフレームワークの確認と設定:</strong>
+Linuxでは、FcitxまたはIBusが主要なIMEフレームワークです。どちらを使っているか、そしてその設定が正しいかを確認することが重要です。</p>
+<ul>
+<li>
+<p><strong>Fcitx (例: Fcitx5 + Mozc)</strong></p>
+<ul>
+<li><strong>Fcitx5の状態確認:</strong> ターミナルで <code>fcitx5</code> と入力してEnterを押し、エラーが出ないか確認します。既に起動している場合は「<code>Fcitx is already running.</code>」のようなメッセージが出ます。</li>
+<li><strong>入力メソッドの確認:</strong> <code>fcitx5-configtool</code> (または <code>fcitx-configtool</code> if using Fcitx4) を実行し、使用したい日本語入力（例: Mozc, Anthy）が「入力メソッド」リストに追加され、有効になっているか確認します。</li>
+<li><strong>環境変数の設定:</strong> <code>$HOME/.profile</code> や <code>$HOME/.xprofile</code>、またはデスクトップ環境の自動起動スクリプトなどに、以下の環境変数が設定されているか確認します。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export GTK_IM_MODULE<span style="color:#f92672">=</span>fcitx
+</span></span><span style="display:flex;"><span>export QT_IM_MODULE<span style="color:#f92672">=</span>fcitx
+</span></span><span style="display:flex;"><span>export XMODIFIERS<span style="color:#f92672">=</span>@im<span style="color:#f92672">=</span>fcitx
+</span></span><span style="display:flex;"><span>export DefaultIMModule<span style="color:#f92672">=</span>fcitx
+</span></span></code></pre></div>変更した場合は、ログアウト・ログインが必要です。</li>
+</ul>
+</li>
+<li>
+<p><strong>IBus (例: IBus + Mozc)</strong></p>
+<ul>
+<li><strong>IBusの状態確認:</strong> ターミナルで <code>ibus-daemon -x -d</code> と入力してEnterを押し、エラーが出ないか確認します。</li>
+<li><strong>入力メソッドの確認:</strong> <code>ibus-setup</code> を実行し、使用したい日本語入力（例: Mozc, Anthy）が「入力メソッド」リストに追加され、有効になっているか確認します。</li>
+<li><strong>環境変数の設定:</strong> <code>$HOME/.profile</code> や <code>$HOME/.xprofile</code> などに、以下の環境変数が設定されているか確認します。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export GTK_IM_MODULE<span style="color:#f92672">=</span>ibus
+</span></span><span style="display:flex;"><span>export QT_IM_MODULE<span style="color:#f92672">=</span>ibus
+</span></span><span style="display:flex;"><span>export XMODIFIERS<span style="color:#f92672">=</span>@im<span style="color:#f92672">=</span>ibus
+</span></span><span style="display:flex;"><span>export DefaultIMModule<span style="color:#f92672">=</span>ibus
+</span></span></code></pre></div>変更した場合は、ログアウト・ログインが必要です。</li>
+</ul>
+</li>
+<li>
+<p><strong>重要:</strong> どちらかのフレームワークしか使わないように設定し、両方が競合しないようにしてください。</p>
+	</div>
+</article><article class="list__item post">
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">

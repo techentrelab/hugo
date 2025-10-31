@@ -52,6 +52,13 @@
 			</a>
 		</li>
 		<li class="menu__item">
+			<a class="menu__link" href="/posts/agent-development-kit/">
+				
+				<span class="menu__text">Agent Development Kit</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
 			<a class="menu__link" href="/posts/ai%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88/">
 				
 				<span class="menu__text">AIエージェント</span>
@@ -245,6 +252,57 @@
 	<header class="main__header">
 		<h1 class="main__title">徒然</h1>
 	</header><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/agent-development-kit/" rel="bookmark">
+			Agent Development Kit
+			</a>
+		</h2>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>Googleの <strong>Agent Development Kit (ADK)</strong> は、主に <strong>Googleアシスタント (Google Assistant)</strong> 上で動作するカスタムエージェント（またはアクション）を開発するためのSDK（ソフトウェア開発キット）を指します。</p>
+<p>これは、ユーザーが「OK Google」と話しかけることで操作できる、スマートスピーカー（Google Home/Nest）、スマートフォン、スマートディスプレイなどのデバイス上で動作する独自の機能やサービスを作成するためのツールセットです。</p>
+<h3 id="agent-development-kit-adk-の主な特徴と提供された時代背景">Agent Development Kit (ADK) の主な特徴と提供された時代背景</h3>
+<ul>
+<li><strong>Googleアシスタントの登場初期:</strong> ADKという名称は、Googleアシスタントが普及し始めた初期の頃に、開発者がアシスタント向けのカスタム機能を開発する際に使われていました。当時は、主に「Actions on Google」というプラットフォーム上で、ユーザーと対話する「Agent (エージェント)」または「Action (アクション)」を構築するためのツールとして提供されていました。</li>
+<li><strong>Dialogflowとの連携:</strong> ADKの主要な部分は、Googleの自然言語理解（NLU）プラットフォームである <strong>Dialogflow</strong> と密接に連携していました。開発者はDialogflowを使って、ユーザーの発話意図（インテント）と情報の抽出（エンティティ）を定義し、エージェントの会話フローを設計しました。</li>
+<li><strong>SDK/ライブラリの提供:</strong> 特定のプログラミング言語（例えばNode.js用のクライアントライブラリなど）で、GoogleアシスタントAPIと連携するためのSDKやライブラリが提供され、開発者がエージェントのロジックを実装できるようになっていました。</li>
+</ul>
+<h3 id="現在の状況と進化">現在の状況と進化</h3>
+<p>「Agent Development Kit (ADK)」という厳密な名称は、現在では公式ドキュメントで以前ほど強調されて使われることは少なくなっています。しかし、その機能と目的は、現代のGoogleアシスタント開発エコシステムに引き継がれています。</p>
+<p>現在のGoogleアシスタント向け開発の主要なコンポーネントは以下の通りです。</p>
+<ol>
+<li>
+<p><strong>Actions on Google (Actions Console):</strong></p>
+<ul>
+<li>Googleアシスタント向けのカスタム機能（アクション）を定義、設定、デプロイするためのプラットフォームです。このコンソールからDialogflowエージェントをアシスタントに接続したり、Webhookを設定してバックエンドロジックを実装したりします。これが、かつてのADKが対象としていた「エージェント開発」の中心的な場所です。</li>
+</ul>
+</li>
+<li>
+<p><strong>Dialogflow:</strong></p>
+<ul>
+<li>引き続き、Googleアシスタントの会話型インターフェースの核となるNLUエンジンとして機能します。ユーザーの発話を理解し、エージェントの会話フローを管理します。</li>
+</ul>
+</li>
+<li>
+<p><strong>Webhook (Cloud Functions, etc.):</strong></p>
+<ul>
+<li>エージェントがユーザーの意図を理解した後、実際のビジネスロジック（データベースからの情報取得、外部APIの呼び出しなど）を実行するためのバックエンドコードは、Webhookとして提供されます。Google Cloud Functionsのようなサーバーレス機能がよく利用されます。</li>
+</ul>
+</li>
+<li>
+<p><strong>Google Assistant SDK (for Devices):</strong></p>
+<ul>
+<li>これは少し異なる文脈で使われますが、Googleアシスタントの機能をカスタムハードウェアデバイスに組み込むためのSDKも存在します。これは、スマートスピーカーのようなデバイスを自作したい開発者向けです。</li>
+</ul>
+</li>
+</ol>
+<h3 id="まとめると">まとめると</h3>
+<p>Googleの <strong>Agent Development Kit (ADK)</strong> は、Googleアシスタント向けのカスタムエージェント（アクション）を開発するための、かつての包括的な呼び名でした。現在では、その機能は主に <strong>Actions on Google</strong> と <strong>Dialogflow</strong> を中心としたツールとプラットフォームに引き継がれ、さらにバックエンドのWebhook実装と組み合わせて開発が進められています。</p>
+	</div>
+</article><article class="list__item post">
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
@@ -748,84 +806,6 @@ GitHubのリポジトリページに行き、「Code」ボタンをクリック�
 <li>
 <p><strong>GitHubリポジトリのURLを取得する:</strong>
 シナリオ1と同じように、GitHubのリポジトリページからURLをコピーします。</p>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/%E5%B0%BF%E5%A4%B1%E7%A6%81/" rel="bookmark">
-			尿失禁
-			</a>
-		</h2>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>排尿後尿滴下と残尿感は、どちらも排尿に関する不快な症状ですが、必ずしも密接な関係があるわけではありません。</p>
-<p><strong>排尿後尿滴下とは</strong></p>
-<p>排尿後尿滴下とは、排尿が終わった後、意図せず尿が少量漏れてしまう症状です。男性に多く見られ、ズボンを汚してしまうなど、日常生活に支障をきたすことがあります。</p>
-<p><strong>排尿後尿滴下の原因</strong></p>
-<ul>
-<li><strong>骨盤底筋の筋力低下:</strong> 骨盤底筋は、尿道を締める役割を担っています。この筋肉が弱ると、排尿後に尿道に残った尿を押し出す力が弱くなり、尿滴下を引き起こすことがあります。</li>
-<li><strong>前立腺肥大症:</strong> 前立腺が肥大すると、尿道を圧迫し、尿の勢いが弱くなったり、排尿後に尿道に尿が残りやすくなったりします。</li>
-<li><strong>神経因性膀胱:</strong> 膀胱や尿道の神経に異常があると、排尿機能がうまく働かず、尿滴下が生じることがあります。</li>
-<li><strong>加齢:</strong> 加齢とともに、膀胱や尿道の機能が低下し、尿滴下のリスクが高まります。</li>
-</ul>
-<p><strong>残尿感とは</strong></p>
-<p>残尿感とは、排尿後にもかかわらず、膀胱に尿が残っているような感覚があることです。</p>
-<p><strong>残尿感の原因</strong></p>
-<ul>
-<li><strong>膀胱炎:</strong> 膀胱の炎症により、膀胱が過敏になり、残尿感を引き起こすことがあります。</li>
-<li><strong>前立腺肥大症:</strong> 前立腺が肥大すると、尿の排出がスムーズに行われず、膀胱に尿が残りやすくなり、残尿感が生じます。</li>
-<li><strong>過活動膀胱:</strong> 膀胱が過敏に収縮することで、尿が十分に排出されなくても残尿感を感じることがあります。</li>
-<li><strong>神経因性膀胱:</strong> 膀胱や尿道の神経に異常があると、膀胱に尿が残っていなくても残尿感を感じることがあります。</li>
-</ul>
-<p><strong>排尿後尿滴下と残尿感の関係</strong></p>
-<ul>
-<li><strong>前立腺肥大症の場合:</strong> 前立腺肥大症は、排尿後尿滴下と残尿感の両方の原因となることがあります。肥大した前立腺が尿道を圧迫することで、尿の排出が妨げられ、尿道に尿が残ったり、膀胱に尿が残っているような感覚が生じたりします。</li>
-<li><strong>骨盤底筋の筋力低下の場合:</strong> 骨盤底筋の筋力低下は、排尿後尿滴下の主な原因ですが、残尿感とは直接的な関係は薄いことが多いです。ただし、骨盤底筋のトレーニングは、排尿機能を全体的に改善する効果が期待できるため、間接的に残尿感の軽減にもつながる可能性があります。</li>
-<li><strong>その他:</strong> 膀胱炎や過活動膀胱は、残尿感の主な原因ですが、排尿後尿滴下とは直接的な関係がないことが多いです。</li>
-</ul>
-<p><strong>診断と治療</strong></p>
-<p>排尿後尿滴下や残尿感の症状がある場合は、泌尿器科を受診して適切な診断と治療を受けることが重要です。原因に応じて、薬物療法、骨盤底筋トレーニング、生活習慣の改善、手術などが検討されます。</p>
-<p>もしよろしければ、これらの症状についてもう少し詳しく教えていただけますか？例えば、いつから症状が出ていますか？男性ですか、女性ですか？他に気になる症状はありますか？</p>
-<p>尿漏れ（尿失禁）の原因は、その種類や性別によって様々ですが、大きく分けて以下のようなものがあります。</p>
-<p><strong>主な尿失禁の種類と原因</strong></p>
-<ol>
-<li><strong>腹圧性尿失禁（ふくあつせい にょうしっきん）</strong>
-<ul>
-<li><strong>症状：</strong> 咳やくしゃみ、笑う、重いものを持ち上げるなど、お腹に力（腹圧）が入った時に尿が漏れる。</li>
-<li><strong>原因：</strong> 尿道を締める働きを持つ**骨盤底筋群（こつばんていきんぐん）**の筋力低下やゆるみ。</li>
-<li><strong>特に女性に多い原因：</strong> 妊娠・出産による骨盤底筋へのダメージ、加齢、女性ホルモンの減少（更年期以降）、肥満、慢性的な便秘や咳など。</li>
-</ul>
-</li>
-<li><strong>切迫性尿失禁（せっぱくせい にょうしっきん）</strong>
-<ul>
-<li><strong>症状：</strong> 急に我慢できないほどの強い尿意（尿意切迫感）が起こり、トイレまで間に合わずに漏れてしまう。</li>
-<li><strong>原因：</strong> 膀胱が過敏になり、自分の意思とは関係なく勝手に収縮してしまうこと（<strong>過活動膀胱</strong>）。</li>
-<li><strong>背景にある疾患など：</strong> 加齢、脳卒中やパーキンソン病などの神経の病気、男性では前立腺肥大症、女性では骨盤臓器脱など。</li>
-</ul>
-</li>
-<li><strong>溢流性尿失禁（いつりゅうせい にょうしっきん）</strong>
-<ul>
-<li><strong>症状：</strong> 尿が出にくい状態（排尿障害）が続き、膀胱に尿がたまり過ぎてあふれ出てしまう（少量ずつ、だらだらと漏れることが多い）。</li>
-<li><strong>原因：</strong> 尿道の閉塞（男性の<strong>前立腺肥大症</strong>が代表的）、膀胱の筋肉の機能低下、直腸がんなどの手術による神経障害など。</li>
-<li><strong>特に男性に多い原因：</strong> 前立腺肥大症。</li>
-</ul>
-</li>
-<li><strong>機能性尿失禁（きのうせい にょうしっきん）</strong>
-<ul>
-<li><strong>症状：</strong> 排尿機能自体は正常だが、身体運動機能や認知機能の低下が原因でトイレで排尿できない、または間に合わない。</li>
-<li><strong>原因：</strong> 歩行障害でトイレに間に合わない、認知症などでトイレの場所や排尿方法が分からなくなる、など。</li>
-</ul>
-</li>
-</ol>
-<p><strong>男性に特有の原因</strong></p>
-<ul>
-<li><strong>前立腺肥大症：</strong> 尿道が圧迫され、溢流性尿失禁や切迫性尿失禁の原因となることがあります。</li>
-<li><strong>排尿後尿滴下：</strong> おしっこを終えた後、尿道に残った尿がポタポタと漏れる現象。加齢や前立腺肥大症などによる尿道の筋肉の衰えや尿の勢いの低下が関わることがあります。</li>
-<li><strong>前立腺がんの手術の影響</strong>。</li>
-</ul>
-<p>尿漏れで悩んでいる場合は、原因を特定し適切な治療を行うためにも、泌尿器科などの医療機関にご相談ください。</p>
 	</div>
 </article>
 </main>
