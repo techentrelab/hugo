@@ -3,9 +3,9 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title> - 徒然のままに</title>
+	<title>Posts - 徒然のままに</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Example article description">
+	<meta name="description" content="">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -13,6 +13,7 @@
 
 	<link rel="stylesheet" href="/css/style.css">
 	
+	<link rel="alternate" type="application/rss+xml" href="/posts/index.xml" title="徒然のままに">
 
 	<link rel="shortcut icon" href="/favicon.ico">
 		
@@ -254,88 +255,76 @@
 		<div class="wrapper flex">
 			<div class="primary">
 			
-<main class="main" role="main">
-	<article class="post">
-		<header class="post__header">
-			<h1 class="post__title"></h1>
-			
-		</header>
-		<div class="content post__content clearfix">
-			
-		</div>
-		<footer class="post__footer">
-			
-<div class="post__tags tags clearfix">
-	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M4 0h8s2 0 4 2l15 15s2 2 0 4L21 31s-2 2-4 0L2 16s-2-2-2-4V3s0-3 4-3m3 10a3 3 0 0 0 0-6 3 3 0 0 0 0 6"/></svg>
-	<ul class="tags__list">
-		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/%E5%BE%92%E7%84%B6/" rel="tag">徒然</a>
-		</li>
-	</ul>
-</div>
-		</footer>
-	</article>
+<main class="main list" role="main">
+	<header class="main__header">
+		<h1 class="main__title">Posts</h1>
+	</header><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/gitpod/" rel="bookmark">
+			Gitpod
+			</a>
+		</h2>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<h3 id="ona-formerly-gitpod">Ona (formerly Gitpod)</h3>
+<p><a href="https://ona.com/">https://ona.com/</a></p>
+<p>Gitpodの料金プランは、利用するユーザーのタイプや利用時間によって異なります。主に以下の3つのプランがあります。</p>
+<ol>
+<li>
+<p><strong>Free (無料プラン):</strong></p>
+<ul>
+<li>個人利用向けで、毎月50時間の利用時間が提供されます。</li>
+<li>パブリックリポジトリやプライベートリポジトリで利用可能です。</li>
+<li>基本的な機能はすべて利用できます。</li>
+<li>小規模なプロジェクトやGitpodを試してみたい場合に最適です。</li>
+</ul>
+</li>
+<li>
+<p><strong>Standard (標準プラン):</strong></p>
+<ul>
+<li>月額$9で、毎月500時間の利用時間が提供されます。</li>
+<li>無料プランの機能に加えて、より多くの利用時間が必要な個人開発者やフリーランス向けです。</li>
+<li>（2023年9月時点の情報であり、料金や時間は変更される可能性があります）</li>
+</ul>
+</li>
+<li>
+<p><strong>Teams &amp; Enterprise (チーム＆エンタープライズプラン):</strong></p>
+<ul>
+<li>大規模なチームや企業向けのカスタムプランです。</li>
+<li>無制限の利用時間、専用サポート、シングルサインオン（SSO）、セルフホスティングオプションなど、高度な機能が提供されます。</li>
+<li>具体的な料金は、Gitpodの営業チームに問い合わせて見積もりを取る形になります。</li>
+</ul>
+</li>
+</ol>
+<p>これらのプランは、Gitpodの公式サイトで詳細を確認できます。時期によってプラン内容や料金が変更されることもあるので、最新の情報は公式サイトで確認することをおすすめします。</p>
+<p>Gitpodは、クラウドベースの統合開発環境（IDE）を提供するサービスです。コードを開発するために必要な環境を、ブラウザ上で瞬時に起動できます。</p>
+<p>主な特徴は以下の通りです。</p>
+<ul>
+<li><strong>瞬時の開発環境起動:</strong> GitHub、GitLab、Bitbucketなどのリポジトリから、わずか数秒で完全に機能する開発環境を起動できます。</li>
+<li><strong>ブラウザベースのIDE:</strong> ローカルに何もインストールすることなく、ブラウザ上でVS CodeベースのIDEを利用できます。</li>
+<li><strong>Dockerfileによる環境定義:</strong> プロジェクトごとに必要なツールや依存関係をDockerfileで定義でき、開発環境の一貫性を保てます。</li>
+<li><strong>共同開発:</strong> 開発環境を簡単に共有し、チームメンバーと共同で作業できます。</li>
+<li><strong>自動化:</strong> 継続的インテグレーション/継続的デリバリー（CI/CD）パイプラインと統合し、開発ワークフローを自動化できます。</li>
+<li><strong>様々な言語とフレームワークのサポート:</strong> 多くのプログラミング言語やフレームワークに対応しています。</li>
+</ul>
+<p>Gitpodを利用することで、開発者は環境構築の手間から解放され、すぐにコードを書き始めることができます。特に、新しいプロジェクトに参加する際や、異なる環境で作業する必要がある場合に非常に便利です。</p>
+<p>例えば、GitHubのリポジトリのURLの前に<code>gitpod.io/#</code>を付けるだけで、そのリポジトリのGitpod環境を起動できます。</p>
+<p>Gitpodのロゴは以下のようなものです。</p>
+	</div>
+</article>
 </main>
 
-
-<nav class="pager flex">
-	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/posts/profile%E3%81%A8xprofile/" rel="prev">
-			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">~/.profileと ~/.xprofile</p>
-		</a>
-	</div>
-	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/posts/%E3%83%9D%E3%83%A2%E3%83%89%E3%83%BC%E3%83%AD%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC2/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">ポモドーロタイマー2</p>
-		</a>
-	</div>
-</nav>
-
+<div class="pagination">
+	<a class="pagination__item pagination__item--prev btn" href="/posts/page/3/">«</a>
+	<span class="pagination__item pagination__item--current">4/4</span>
+</div>
 
 			</div>
-			<aside class="sidebar"><div class="widget-search widget">
-	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
-		<input class="widget-search__field" type="search" placeholder="Search…" value="" name="q" aria-label="Search…">
-		<input class="widget-search__submit" type="submit" value="Search">
-		<input type="hidden" name="sitesearch" value="http://localhost:1313/">
-	</form>
-</div>
-<div class="widget-recent widget">
-	<h4 class="widget__title">Recent Posts</h4>
-	<div class="widget__content">
-		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/posts/agent-development-kit/">Agent Development Kit</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/ai%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88/">AIエージェント</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/gemini-enterprise/">Gemini Enterprise</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/github/">GitHub</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/brave%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6/">Braveブラウザ</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/adhd/">ADHD</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/%E3%82%B9%E3%83%9E%E3%83%95%E3%82%A9/">スマフォ</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/%E5%AE%9A%E5%9E%8B%E6%96%87/">定型文</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/%E9%95%B7%E6%99%82%E9%96%93%E5%BA%A7%E3%82%8A%E7%B6%9A%E3%81%91%E3%82%8B/">長時間座り続ける</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/2d-vs-3d/">クレジットカード認証：2D vs 3D</a></li>
-		</ul>
-	</div>
-</div>
-<div class="widget-taglist widget">
-	<h4 class="widget__title">Tags</h4>
-	<div class="widget__content">
-		<a class="widget-taglist__link widget__link btn" href="/tags/ai/" title="Ai">Ai</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/cook/" title="Cook">Cook</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/git/" title="Git">Git</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/health/" title="Health">Health</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/learn/" title="Learn">Learn</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/linux/" title="Linux">Linux</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/living/" title="Living">Living</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/money/" title="Money">Money</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/time/" title="Time">Time</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/work/" title="Work">Work</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/%E5%BE%92%E7%84%B6/" title="徒然">徒然</a>
-	</div>
-</div>
-</aside>
+			
+
 		</div>
 		<footer class="footer">
 	<div class="container footer__container flex">
@@ -348,7 +337,5 @@
 </footer>
 	</div>
 <script async defer src="/js/menu.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
 </body>
 </html>

@@ -95,6 +95,13 @@
 			</a>
 		</li>
 		<li class="menu__item">
+			<a class="menu__link" href="/posts/gemini-enterprise/">
+				
+				<span class="menu__text">Gemini Enterprise</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
 			<a class="menu__link" href="/posts/git-clone/">
 				
 				<span class="menu__text">git clone</span>
@@ -251,6 +258,37 @@
 			
 <main class="main list" role="main">
 	<article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/lubuntu--%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%85%A5%E5%8A%9B/" rel="bookmark">
+			Lubuntu  日本語入力
+			</a>
+		</h2>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<hr>
+<h2 id="lubuntu--日本語入力のセットアップガイド">Lubuntu  日本語入力のセットアップガイド</h2>
+<h3 id="日本語入力エンジンmozcの導入">日本語入力エンジン「Mozc」の導入</h3>
+<p>まず、日本語入力に必要な「fcitx-mozc」をインストールします。</p>
+<ol>
+<li>
+<p><strong>システムを更新し、<code>fcitx-mozc</code>をインストールします。</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
+</span></span><span style="display:flex;"><span>sudo apt install fcitx-mozc
+</span></span></code></pre></div></li>
+<li>
+<p><strong>再ログイン後、設定を確認します。</strong>
+ログアウトして再度ログインし、「入力メソッドの設定」を開いてください。以下の項目が表示されていれば、インストールは成功です。</p>
+<ul>
+<li>キーボード - 日本語</li>
+<li>Mozc</li>
+</ul>
+</li>
+</ol>
+	</div>
+</article><article class="list__item post">
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
@@ -676,68 +714,13 @@ Linuxでは、FcitxまたはIBusが主要なIMEフレームワークです。ど
 	<div class="content list__excerpt post__content clearfix">
 		
 	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/gitpod/" rel="bookmark">
-			Gitpod
-			</a>
-		</h2>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<h3 id="ona-formerly-gitpod">Ona (formerly Gitpod)</h3>
-<p><a href="https://ona.com/">https://ona.com/</a></p>
-<p>Gitpodの料金プランは、利用するユーザーのタイプや利用時間によって異なります。主に以下の3つのプランがあります。</p>
-<ol>
-<li>
-<p><strong>Free (無料プラン):</strong></p>
-<ul>
-<li>個人利用向けで、毎月50時間の利用時間が提供されます。</li>
-<li>パブリックリポジトリやプライベートリポジトリで利用可能です。</li>
-<li>基本的な機能はすべて利用できます。</li>
-<li>小規模なプロジェクトやGitpodを試してみたい場合に最適です。</li>
-</ul>
-</li>
-<li>
-<p><strong>Standard (標準プラン):</strong></p>
-<ul>
-<li>月額$9で、毎月500時間の利用時間が提供されます。</li>
-<li>無料プランの機能に加えて、より多くの利用時間が必要な個人開発者やフリーランス向けです。</li>
-<li>（2023年9月時点の情報であり、料金や時間は変更される可能性があります）</li>
-</ul>
-</li>
-<li>
-<p><strong>Teams &amp; Enterprise (チーム＆エンタープライズプラン):</strong></p>
-<ul>
-<li>大規模なチームや企業向けのカスタムプランです。</li>
-<li>無制限の利用時間、専用サポート、シングルサインオン（SSO）、セルフホスティングオプションなど、高度な機能が提供されます。</li>
-<li>具体的な料金は、Gitpodの営業チームに問い合わせて見積もりを取る形になります。</li>
-</ul>
-</li>
-</ol>
-<p>これらのプランは、Gitpodの公式サイトで詳細を確認できます。時期によってプラン内容や料金が変更されることもあるので、最新の情報は公式サイトで確認することをおすすめします。</p>
-<p>Gitpodは、クラウドベースの統合開発環境（IDE）を提供するサービスです。コードを開発するために必要な環境を、ブラウザ上で瞬時に起動できます。</p>
-<p>主な特徴は以下の通りです。</p>
-<ul>
-<li><strong>瞬時の開発環境起動:</strong> GitHub、GitLab、Bitbucketなどのリポジトリから、わずか数秒で完全に機能する開発環境を起動できます。</li>
-<li><strong>ブラウザベースのIDE:</strong> ローカルに何もインストールすることなく、ブラウザ上でVS CodeベースのIDEを利用できます。</li>
-<li><strong>Dockerfileによる環境定義:</strong> プロジェクトごとに必要なツールや依存関係をDockerfileで定義でき、開発環境の一貫性を保てます。</li>
-<li><strong>共同開発:</strong> 開発環境を簡単に共有し、チームメンバーと共同で作業できます。</li>
-<li><strong>自動化:</strong> 継続的インテグレーション/継続的デリバリー（CI/CD）パイプラインと統合し、開発ワークフローを自動化できます。</li>
-<li><strong>様々な言語とフレームワークのサポート:</strong> 多くのプログラミング言語やフレームワークに対応しています。</li>
-</ul>
-<p>Gitpodを利用することで、開発者は環境構築の手間から解放され、すぐにコードを書き始めることができます。特に、新しいプロジェクトに参加する際や、異なる環境で作業する必要がある場合に非常に便利です。</p>
-<p>例えば、GitHubのリポジトリのURLの前に<code>gitpod.io/#</code>を付けるだけで、そのリポジトリのGitpod環境を起動できます。</p>
-<p>Gitpodのロゴは以下のようなものです。</p>
-	</div>
 </article>
 </main>
 
 <div class="pagination">
 	<a class="pagination__item pagination__item--prev btn" href="/page/2/">«</a>
-	<span class="pagination__item pagination__item--current">3/3</span>
+	<span class="pagination__item pagination__item--current">3/4</span>
+	<a class="pagination__item pagination__item--next btn" href="/page/4/">»</a>
 </div>
 
 			</div>
